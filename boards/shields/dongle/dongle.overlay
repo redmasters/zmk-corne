@@ -31,13 +31,6 @@
         >;
     };
 
-    physical_layout0: physical_layout {
-      compatible = "zmk,physical-layout";
-      display_name = "Default Layout";
-      transform = <&default_transform>;
-  };
-  
-
 };
 
 
