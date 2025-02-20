@@ -8,7 +8,7 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    # include corne with dongle pro_micro and xiao compatible
+    # include corne with dongle pro_micro and dongle-display
     - name: redmasters
       url-base: https://github.com/redmasters
     
