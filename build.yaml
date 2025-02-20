@@ -17,7 +17,7 @@ include:
 
   # dongle
   - board: nice_nano_v2
-    shield: corne_dongle
+    shield: corne_dongle dongle_display
     snippet: common-config studio-rpc-usb-uart
     artifact-name: corne_dongle
 
