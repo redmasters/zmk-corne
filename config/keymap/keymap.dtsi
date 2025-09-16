@@ -204,7 +204,7 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
 base {
     bindings = <
 //╭──────────┬──────┬──
-___   &kp Q  &mt LS(F2) W             &kp E               &kp R           &kp T             &mt LS(F6) Y    &kp U           &kp I                 &mt LS(F9) O      &kp P          ___
+___   &kp Q  &mt LC(F2) W             &kp E               &kp R           &kp T             &mt LS(F6) Y    &kp U           &kp I                 &mt LS(F9) O      &kp P          ___
 ___   &kp A  &hml LEFT_SHIFT S &hml LEFT_CONTROL D &hml LEFT_ALT F &hml LEFT_GUI G   &hmr LEFT_GUI H &hmr LEFT_ALT J &hmr LEFT_CONTROL K   &hmr LEFT_SHIFT L &kp SEMICOLON  &kp SQT
 ___   &kp Z  &kp X             &kp C               &kp V           &kp B             &kp N           &kp M           &kp COMMA             &kp DOT           &kp FSLH       &smart_shft
                                      &lt FN ESC           &lt NAV LEFT_GUI  &kp TAB         &kp RET         &lt NUM SPACE      &bs_del
