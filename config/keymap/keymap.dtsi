@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/helper.h"
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEF 0
 #define NAV 1
@@ -203,7 +203,7 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
 base {
     bindings = <
 //╭──────────┬──────┬──
-___   &kp Q  &mt LC(F2) W             &kp E               &kp R           &kp T             &mt LS(F6) Y    &kp U           &kp I                 &mt LS(F9) O      &kp P          ___
+___   &kp Q  &mt LC(F2) W      &kp E               &kp R           &kp T             &mt LS(F6) Y    &kp U           &kp I                 &mt LS(F9) O      &kp P          ___
 ___   &kp A  &hml LEFT_SHIFT S &hml LEFT_CONTROL D &hml LEFT_ALT F &hml LEFT_GUI G   &hmr LEFT_GUI H &hmr LEFT_ALT J &hmr LEFT_CONTROL K   &hmr LEFT_SHIFT L &kp SEMICOLON  &kp SQT
 ___   &kp Z  &kp X             &kp C               &kp V           &kp B             &kp N           &kp M           &kp COMMA             &kp DOT           &kp FSLH       &smart_shft
                                      &lt FN ESC           &lt NAV LEFT_GUI  &kp TAB         &kp RET         &lt NUM SPACE      &bs_del
@@ -244,7 +244,7 @@ display-name = "num";
 
 sys{
     bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &ext_power EP_TOG   &trans  &trans  &trans  &bt BT_CLR    &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans    &out OUT_TOG        &trans  &trans  &trans  &bt BT_CLR    &bt BT_CLR_ALL
 &trans  &trans  &trans  &trans  &trans  &trans    &trans              &trans  &trans  &trans  &bt BT_SEL 2  &bt BT_SEL 3
 &trans  &trans  &trans  &trans  &trans  &trans    &trans              &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1
                         &trans  &trans  &trans    &trans              &trans  &trans
