@@ -18,7 +18,7 @@
 
 #define XXX &none
 #define ___ &trans
-#define EP_TOG &ext_power
+#define PW_TOG &ext_power
 
 /* Global settings */
 
@@ -245,7 +245,7 @@ display-name = "num";
 
 sys{
     bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &EP_TOG  &trans  &trans  &trans  &bt BT_CLR    &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans    &PW_TOG  &trans  &trans  &trans  &bt BT_CLR    &bt BT_CLR_ALL
 &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans  &trans  &trans  &bt BT_SEL 2  &bt BT_SEL 3
 &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1
                         &trans  &trans  &trans    &trans   &trans  &trans
