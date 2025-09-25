@@ -122,7 +122,7 @@ ZMK_MOD_MORPH(smart_shft,
 };
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num NUM 0
+#define SMART_NUM &smart_num NUM 3
 ZMK_HOLD_TAP(smart_num,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -202,11 +202,11 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
     compatible = "zmk,keymap";
 base {
     bindings = <
-//╭──────────┬──────┬──
-___   &kp Q  &mt RC(F2) W      &kp E               &kp R           &kp T             &mt LS(F6) Y    &kp U           &kp I                 &mt LS(F9) O      &kp P          ___
-___   &kp A  &hml LEFT_SHIFT S &hml LEFT_CONTROL D &hml LEFT_ALT F &hml LEFT_GUI G   &hmr LEFT_GUI H &hmr LEFT_ALT J &hmr LEFT_CONTROL K   &hmr LEFT_SHIFT L &kp SEMICOLON  &kp SQT
-___   &kp Z  &kp X             &kp C               &kp V           &kp B             &kp N           &kp M           &kp COMMA             &kp DOT           &kp FSLH       &smart_shft
-                                     &lt FN ESC           &lt NAV LEFT_GUI  &kp TAB         &kp RET         &lt NUM SPACE      &bs_del
+//╭─────────┬──────────────────┬──                                                     ┬
+___   &kp Q  &mt RC(F2) W       &kp E               &kp R              &kp T             &mt LS(F6) Y    &kp U           &kp I                 &mt LS(F9) O      &kp P          ___
+___   &kp A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D &hml LEFT_ALT F    &hml LEFT_GUI G   &hmr LEFT_GUI H &hmr LEFT_ALT J &hmr LEFT_CONTROL K   &hmr LEFT_SHIFT L &kp SEMICOLON  &kp SQT
+___   &kp Z  &kp X              &kp C               &kp V              &kp B             &kp N           &kp M           &kp COMMA             &kp DOT           &kp FSLH       &smart_shft
+                                &lt FN ESC          &lt NAV LEFT_GUI   &kp TAB           &kp RET         &lt NUM SPACE   &bs_del
     >;
 display-name = "base";
 };
@@ -214,29 +214,30 @@ display-name = "base";
 
 nav {
     bindings = <
-&kp TILDE         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR           &kp PERCENT    &trans    &kp AMPERSAND  &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &mt UNDER KP_MINUS  &mt PLUS EQUAL
-&trans            &swapper  &sk LEFT_SHIFT    &sk LEFT_CONTROL     &sk LEFT_ALT   &sk LEFT_GUI   NAV_LEFT  NAV_DOWN       NAV_UP   NAV_RIGHT  &kp RET              &kp PIPE
-&kp LC(LEFT_GUI)  &trans    &trans  &trans    &trans               &trans         &kp INS   &kp HOME       &kp PAGE_DOWN                    &kp PG_UP                          &kp END             &trans
-                                    &trans    &trans               &kp SPACE      &kp RET   CANCEL        &kp RALT
+//1                                                                        6            ┬  1                                                                                                               6
+&kp TILDE         &kp EXCL  &kp AT          &kp HASH          &kp DOLLAR   &kp PERCENT    &kp ASTERTERISK  &kp AMPERSAND  &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &mt UNDER KP_MINUS  &mt PLUS EQUAL
+&trans            &swapper  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT &sk LEFT_GUI   NAV_LEFT         NAV_DOWN       NAV_UP                           NAV_RIGHT                          &kp RET             &kp PIPE
+&kp LC(LEFT_GUI)  &trans    &trans          &trans            &trans       &trans         &kp INS          &kp HOME       &kp PAGE_DOWN                    &kp PG_UP                          &kp END             &trans
+                                            &trans            &trans       &kp SPACE      &kp RET          CANCEL         &kp RALT
     >;
 display-name = "nav";
 };
 
 fn{
     bindings = <
-&kp F12  &kp F7  &kp F8  &kp F9  &trans     &trans          &trans           &trans    &trans    &trans    &trans  &trans
-&kp F11  &kp F4  &kp F5  &kp F6  &trans     &trans          DSK_PREV         VOL_DOWN  VOL_UP    DSK_NEXT  &trans  &trans
-&kp F10  &kp F1  &kp F2  &kp F3  &trans     &trans          &kp PRINTSCREEN  &trans    &trans    &trans    &trans  &trans
-                         &trans  &trans     &trans          &kp LCTRL        &kp LEFT_ALT    &trans
+&kp F12  &kp F7  &kp F8              &kp F9                &trans         &trans    &trans           &trans    &trans    &trans    &trans  &trans
+&kp F11  &kp F4  &hml LEFT_SHIFT F5  &hml LEFT_CONTROL F6  &hml LEFT_ALT  &trans    DSK_PREV  VOL_DOWN  VOL_UP    DSK_NEXT  &trans  &trans
+&kp F10  &kp F1  &kp F2              &kp F3                &trans         &trans    &kp PRINTSCREEN  &trans    &trans    &trans    &trans  &trans
+                                     &trans                &trans         &trans    &kp LCTRL        &kp LEFT_ALT    &trans
     >;
 display-name = "fn";
 };
 
 num{
     bindings = < 
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5       &kp N6         &kp N7        &kp N8    &kp N9   &kp N0    &kp BSPC
-&kp LCTRL  &trans  &trans  &trans  &trans        &trans       &kp MINUS      &kp N4        &kp N5    &kp N6   &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans  &trans  &trans  &trans        &tog GAME    ___            &kp N1        &kp N2    &kp N3   &kp PIPE  &kp TILDE
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5       &kp N6         &kp N7               &kp N8                &kp N9                &kp N0    &kp BSPC
+&kp LCTRL  &trans  &trans  &trans  &trans        &trans       &kp MINUS      &mt ASTERTERISK N4   &mt LEFT_BRACKET N5   &mt RIGHT_BRACKET N6  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans  &trans  &trans  &trans        &tog GAME    ___            &kp N1               &kp N2                &kp N3                &kp PIPE  &kp TILDE
                            &trans  &smart_num    &trans       ___            ___           &kp RALT
     >;
 display-name = "num";
@@ -244,7 +245,7 @@ display-name = "num";
 
 sys{
     bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans        &out OUT_USB   &out OUT_BLE  &trans  &trans  &bt BT_CLR    &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans        &out OUT_TOG   &trans        &trans  &trans  &bt BT_CLR    &bt BT_CLR_ALL
 &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans        &trans  &trans  &bt BT_SEL 2  &bt BT_SEL 3
 &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans        &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1
                         &trans  &trans  &trans        &trans         &trans        &trans
