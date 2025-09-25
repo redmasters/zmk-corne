@@ -214,10 +214,10 @@ display-name = "base";
 
 nav {
     bindings = <
-//1                                                                        6            ┬  1                                                                                                               6
-&kp TILDE         &kp EXCL  &kp AT          &kp HASH          &kp DOLLAR   &kp PERCENT    &kp ASTERISK     &kp AMPERSAND  &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &mt UNDER KP_MINUS  &mt PLUS EQUAL
-&trans            &swapper  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT &sk LEFT_GUI   NAV_LEFT         NAV_DOWN       NAV_UP                           NAV_RIGHT                          &kp RET             &kp PIPE
-&kp LC(LEFT_GUI)  &trans    &trans          &trans            &trans       &trans         &kp INS          &kp HOME       &kp PAGE_DOWN                    &kp PG_UP                          &kp END             &trans
+//1                                                                        6            ┬  1                                                                                               6
+&kp TILDE         &kp EXCL  &kp AT          &kp HASH          &kp DOLLAR   &kp PERCENT    &kp CARET        &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt UNDER KP_MINUS  &mt PLUS EQUAL
+&trans            &swapper  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT &sk LEFT_GUI   NAV_LEFT         NAV_DOWN       NAV_UP                NAV_RIGHT              &kp LEFT_BRACKET    &kp RIGHT_BRACKET
+&kp LC(LEFT_GUI)  &trans    &trans          &trans            &trans       &trans         &kp INS          &kp HOME       &kp PAGE_DOWN         &kp PG_UP              &kp END             &trans
                                             &trans            &trans       &kp SPACE      &kp RET          CANCEL         &kp RALT
     >;
 display-name = "nav";
@@ -225,7 +225,7 @@ display-name = "nav";
 
 fn{
     bindings = <
-//1                                                                       6        ┬   1                                                                                                               6
+//1                                                                       6        ┬   1                                                     6
 &kp F12  &kp F7  &kp F8              &kp F9                &trans         &trans      &trans           &trans    &trans    &trans    &trans  &trans
 &kp F11  &kp F4  &hml LEFT_SHIFT F5  &hml LEFT_CONTROL F6  &hml LEFT_ALT  &trans      DSK_PREV         VOL_DOWN  VOL_UP    DSK_NEXT  &trans  &trans
 &kp F10  &kp F1  &kp F2              &kp F3                &trans         &trans      &kp PRINTSCREEN  &trans    &trans    &trans    &trans  &trans
@@ -236,10 +236,10 @@ display-name = "fn";
 
 num{
     bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5       &kp N6         &kp N7               &kp N8                &kp N9                &kp N0    &kp BSPC
-&kp LCTRL  &trans  &trans  &trans  &trans        &trans       &kp MINUS      &mt ASTERTERISK N4   &mt LBKT N5           &mt RBKT N6  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans  &trans  &trans  &trans        &tog GAME    ___            &kp N1               &kp N2                &kp N3                &kp PIPE  &kp TILDE
-                           &trans  &smart_num    &trans       ___            ___           &kp RALT
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5       &kp N6         &kp N7               &kp N8  &kp N9  &kp N0    &kp BSPC
+&kp LCTRL  &trans  &trans  &trans  &trans        &trans       &kp MINUS      &mt ASTERTERISK N4   &kp N5  &kp N6  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans  &trans  &trans  &trans        &tog GAME    ___            &kp N1               &kp N2  &kp N3  &kp PIPE  &kp TILDE
+                           &trans  &smart_num    &trans       ___            ___                  &kp RALT
     >;
 display-name = "num";
 };
