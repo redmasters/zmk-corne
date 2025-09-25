@@ -237,7 +237,7 @@ display-name = "fn";
 num{
     bindings = <
 &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5       &kp N6         &kp N7               &kp N8                &kp N9                &kp N0    &kp BSPC
-&kp LCTRL  &trans  &trans  &trans  &trans        &trans       &kp MINUS      &mt ASTERTERISK N4   &mt LEFT_BRACKET N5   &mt RIGHT_BRACKET N6  &kp BSLH  &kp GRAVE
+&kp LCTRL  &trans  &trans  &trans  &trans        &trans       &kp MINUS      &mt ASTERTERISK N4   &mt LBKT N5           &mt RBKT N6  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans  &trans  &trans  &trans        &tog GAME    ___            &kp N1               &kp N2                &kp N3                &kp PIPE  &kp TILDE
                            &trans  &smart_num    &trans       ___            ___           &kp RALT
     >;
