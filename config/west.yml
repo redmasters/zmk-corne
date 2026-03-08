@@ -30,7 +30,7 @@ manifest:
     # Zephyr with a path other than `zephyr` (as in `going-modular`).
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v.0.3
       import: app/west.yml
 
   self:
