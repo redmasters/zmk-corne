@@ -4,9 +4,4 @@
 # Configuração padrão para Corne com nice!nano v2
 # Compila firmware para ambas as metades do teclado
 
-include:
-  - board: nice_nano_v2
-    shield: corne_left
-  - board: nice_nano_v2
-    shield: corne_right
-
+include: []
