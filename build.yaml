@@ -4,4 +4,8 @@
 # Configuração padrão para Corne com nice!nano v2
 # Compila firmware para ambas as metades do teclado
 
-include: []
+include:
+  - board: nrfmicro/nrf52840/zmk@1.3
+    shield: corne_left
+  - board: nrfmicro/nrf52840/zmk@1.3
+    shield: corne_right
