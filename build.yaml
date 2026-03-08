@@ -5,7 +5,21 @@
 # Compila firmware para ambas as metades do teclado
 
 include:
+# Dongle com display OLED
+  - board: nice_nano_v2
+    shield: corne_dongle
+    artifact-name: corne_dongle_pro_micro
+
+# Reset settings para todas as boards
+  - board: nice_nano_v2
+    shield: settings_reset
+
+# Left Half como Peripheral
   - board: nice_nano_v2
     shield: corne_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
+  # Right Half como Peripheral  
   - board: nice_nano_v2
     shield: corne_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
