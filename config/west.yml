@@ -2,6 +2,7 @@
 manifest:
   defaults:
     remote: urob
+    revision: v0.3
 
   remotes:
     - name: zmkfirmware
@@ -30,7 +31,7 @@ manifest:
     # Zephyr with a path other than `zephyr` (as in `going-modular`).
     - name: zmk
       remote: zmkfirmware
-      revision: v.0.3
+      revision: v0.3
       import: app/west.yml
 
   self:
