@@ -1,38 +1,17 @@
----
-manifest:
-  defaults:
-    remote: urob
-    revision: v0.3
+# ZMK Corne - Manifesto West Padrão
+# Documentação: https://zmk.dev/docs/config
+#
+# Configuração mínima usando apenas o ZMK oficial
 
+manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
-    # include corne with dongle pro_micro and dongle-display
-    - name: redmasters
-      url-base: https://github.com/redmasters
-    
   projects:
-    - name: zmk-helpers
-      revision: main
-      path: modules/helpers
-    - name: zmk-auto-layer
-      revision: main
-      path: modules/auto-layer
-    - name: zmk-tri-state
-      revision: main
-      path: modules/tri-state
-    # include dongle-display
-    - name: zmk-dongle-display
-      remote: redmasters
-      revision: main
-    # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
-    # Zephyr with a path other than `zephyr` (as in `going-modular`).
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
-
   self:
     path: config
+
