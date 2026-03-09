@@ -4,7 +4,7 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zephyr,display = &oled;
-        zmk,physical-layout= default_transform
+        zmk,physical-layout = &default_transform;  // <- & antes do nome
     };
 
     mock_kscan: mock_kscan_0 {
@@ -14,7 +14,6 @@
         events = <0>;
     };
 
-    // Matrix transform do Corne (necessário para o dongle processar eventos)
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
@@ -26,9 +25,10 @@
                             RC(3,2) RC(3,3) RC(3,4) RC(3,5)  RC(3,6) RC(3,7) RC(3,8) RC(3,9)
         >;
     };
+};  // <- Fechar o nó raiz aqui
 
-// 128x32 OLED
-  &pro_micro_i2c {
+// Configuração do OLED - FORA do nó raiz /
+&pro_micro_i2c {
     status = "okay";
     
     oled: ssd1306@3c {
@@ -46,6 +46,4 @@
         inversion-on;
         prechargep = <0x22>;
     };
-  };
-
 };
