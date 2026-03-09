@@ -1,13 +1,15 @@
 if SHIELD_CORNE_DONGLE
 
-# Max 16 characters in keyboard name
 config ZMK_KEYBOARD_NAME
-    default "Corne Dongle"
+    default "Corne ReD"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 config ZMK_SPLIT
+    default y
+
+config ZMK_DISPLAY
     default y
 
 # Set this to the number of peripherals your dongle will have.
@@ -24,47 +26,39 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 7
 
-# --- DISPLAY CONFIGURATIONS ---
-# Habilitar display
-config ZMK_DISPLAY
+endif
+
+if ZMK_DISPLAY
+
+config I2C
     default y
 
-# Usar status screen built-in (mostra bateria, layer, output)
-#config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
-#    default y
-
-# Blank display quando idle (economiza bateria OLED)
-config ZMK_DISPLAY_BLANK_ON_IDLE
+config SSD1306
     default y
 
-# Work queue dedicada para não atrasar key scanning
-#config ZMK_DISPLAY_WORK_QUEUE_DEDICATED
-#    default y
+if SHIELD_CORNE_DONGLE
 
-# --- WIDGETS ---
-# Widget de bateria (habilitado por padrão)
-config ZMK_WIDGET_BATTERY_STATUS
-    default y
-
-# Mostrar porcentagem ao invés de ícones
-config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
-    default y
-
-# Widget de layer ativo
-config ZMK_WIDGET_LAYER_STATUS
-    default y
-
-# Widget de status de output (USB/BLE)
-config ZMK_WIDGET_OUTPUT_STATUS
-    default y
-
-# --- PERIPHERAL BATTERY MONITORING ---
-# Fetch battery levels dos peripherals
-config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
-    default y
-
-# Proxy battery levels para o host (opcional)
-config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
-    default y
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
 
 endif
+
+endif # ZMK_DISPLAY
+
+if LVGL
+
+config LV_Z_VDB_SIZE
+    default 64
+
+config LV_DPI_DEF
+    default 148
+
+config LV_Z_BITS_PER_PIXEL
+    default 1
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
+
+endif # LVGL
