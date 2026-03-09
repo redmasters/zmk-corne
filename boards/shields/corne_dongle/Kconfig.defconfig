@@ -30,16 +30,16 @@ config ZMK_DISPLAY
     default y
 
 # Usar status screen built-in (mostra bateria, layer, output)
-config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
-    default y
+#config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
+#    default y
 
 # Blank display quando idle (economiza bateria OLED)
 config ZMK_DISPLAY_BLANK_ON_IDLE
     default y
 
 # Work queue dedicada para não atrasar key scanning
-config ZMK_DISPLAY_WORK_QUEUE_DEDICATED
-    default y
+#config ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+#    default y
 
 # --- WIDGETS ---
 # Widget de bateria (habilitado por padrão)
