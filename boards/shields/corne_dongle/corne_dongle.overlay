@@ -4,6 +4,7 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zephyr,display = &oled;
+        zmk,physical-layout= default_transform
     };
 
     mock_kscan: mock_kscan_0 {
