@@ -15,13 +15,10 @@ manifest:
     
   projects:
     - name: zmk-helpers
-      revision: main
       path: modules/helpers
     - name: zmk-auto-layer
-      revision: main
       path: modules/auto-layer
     - name: zmk-tri-state
-      revision: main
       path: modules/tri-state
     # include dongle-display
     - name: zmk-dongle-display
