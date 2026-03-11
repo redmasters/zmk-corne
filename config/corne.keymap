@@ -122,10 +122,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp F12  &kp F7         &kp F8         &kp F9        &trans  &kp PRCNT    &out OUT_TOG            &trans             &trans           &trans             &bt BT_CLR    &bt BT_CLR_ALL
-&kp F11  &hml LSHFT F4  &hml LCTRL F5  &hml LALT F6  &trans  &trans       &kp LC(LG(LEFT_ARROW))  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(LC(RIGHT))  &bt BT_SEL 2  &bt BT_SEL 3
-&kp F10  &kp F1         &kp F2         &kp F3        &trans  &trans       &kp PRINTSCREEN         &trans             &trans           &trans             &bt BT_SEL 0  &bt BT_SEL 1
-                                       &trans        &trans  &trans       &kp RET                 &trans             &kp RALT
+&kp F12  &kp F7         &kp F8         &kp F9        &trans  &trans    &out OUT_TOG            &trans             &trans           &trans             &bt BT_CLR    &bt BT_CLR_ALL
+&kp F11  &hml LSHFT F4  &hml LCTRL F5  &hml LALT F6  &trans  &trans    &kp LC(LG(LEFT_ARROW))  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(LC(RIGHT))  &bt BT_SEL 2  &bt BT_SEL 3
+&kp F10  &kp F1         &kp F2         &kp F3        &trans  &trans    &kp PRINTSCREEN         &trans             &trans           &trans             &bt BT_SEL 0  &bt BT_SEL 1
+                                       &trans        &trans  &trans    &kp RET                 &trans             &kp RALT
             >;
         };
 
