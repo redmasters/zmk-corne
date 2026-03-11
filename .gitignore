@@ -1,3 +1,4 @@
-
-.zmk/
+.idea
 .idea/
+.zmk
+zmk/
