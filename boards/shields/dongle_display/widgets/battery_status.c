@@ -128,7 +128,7 @@ static void set_battery_symbol(lv_obj_t *widget, struct battery_state state) {
     }
 }
 
-void battery_status_update_cb(struct battery_state state) {
+static void battery_status_update_cb(struct battery_state state) {
     struct zmk_widget_dongle_battery_status *widget;
     SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { set_battery_symbol(widget->obj, state); }
 }

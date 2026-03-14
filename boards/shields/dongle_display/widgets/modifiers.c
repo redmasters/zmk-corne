@@ -18,6 +18,10 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "modifiers.h"
 
+#ifndef lv_anim_set_duration
+#define lv_anim_set_duration(a, d) ((a)->duration = (d))
+#endif
+
 struct modifiers_state {    
     uint8_t modifiers;
 };
@@ -91,6 +95,8 @@ static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 static void anim_y_cb(void *var, int32_t v) {
     lv_obj_set_y(var, v);
 }
+
+
 
 static void move_object_y(void *obj, int32_t from, int32_t to) {
     lv_anim_t a;
