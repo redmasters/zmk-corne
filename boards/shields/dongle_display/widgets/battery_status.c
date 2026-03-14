@@ -98,11 +98,12 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     lv_draw_rect(&layer, &rect_fill_dsc, &rect_coords);
     lv_canvas_finish_layer(canvas, &layer);
 #else /* LVGL v8 */
-    /* In LVGL v8, use the canvas' draw context */
-    lv_draw_ctx_t *draw_ctx = lv_canvas_get_draw_ctx(canvas);
-    if (draw_ctx) {
-        lv_draw_rect(draw_ctx, &rect_fill_dsc, &rect_coords);
-    }
+    /* Fill a rectangle area by setting pixels directly (avoids lv_canvas_get_draw_ctx) */
+        for (int y = rect_coords.y1; y <= rect_coords.y2; y++) {
+            for (int x = rect_coords.x1; x <= rect_coords.x2; x++) {
+                lv_canvas_set_px(canvas, x, y, lv_color_white());
+            }
+        }
 #endif
 }
 
