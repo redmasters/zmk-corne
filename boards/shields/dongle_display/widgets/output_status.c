@@ -77,7 +77,7 @@ struct output_status_state {
 static struct output_status_state get_state(const zmk_event_t *_eh) {
     struct output_status_state st;
 
-    st.selected_endpoint = zmk_endpoint_get_selected();
+    st.selected_endpoint = zmk_endpoints_selected();
     st.preferred_transport = zmk_endpoint_get_preferred_transport();
 
 #if IS_ENABLED(CONFIG_ZMK_BLE)

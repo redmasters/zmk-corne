@@ -52,9 +52,6 @@ static lv_color_t battery_image_buffer[ZMK_SPLIT_BLE_PERIPHERAL_COUNT + SOURCE_O
 
 static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     lv_canvas_fill_bg(canvas, lv_color_black(), LV_OPA_COVER);
-    
-    lv_layer_t layer;
-    lv_canvas_init_layer(canvas, &layer);
 
     lv_draw_rect_dsc_t rect_fill_dsc;
     lv_draw_rect_dsc_init(&rect_fill_dsc);
@@ -71,7 +68,7 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
 
     lv_area_t rect_coords;
     bool rect_draw = true;
-    
+
     if (level <= 10 || usb_present) {
         rect_coords = (lv_area_t){1, 2, 3, 6};
     } else if (level <= 30) {
@@ -86,11 +83,22 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
         rect_draw = false;
     }
 
-    if (rect_draw) {
-        lv_draw_rect(&layer, &rect_fill_dsc, &rect_coords);
+    if (!rect_draw) {
+        return;
     }
 
+#if defined(LV_COLOR_FORMAT_L8) /* LVGL v9 */
+    lv_layer_t layer;
+    lv_canvas_init_layer(canvas, &layer);
+    lv_draw_rect(&layer, &rect_fill_dsc, &rect_coords);
     lv_canvas_finish_layer(canvas, &layer);
+#else /* LVGL v8 */
+    /* In LVGL v8, use the canvas' draw context */
+    lv_draw_ctx_t *draw_ctx = lv_canvas_get_draw_ctx(canvas);
+    if (draw_ctx) {
+        lv_draw_rect(draw_ctx, &rect_fill_dsc, &rect_coords);
+    }
+#endif
 }
 
 static void set_battery_symbol(lv_obj_t *widget, struct battery_state state) {
