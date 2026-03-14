@@ -18,10 +18,6 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "modifiers.h"
 
-#ifndef lv_anim_set_duration
-#define lv_anim_set_duration(a, d) ((a)->duration = (d))
-#endif
-
 struct modifiers_state {    
     uint8_t modifiers;
 };
