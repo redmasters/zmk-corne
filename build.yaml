@@ -15,12 +15,14 @@ include:
   - board: nice_nano_v2
     shield: corne_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    snippet: common-config studio-rpc-usb-uart
     artifact-name: corne_left
 
   # Right Half como Peripheral  
   - board: nice_nano_v2
     shield: corne_right
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    snippet: common-config studio-rpc-usb-uart
     artifact-name: corne_right
 
  # Reset settings para todas as boards
