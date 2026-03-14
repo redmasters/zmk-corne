@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <lvgl.h>
 #include <zephyr/kernel.h>
 #include <zephyr/bluetooth/services/bas.h>
 
@@ -100,7 +101,7 @@ static void move_object_y(void *obj, int32_t from, int32_t to) {
     lv_anim_set_var(&a, obj);
 
 /* LVGL v9 uses lv_anim_set_time(); LVGL v8 uses lv_anim_set_duration(). */
-#if defined(lv_anim_set_time)
+#if defined(LVLG_VERSION_MAJOR >= 9)
     lv_anim_set_time(&a, 200);
 #else
     lv_anim_set_duration(&a, 200);
