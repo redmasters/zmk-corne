@@ -133,7 +133,7 @@ static void set_status_symbol(lv_obj_t *widget, struct output_status_state state
     lv_obj_t *selection_line = lv_obj_get_child(widget, output_symbol_selection_line);
 
     enum zmk_transport transport = state.selected_endpoint.transport;
-    bool connected = transport != ZMK_TRANSPORT_NONE;
+    bool connected = (transport == ZMK_TRANSPORT_USB) || (transport == ZMK_TRANSPORT_BLE);
 
     if (!connected) {
         transport = state.preferred_transport;
@@ -154,15 +154,17 @@ static void set_status_symbol(lv_obj_t *widget, struct output_status_state state
             current_selection_line_state = selection_line_state_bt;
         }
         break;
-    case ZMK_TRANSPORT_NONE:
-        if (current_selection_line_state != selection_line_state_none) {
-            if (current_selection_line_state == selection_line_state_usb) {
-                change_size_object(selection_line, 11, 0);
-            } else {
-                change_size_object(selection_line, 18, 0);
-            }
-            current_selection_line_state = selection_line_state_none;
-        }
+    default:
+         /* “no transport / unknown” handling (replaces ZMK_TRANSPORT_NONE) */
+         if (current_selection_line_state != selection_line_state_none) {
+             if (current_selection_line_state == selection_line_state_usb) {
+                 change_size_object(selection_line, 11, 0);
+             } else {
+                 change_size_object(selection_line, 18, 0);
+             }
+             current_selection_line_state = selection_line_state_none;
+         }
+         break;
     }
 
     if (state.usb_is_hid_ready && connected) {
