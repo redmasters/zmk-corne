@@ -65,8 +65,6 @@ typedef lv_point_t zmk_lv_point_line_t;
 
 static zmk_lv_point_line_t selection_line_points[] = { {0, 0}, {0, 0} };
 
-lv_point_precise_t selection_line_points[] = { {0, 0}, {0, 0} };
-
 struct output_status_state {
     struct zmk_endpoint_instance selected_endpoint;
     enum zmk_transport preferred_transport;

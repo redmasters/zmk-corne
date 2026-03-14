@@ -22,8 +22,15 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_1 uin
   0x30, 0x70, 0x70, 0x30, 0x30, 0x30, 
 };
 
+#if defined(LV_COLOR_FORMAT_I1) /* LVGL v9 */
+#define ZMK_IMG_CF_I1 LV_COLOR_FORMAT_I1
+#else /* LVGL v8 */
+#define ZMK_IMG_CF_I1 LV_IMG_CF_INDEXED_1BIT
+#endif
+
+
 const lv_img_dsc_t sym_1 = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 5,
   .header.h = 6,
   .data_size = 14,
@@ -42,7 +49,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_2 uin
 };
 
 const lv_img_dsc_t sym_2 = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 5,
   .header.h = 6,
   .data_size = 14,
@@ -61,7 +68,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_3 uin
 };
 
 const lv_img_dsc_t sym_3 = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 5,
   .header.h = 6,
   .data_size = 14,
@@ -80,7 +87,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_4 uin
 };
 
 const lv_img_dsc_t sym_4 = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 5,
   .header.h = 6,
   .data_size = 14,
@@ -99,7 +106,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_5 uin
 };
 
 const lv_img_dsc_t sym_5 = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 5,
   .header.h = 6,
   .data_size = 14,
@@ -118,7 +125,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_OK ui
 };
 
 const lv_img_dsc_t sym_ok = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 5,
   .header.h = 5,
   .data_size = 13,
@@ -137,7 +144,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_NOK u
 };
 
 const lv_img_dsc_t sym_nok = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 5,
   .header.h = 5,
   .data_size = 13,
@@ -156,7 +163,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_OPEN 
 };
 
 const lv_img_dsc_t sym_open = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 5,
   .header.h = 5,
   .data_size = 13,
@@ -178,7 +185,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_BT ui
 };
 
 const lv_img_dsc_t sym_bt = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 9,
   .header.h = 14,
   .data_size = 36,
@@ -200,7 +207,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_USB u
 };
 
 const lv_img_dsc_t sym_usb = {
-  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.cf = ZMK_IMG_CF_I1,
   .header.w = 9,
   .header.h = 14,
   .data_size = 36,
