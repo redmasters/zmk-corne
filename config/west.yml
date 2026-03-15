@@ -11,15 +11,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: redmasters
-      url-base: https://github.com/redmasters
+    - name: mctechonology17
+      url-base: https://github.com/mctechonology17
 
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: zmk-dongle-display
-      remote: redmasters
+    - name: zmk-config
+      remote: mctechonology17
       revision: main
 
   self:
