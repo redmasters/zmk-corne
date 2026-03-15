@@ -8,16 +8,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: mctechonology17
-      url-base: https://github.com/mctechonology17
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
 
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
     - name: zmk-config
-      remote: mctechonology17
+      remote: mctechnology17
       revision: main
 
   self:
