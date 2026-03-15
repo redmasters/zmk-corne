@@ -4,9 +4,6 @@
 # Configuração mínima usando apenas o ZMK oficial
 
 manifest:
-  defaults:
-    remote: zmkfirmware
-    revision: v0.3
 
   remotes:
     - name: zmkfirmware
@@ -17,6 +14,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
+      revision: v0.3
       import: app/west.yml
     - name: zmk-config
       remote: mctechonology17
