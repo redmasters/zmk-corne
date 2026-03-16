@@ -4,20 +4,19 @@
 # Configuração mínima usando apenas o ZMK oficial
 
 manifest:
-
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
+    - name: redmasters
+      url-base: https://github.com/redmasters
 
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: zmk-config
-      remote: mctechnology17
+    - name: zmk-config-dongle
+      remote: redmasters
       revision: main
 
   self:
