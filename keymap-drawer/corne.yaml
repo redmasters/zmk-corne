@@ -36,7 +36,7 @@ layers:
   - ','
   - .
   - /
-  - {t: ▽, type: trans}
+  - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
   - {t: ESC, h: fn}
   - {t: LEFT GUI, h: nav}
   - TAB
