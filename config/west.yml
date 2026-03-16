@@ -15,7 +15,7 @@ manifest:
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: zmk-config-dongle
+    - name: zmk-dongle-display
       remote: redmasters
       revision: main
 
