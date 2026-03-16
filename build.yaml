@@ -7,7 +7,7 @@
 include:
 # Dongle com display OLED
   - board: nice_nano_v2
-    shield: corne_dongle_pro_micro dongle_display
+    shield: corne_dongle dongle_display
     snippet: common-config studio-rpc-usb-uart
     artifact-name: corne_dongle
 
