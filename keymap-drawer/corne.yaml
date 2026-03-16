@@ -1,0 +1,354 @@
+layout: {zmk_keyboard: corne}
+layers:
+  base:
+  - {t: ▽, type: trans}
+  - Q
+  - {t: W, h: Ctl+F2}
+  - E
+  - R
+  - T
+  - {t: Y, h: Sft+F6}
+  - U
+  - I
+  - {t: O, h: Sft+F9}
+  - P
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - A
+  - {t: S, h: LEFT SHIFT}
+  - {t: D, h: LEFT CONTROL}
+  - {t: F, h: LEFT ALT}
+  - {t: G, h: LEFT GUI}
+  - {t: H, h: LEFT GUI}
+  - {t: J, h: LEFT ALT}
+  - {t: K, h: LEFT CONTROL}
+  - {t: L, h: LEFT SHIFT}
+  - ;
+  - ''''
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: ▽, type: trans}
+  - {t: ESC, h: fn}
+  - {t: LEFT GUI, h: nav}
+  - TAB
+  - RET
+  - {t: SPACE, h: num}
+  - BACKSPACE
+  nav:
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - {t: (, h: '*'}
+  - )
+  - {t: KP MINUS, h: _}
+  - {t: +, h: '='}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: LEFT, h: HOME}
+  - DOWN
+  - UP
+  - RIGHT
+  - '['
+  - ']'
+  - Ctl+LEFT GUI
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - INSERT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - SPACE
+  - RET
+  - {t: ▽, type: trans}
+  - RALT
+  fn:
+  - {t: ▽, type: trans}
+  - F12
+  - F7
+  - F8
+  - F9
+  - PRINTSCREEN
+  - OUT TOG
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - BT CLR
+  - BT CLR ALL
+  - {t: ▽, type: trans}
+  - F11
+  - F4
+  - F5
+  - F6
+  - SCROLLLOCK
+  - Ctl+Gui+LEFT ARROW
+  - VOLUME DOWN
+  - VOLUME UP
+  - Gui+Ctl+RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F10
+  - F1
+  - F2
+  - F3
+  - PAUSE BREAK
+  - PRINTSCREEN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PAUSE
+  - PLAY PAUSE
+  - MUTE
+  num:
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '='
+  - BSPC
+  - LCTRL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - \
+  - '`'
+  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: game, h: toggle}
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - Sft+|
+  - Sft+~
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  game:
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: ▽, type: trans}
+  - LSHFT
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - LCTRL
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: ▽, type: trans}
+  - {t: ESC, h: fngame}
+  - SPACE
+  - TAB
+  - RET
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  fngame:
+  - {t: ▽, type: trans}
+  - F12
+  - F7
+  - F8
+  - F9
+  - PRINTSCREEN
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - {t: ▽, type: trans}
+  - {t: game, h: toggle}
+  - {t: ▽, type: trans}
+  - F11
+  - F4
+  - F5
+  - F6
+  - SCROLLLOCK
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F10
+  - F1
+  - F2
+  - F3
+  - PAUSE BREAK
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - {t: ▽, type: trans}
+  dota:
+  - {t: ▽, type: trans}
+  - Q
+  - {t: W, h: Ctl+F2}
+  - E
+  - R
+  - T
+  - {t: Y, h: Sft+F6}
+  - U
+  - I
+  - {t: O, h: Sft+F9}
+  - P
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - A
+  - S
+  - {t: D, h: LEFT CONTROL}
+  - {t: F, h: LEFT ALT}
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ENTER
+  - LEFT SHIFT
+  - {t: SPACE, h: base}
+  - TAB
+  - RET
+  - {t: SPACE, h: F4}
+  - F8
+  mouse:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp RCLK'
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+combos:
+- p: [21, 22]
+  k: {t: dota, h: toggle}
+  l: [game, dota]
+- p: [26, 27]
+  k: Ctl+INS
+- p: [27, 28]
+  k: Sft+INS

@@ -62,7 +62,7 @@
         dota {
             bindings = <&tog 6>;
             key-positions = <21 22>;
-            layers = <4>;
+            layers = <4 6>;
         };
 
         copy {
@@ -144,22 +144,21 @@
         game {
             display-name = "game";
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E  &kp R      &kp T      &kp Y    &kp U   &kp I      &kp O    &kp P     &trans
-&kp LSHFT  &kp A  &kp S  &kp D  &kp F      &kp G      &kp H    &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp B      &kp N    &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                         &mo 5  &kp SPACE  &kp TAB    &kp RET  &trans  &trans
+&kp ESC    &kp Q  &kp W  &kp E      &kp R      &kp T      &kp Y    &kp U   &kp I      &kp O    &kp P     &trans
+&kp LSHFT  &kp A  &kp S  &kp D      &kp F      &kp G      &kp H    &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C      &kp V      &kp B      &kp N    &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                         &lt 5 ESC  &kp SPACE  &kp TAB    &kp RET  &trans  &trans
             >;
         };
 
-        fungame {
+        fngame {
+            display-name = "fngame";
             bindings = <
-&kp F12    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6     &kp N7  &kp N8  &kp N9  &kp N0        &tog 4
-&kp F11    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp BSLH      &kp GRAVE
-&kp LSHFT  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &trans     &kp N1  &kp N2  &kp N3  &kp LS(PIPE)  &kp LS(TILDE)
-                           &trans  &trans  &trans     &trans     &trans  &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &kp N7        &kp N8  &kp N9  &trans  &tog 4
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &kp N4        &kp N5  &kp N6  &trans  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &kp N0  &kp N1        &kp N2  &kp N3  &trans  &trans
+                         &trans  &trans  &trans             &trans  &kp NUMBER_0  &trans
             >;
-
-            label = "fngame";
         };
 
         dota {
@@ -168,7 +167,7 @@
 &trans  &kp Q  &mt RC(F2) W  &kp E                &kp R            &kp T      &mt LS(F6) Y  &kp U         &kp I      &mt LS(F9) O  &kp P     &trans
 &trans  &kp A  &kp S         &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G      &kp H         &kp J         &kp K      &kp L         &kp SEMI  &kp SQT
 &trans  &kp Z  &kp X         &kp C                &kp V            &kp B      &kp N         &kp M         &kp COMMA  &kp DOT       &kp FSLH  &kp ENTER
-                             &kp LEFT_SHIFT       &lt 5 SPACE      &kp TAB    &kp RET       &mt F4 SPACE  &kp F8
+                             &kp LEFT_SHIFT       &lt 0 SPACE      &kp TAB    &kp RET       &mt F4 SPACE  &kp F8
             >;
         };
 
