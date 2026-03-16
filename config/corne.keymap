@@ -102,7 +102,9 @@
         };
     };
 
-    keymap {
+    
+behaviors {};
+keymap {
         compatible = "zmk,keymap";
 
         base {
@@ -119,7 +121,7 @@
 &trans  &kp A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr LEFT_ALT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &kp SEMI  &kp SQT
 &trans  &kp Z  &kp X              &kp C                &kp V            &kp B              &kp N            &kp M            &kp COMMA            &kp DOT            &kp FSLH  &smart_shift
                                   &lt 2 ESC            &lt 1 LEFT_GUI   &kp TAB            &kp RET          &lt 3 SPACE      &bs_delete
-            >;
+>;
         };
 
         navigation {
@@ -136,7 +138,7 @@
 &trans            &trans    &trans  &trans    &trans      &trans         &mt_home HOME LEFT  &kp DOWN       &kp UP                         &kp RIGHT              &kp LEFT_BRACKET    &kp RIGHT_BRACKET
 &kp LC(LEFT_GUI)  &trans    &trans  &trans    &trans      &trans         &kp INSERT          &trans         &trans                         &trans                 &trans              &trans
                                     &trans    &trans      &kp SPACE      &kp RET             &trans         &kp RALT
-            >;
+>;
         };
 
         function {
@@ -153,7 +155,7 @@
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &kp LC(LG(LEFT_ARROW))  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(LC(RIGHT))  &trans      &trans
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &kp PRINTSCREEN         &trans             &trans           &trans             &trans      &trans
                          &trans  &trans  &trans             &kp C_PAUSE             &kp K_PLAY_PAUSE   &kp K_MUTE
-            >;
+>;
         };
 
         numbers {
@@ -162,7 +164,7 @@
 &kp LCTRL  &trans  &trans  &trans  &trans  &trans    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp BSLH      &kp GRAVE
 &kp LSHFT  &trans  &trans  &trans  &trans  &tog 4    &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp LS(PIPE)  &kp LS(TILDE)
                            &trans  &trans  &trans    &trans     &trans  &trans
-            >;
+>;
 
             label = "num";
         };
@@ -174,7 +176,7 @@
 &kp LSHFT  &kp A  &kp S  &kp D      &kp F      &kp G      &kp H    &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z  &kp X  &kp C      &kp V      &kp B      &kp N    &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
                          &lt 5 ESC  &kp SPACE  &kp TAB    &kp RET  &trans  &trans
-            >;
+>;
         };
 
         fngame {
@@ -184,17 +186,17 @@
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &kp N4        &kp N5  &kp N6  &trans  &trans
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &kp N0  &kp N1        &kp N2  &kp N3  &trans  &trans
                          &trans  &trans  &trans             &trans  &kp NUMBER_0  &trans
-            >;
+>;
         };
 
         dota {
             display-name = "dota";
             bindings = <
-&trans  &kp Q  &mt RC(F2) W  &kp E                &kp R            &kp T      &mt LS(F6) Y  &kp U         &kp I      &mt LS(F9) O  &kp P     &trans
-&trans  &kp A  &kp S         &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G      &kp H         &kp J         &kp K      &kp L         &kp SEMI  &kp SQT
-&trans  &kp Z  &kp X         &kp C                &kp V            &kp B      &kp N         &kp M         &kp COMMA  &kp DOT       &kp FSLH  &kp ENTER
-                             &kp LEFT_SHIFT       &lt 0 SPACE      &kp TAB    &kp RET       &mt F4 SPACE  &kp F8
-            >;
+&trans  &kp Q  &kp W  &kp E                &kp R            &kp T      &kp Y    &kp U         &kp I      &kp O    &kp P     &trans
+&trans  &kp A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G      &kp H    &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
+&trans  &kp Z  &kp X  &kp C                &kp V            &kp B      &kp N    &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+                      &kp LEFT_SHIFT       &lt 0 SPACE      &kp TAB    &kp RET  &mt F4 SPACE  &kp F8
+>;
         };
 
         mouse {
@@ -203,7 +205,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
                         &trans  &trans  &trans    &mkp RCLK       &mkp LCLK       &mkp MCLK
-            >;
+>;
         };
     };
 };
