@@ -137,6 +137,8 @@
 &kp LSHFT  &trans  &trans  &trans  &trans  &tog 4    &kp NUMBER_0  &kp N1  &kp N2  &kp N3  &kp LS(PIPE)  &kp LS(TILDE)
                            &trans  &trans  &trans    &trans        &trans  &trans
             >;
+
+            label = "num";
         };
 
         game {
@@ -156,6 +158,8 @@
 &kp LSHFT  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &trans     &kp N1  &kp N2  &kp N3  &kp LS(PIPE)  &kp LS(TILDE)
                            &trans  &trans  &trans     &trans     &trans  &trans
             >;
+
+            label = "fngame";
         };
 
         dota {
