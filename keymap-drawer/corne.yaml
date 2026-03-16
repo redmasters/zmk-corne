@@ -42,7 +42,7 @@ layers:
   - TAB
   - RET
   - {t: SPACE, h: num}
-  - BACKSPACE
+  - {t: BACKSPACE, s: DEL}
   nav:
   - '~'
   - '!'
