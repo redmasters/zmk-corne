@@ -140,7 +140,7 @@ layers:
   - '7'
   - '8'
   - '9'
-  - '='
+  - '0'
   - BSPC
   - LCTRL
   - {t: ▽, type: trans}
@@ -160,7 +160,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: game, h: toggle}
-  - '0'
+  - '='
   - '1'
   - '2'
   - '3'
