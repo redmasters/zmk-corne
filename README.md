@@ -5,7 +5,10 @@
 - Teclas MX;
 - Brown switches;
 -  KLP Lame keycaps
+### Keymap:
+Heavily based on miryoku layout, with some changes to fit my needs. I also added a layer for mouse keys and media controls, as well as a layer for symbols and numbers.
 
+![keymap](keymap-drawer/corne.svg)
 ![corneMXSep25](https://github.com/user-attachments/assets/7398610f-8dae-4a55-93a2-0f7db8255be1)
 ![dongle](https://github.com/user-attachments/assets/d0380472-0ed7-4239-918c-ba612be7c63c)
 
