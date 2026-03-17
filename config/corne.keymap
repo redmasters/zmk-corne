@@ -78,6 +78,18 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mt_end: mt_end {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_END";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <220>;
+            hold-trigger-key-positions = <0>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -92,11 +104,26 @@
         copy {
             bindings = <&kp LC(INS)>;
             key-positions = <26 27>;
+            layers = <0 3 4 6>;
         };
 
         paste {
             bindings = <&kp LS(INS)>;
             key-positions = <27 28>;
+            layers = <0 3 4 6>;
+        };
+
+        mouse {
+            bindings = <&tog 7>;
+            key-positions = <4 2>;
+            layers = <0 4 6>;
+        };
+
+        alt+insert {
+            bindings = <&kp LA(INSERT)>;
+            key-positions = <15 16>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
         };
     };
 
@@ -131,9 +158,9 @@
 
             bindings = <
 &kp TILDE         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET           &kp AMPERSAND  &mt ASTERISK LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt UNDER KP_MINUS  &mt EQUAL PLUS
-&trans            &trans    &trans  &trans    &trans      &trans         &mt_home HOME LEFT  &kp DOWN       &kp UP                         &kp RIGHT              &kp LEFT_BRACKET    &kp RIGHT_BRACKET
-&kp LC(LEFT_GUI)  &trans    &trans  &trans    &trans      &trans         &kp INSERT          &trans         &trans                         &trans                 &trans              &trans
-                                    &trans    &trans      &kp SPACE      &kp RET             &trans         &kp RALT
+&trans            &trans    &trans  &trans    &trans      &trans         &mt_home HOME LEFT  &kp DOWN       &kp UP                         &mt_end END RIGHT      &kp LEFT_BRACKET    &kp RIGHT_BRACKET
+&kp LC(LEFT_GUI)  &trans    &trans  &trans    &trans      &trans         &kp HOME            &kp PAGE_DOWN  &kp PAGE_UP                    &kp END                &kp INSERT          &kp CAPSLOCK
+                                    &trans    &trans      &trans         &kp RET             &trans         &kp RALT
             >;
         };
 
@@ -147,9 +174,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &out OUT_TOG            &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_CLR  &bt BT_CLR_ALL
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &kp LC(LG(LEFT_ARROW))  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(LC(RIGHT))  &trans      &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &kp PRINTSCREEN         &trans             &trans           &trans             &trans      &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &out OUT_TOG            &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_CLR         &bt BT_CLR_ALL
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &kp LC(LG(LEFT_ARROW))  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(LC(RIGHT))  &kp K_APPLICATION  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &kp PRINTSCREEN         &trans             &trans           &trans             &trans             &trans
                          &trans  &trans  &trans             &kp C_PAUSE             &kp K_PLAY_PAUSE   &kp K_MUTE
             >;
         };

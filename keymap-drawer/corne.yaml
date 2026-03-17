@@ -65,7 +65,7 @@ layers:
   - {t: LEFT, h: HOME}
   - DOWN
   - UP
-  - RIGHT
+  - {t: RIGHT, h: END}
   - '['
   - ']'
   - Ctl+LEFT GUI
@@ -74,15 +74,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - HOME
+  - PAGE DOWN
+  - PAGE UP
+  - END
   - INSERT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - CAPSLOCK
   - {t: ▽, type: trans}
   - {type: held}
-  - SPACE
+  - {t: ▽, type: trans}
   - RET
   - {t: ▽, type: trans}
   - RALT
@@ -109,7 +109,7 @@ layers:
   - VOLUME DOWN
   - VOLUME UP
   - Gui+Ctl+RIGHT
-  - {t: ▽, type: trans}
+  - APPLICATION
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F10
@@ -350,5 +350,13 @@ combos:
   l: [game, dota]
 - p: [26, 27]
   k: Ctl+INS
+  l: [base, num, game, dota]
 - p: [27, 28]
   k: Sft+INS
+  l: [base, num, game, dota]
+- p: [4, 2]
+  k: {t: mouse, h: toggle}
+  l: [base, game, dota]
+- p: [15, 16]
+  k: Alt+INSERT
+  l: [base]
