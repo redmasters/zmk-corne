@@ -188,10 +188,10 @@
         dota {
             display-name = "dota";
             bindings = <
-&trans  &kp Q  &mt RC(F2) W  &kp E                &kp R            &kp T      &mt LS(F6) Y  &kp U         &kp I      &mt LS(F9) O  &kp P     &trans
-&trans  &kp A  &kp S         &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G      &kp H         &kp J         &kp K      &kp L         &kp SEMI  &kp SQT
-&trans  &kp Z  &kp X         &kp C                &kp V            &kp B      &kp N         &kp M         &kp COMMA  &kp DOT       &kp FSLH  &kp ENTER
-                             &kp LEFT_SHIFT       &lt 0 SPACE      &kp TAB    &kp RET       &mt F4 SPACE  &kp F8
+&trans  &kp Q  &kp W  &kp E                &kp R            &kp T      &kp Y    &kp U         &kp I      &kp O    &kp P     &trans
+&trans  &kp A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G      &kp H    &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
+&trans  &kp Z  &kp X  &kp C                &kp V            &kp B      &kp N    &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+                      &kp LEFT_SHIFT       &lt 0 SPACE      &kp TAB    &kp RET  &mt F4 SPACE  &kp F8
             >;
         };
 

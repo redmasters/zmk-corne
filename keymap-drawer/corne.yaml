@@ -261,14 +261,14 @@ layers:
   dota:
   - {t: ▽, type: trans}
   - Q
-  - {t: W, h: Ctl+F2}
+  - W
   - E
   - R
   - T
-  - {t: Y, h: Sft+F6}
+  - Y
   - U
   - I
-  - {t: O, h: Sft+F9}
+  - O
   - P
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
