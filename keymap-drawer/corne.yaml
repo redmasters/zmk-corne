@@ -142,7 +142,7 @@ layers:
   - '9'
   - '0'
   - BSPC
-  - LCTRL
+  - LSHFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -154,7 +154,7 @@ layers:
   - '6'
   - \
   - '`'
-  - LSHFT
+  - LCTRL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
