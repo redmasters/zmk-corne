@@ -296,7 +296,7 @@ layers:
   - /
   - ENTER
   - LEFT SHIFT
-  - {t: SPACE, h: base}
+  - {t: SPACE, h: fngame}
   - TAB
   - RET
   - {t: SPACE, h: F4}
