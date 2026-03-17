@@ -9,7 +9,7 @@
 //#define CONFIG_WIRELESS
 
 /* source the main keymap */
-#include "keymap/keymap.dtsi"
+#include "base.keymap"
 
 /* use 5-column layout for Zen */
 //ZMK_APPLY_MATRIX_TRANSFORM(five_column_transform)
