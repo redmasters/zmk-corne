@@ -213,17 +213,17 @@
 &trans  &kp Q  &kp W  &kp E                &kp R            &kp T      &kp Y    &kp U         &kp I      &kp O    &kp P     &kp BACKSPACE
 &trans  &kp A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G      &kp H    &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
 &trans  &kp Z  &kp X  &kp C                &kp V            &kp B      &kp N    &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                      &trans               &trans           &kp TAB    &kp RET  &mt F4 SPACE  &kp F8
+                      &kp LEFT_SHIFT       &lt 6 SPACE      &kp TAB    &kp RET  &mt F4 SPACE  &kp F8
             >;
         };
 
         fngame {
             display-name = "fngame";
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &kp N7        &kp N8  &kp N9  &trans  &tog 4
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &kp N4        &kp N5  &kp N6  &trans  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &kp N0  &kp N1        &kp N2  &kp N3  &trans  &trans
-                         &trans  &trans  &trans             &trans  &kp NUMBER_0  &trans
+&kp F12  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8  &kp N9  &kp N0  &tog 4
+&kp F11  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &trans  &kp N4        &kp N5  &kp N6  &trans  &trans
+&trans   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp N0  &kp N1        &kp N2  &kp N3  &trans  &trans
+                         &trans  &trans  &trans     &trans  &kp NUMBER_0  &trans
             >;
         };
 

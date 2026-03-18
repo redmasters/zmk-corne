@@ -252,31 +252,31 @@ layers:
   - .
   - /
   - ENTER
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT SHIFT
+  - {t: SPACE, h: fngame}
   - TAB
   - RET
   - {t: SPACE, h: F4}
   - F8
   fngame:
-  - {t: ▽, type: trans}
   - F12
-  - F7
-  - F8
-  - F9
-  - PRINTSCREEN
-  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
   - '7'
   - '8'
   - '9'
-  - {t: ▽, type: trans}
+  - '0'
   - {t: game, h: toggle}
-  - {t: ▽, type: trans}
   - F11
-  - F4
-  - F5
   - F6
-  - SCROLLLOCK
+  - F7
+  - F8
+  - F9
+  - F10
   - {t: ▽, type: trans}
   - '4'
   - '5'
@@ -284,11 +284,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F10
   - F1
   - F2
   - F3
-  - PAUSE BREAK
+  - F4
+  - F5
   - '0'
   - '1'
   - '2'
