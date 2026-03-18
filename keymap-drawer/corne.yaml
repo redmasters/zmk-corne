@@ -346,7 +346,7 @@ layers:
   - '&mkp MCLK'
 combos:
 - p: [21, 22]
-  k: {t: mouse, h: toggle}
+  k: {t: dota, h: toggle}
   l: [game, mouse]
 - p: [26, 27]
   k: Ctl+INS

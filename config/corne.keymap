@@ -101,7 +101,7 @@
         compatible = "zmk,combos";
 
         dota {
-            bindings = <&tog 7>;
+            bindings = <&tog 5>;
             key-positions = <21 22>;
             layers = <4 7>;
         };

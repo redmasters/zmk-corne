@@ -1078,8 +1078,8 @@ path.combo {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="714" y="85" width="28" height="26" class="combo"/>
-<a href="#mouse">
-<text x="728" y="98" class="combo tap layer-activator">mouse</text>
+<a href="#dota">
+<text x="728" y="98" class="combo tap layer-activator">dota</text>
 </a><text x="728" y="109" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
@@ -1639,8 +1639,8 @@ path.combo {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="714" y="85" width="28" height="26" class="combo"/>
-<a href="#mouse">
-<text x="728" y="98" class="combo tap layer-activator">mouse</text>
+<a href="#dota">
+<text x="728" y="98" class="combo tap layer-activator">dota</text>
 </a><text x="728" y="109" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
