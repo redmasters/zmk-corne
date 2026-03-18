@@ -347,7 +347,7 @@ layers:
 combos:
 - p: [21, 22]
   k: {t: dota, h: toggle}
-  l: [game, mouse]
+  l: [game, dota]
 - p: [26, 27]
   k: Ctl+INS
   l: [base, num, game, mouse]
@@ -356,7 +356,7 @@ combos:
   l: [base, num, game, mouse]
 - p: [4, 2]
   k: {t: mouse, h: toggle}
-  l: [base, game, mouse, mouse]
+  l: [base, game]
 - p: [15, 16]
   k: Alt+INSERT
   l: [base]

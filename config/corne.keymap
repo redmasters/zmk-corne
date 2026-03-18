@@ -103,7 +103,7 @@
         dota {
             bindings = <&tog 5>;
             key-positions = <21 22>;
-            layers = <4 7>;
+            layers = <4 5>;
         };
 
         copy {
@@ -121,7 +121,7 @@
         mouse {
             bindings = <&tog 7>;
             key-positions = <4 2>;
-            layers = <0 4 7 7>;
+            layers = <0 4>;
         };
 
         alt+insert {
