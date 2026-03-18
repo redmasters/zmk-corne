@@ -38,7 +38,7 @@ layers:
   - /
   - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
   - {t: ESC, h: fn}
-  - '&td_gui_func_media'
+  - '&td_gui_nav_media'
   - {t: TAB, h: num}
   - {t: Ctl+ENTER, h: mouse}
   - {t: SPACE, h: num}
