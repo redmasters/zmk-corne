@@ -38,9 +38,9 @@ layers:
   - /
   - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
   - {t: ESC, h: fn}
-  - {t: LEFT GUI, h: nav}
+  - '&td_gui_func_media'
   - {t: TAB, h: num}
-  - RET
+  - {t: Ctl+ENTER, h: mouse}
   - {t: SPACE, h: num}
   - {t: BACKSPACE, s: DEL}
   nav:
@@ -81,42 +81,42 @@ layers:
   - INSERT
   - CAPSLOCK
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RET
   - {t: ▽, type: trans}
   - RALT
   fn:
   - {t: ▽, type: trans}
-  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F7
   - F8
   - F9
-  - PRINTSCREEN
-  - {t: ▽, type: trans}
-  - F7
-  - F8
-  - F9
   - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F11
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F4
   - F5
   - F6
-  - SCROLLLOCK
-  - {t: ▽, type: trans}
-  - F4
-  - F5
-  - F6
   - F11
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F10
-  - F1
-  - F2
-  - F3
-  - PAUSE BREAK
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - PRINTSCREEN
   - F1
   - F2
@@ -126,9 +126,9 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PAUSE
-  - PLAY PAUSE
-  - MUTE
+  - {t: ▽, type: trans}
+  - SPACE
+  - APPLICATION
   num:
   - '`'
   - '1'
@@ -144,34 +144,34 @@ layers:
   - BSPC
   - LSHFT
   - {t: ▽, type: trans}
+  - {t: LEFT SHIFT, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '-'
+  - '='
   - '4'
   - '5'
   - '6'
-  - \
-  - '`'
+  - '['
+  - ']'
   - LCTRL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: game, h: toggle}
-  - '='
+  - \
   - '1'
   - '2'
   - '3'
-  - Sft+|
-  - Sft+~
+  - ;
+  - /
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
+  - '-'
   - '0'
-  - {t: ▽, type: trans}
+  - .
   game:
   - ESC
   - Q
@@ -341,15 +341,58 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp LCLK'
+  - {t: '&mkp LCLK', type: held}
   - '&mkp RCLK'
   - '&mkp MCLK'
+  media:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - OUT TOG
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - BT CLR
+  - BT CLR ALL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PREVIOUS
+  - VOLUME UP
+  - VOLUME DOWN
+  - NEXT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - STOP
+  - PLAY PAUSE
+  - MUTE
 combos:
 - p: [21, 22]
   k: {t: dota, h: toggle}
   l: [game, dota]
 - p: [26, 27]
-  k: Ctl+INS
+  k: '&copy_cut'
   l: [base, num, game, mouse]
 - p: [27, 28]
   k: Sft+INS
