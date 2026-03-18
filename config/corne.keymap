@@ -101,27 +101,27 @@
         compatible = "zmk,combos";
 
         dota {
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
             key-positions = <21 22>;
-            layers = <4 6>;
+            layers = <4 7>;
         };
 
         copy {
             bindings = <&kp LC(INS)>;
             key-positions = <26 27>;
-            layers = <0 3 4 6>;
+            layers = <0 3 4 7>;
         };
 
         paste {
             bindings = <&kp LS(INS)>;
             key-positions = <27 28>;
-            layers = <0 3 4 6>;
+            layers = <0 3 4 7>;
         };
 
         mouse {
             bindings = <&tog 7>;
             key-positions = <4 2>;
-            layers = <0 4 6 7>;
+            layers = <0 4 7 7>;
         };
 
         alt+insert {
@@ -203,7 +203,17 @@
 &kp ESC    &kp Q  &kp W  &kp E      &kp R      &kp T      &kp Y    &kp U   &kp I      &kp O    &kp P     &trans
 &kp LSHFT  &kp A  &kp S  &kp D      &kp F      &kp G      &kp H    &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp Z  &kp X  &kp C      &kp V      &kp B      &kp N    &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                         &lt 5 ESC  &kp SPACE  &kp TAB    &kp RET  &trans  &trans
+                         &lt 6 ESC  &kp SPACE  &kp TAB    &kp RET  &trans  &trans
+            >;
+        };
+
+        dota {
+            display-name = "dota";
+            bindings = <
+&trans  &kp Q  &kp W  &kp E                &kp R            &kp T      &kp Y    &kp U         &kp I      &kp O    &kp P     &kp BACKSPACE
+&trans  &kp A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G      &kp H    &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
+&trans  &kp Z  &kp X  &kp C                &kp V            &kp B      &kp N    &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+                      &trans               &trans           &kp TAB    &kp RET  &mt F4 SPACE  &kp F8
             >;
         };
 
@@ -217,16 +227,6 @@
             >;
         };
 
-        dota {
-            display-name = "dota";
-            bindings = <
-&trans  &kp Q  &kp W  &kp E                &kp R            &kp T      &kp Y    &kp U         &kp I      &kp O    &kp P     &trans
-&trans  &kp A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &kp G      &kp H    &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
-&trans  &kp Z  &kp X  &kp C                &kp V            &kp B      &kp N    &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                      &kp LEFT_SHIFT       &mo 5            &kp TAB    &kp RET  &mt F4 SPACE  &kp F8
-            >;
-        };
-
         mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
@@ -234,6 +234,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
                         &trans  &trans  &trans    &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
+
+            label = "mouse";
         };
     };
 };

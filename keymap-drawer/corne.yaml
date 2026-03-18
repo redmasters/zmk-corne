@@ -215,6 +215,49 @@ layers:
   - RET
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  dota:
+  - {t: ▽, type: trans}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - BACKSPACE
+  - {t: ▽, type: trans}
+  - A
+  - S
+  - {t: D, h: LEFT CONTROL}
+  - {t: F, h: LEFT ALT}
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ENTER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - TAB
+  - RET
+  - {t: SPACE, h: F4}
+  - F8
   fngame:
   - {t: ▽, type: trans}
   - F12
@@ -258,49 +301,6 @@ layers:
   - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
-  dota:
-  - {t: ▽, type: trans}
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - A
-  - S
-  - {t: D, h: LEFT CONTROL}
-  - {t: F, h: LEFT ALT}
-  - G
-  - H
-  - J
-  - K
-  - L
-  - ;
-  - ''''
-  - {t: ▽, type: trans}
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - ENTER
-  - LEFT SHIFT
-  - fngame
-  - TAB
-  - RET
-  - {t: SPACE, h: F4}
-  - F8
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -346,17 +346,17 @@ layers:
   - '&mkp MCLK'
 combos:
 - p: [21, 22]
-  k: {t: dota, h: toggle}
-  l: [game, dota]
+  k: {t: mouse, h: toggle}
+  l: [game, mouse]
 - p: [26, 27]
   k: Ctl+INS
-  l: [base, num, game, dota]
+  l: [base, num, game, mouse]
 - p: [27, 28]
   k: Sft+INS
-  l: [base, num, game, dota]
+  l: [base, num, game, mouse]
 - p: [4, 2]
   k: {t: mouse, h: toggle}
-  l: [base, game, dota, mouse]
+  l: [base, game, mouse, mouse]
 - p: [15, 16]
   k: Alt+INSERT
   l: [base]
