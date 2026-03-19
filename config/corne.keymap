@@ -179,7 +179,7 @@
 
             bindings = <
 &kp TILDE         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET           &kp AMPERSAND  &mt ASTERISK LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt UNDER KP_MINUS  &mt EQUAL PLUS
-&trans            &trans    &trans  &trans    &trans      &trans         &mt_home HOME LEFT  &kp DOWN       &kp UP                         &mt_end END RIGHT      &kp LEFT_BRACKET    &kp RIGHT_BRACKET
+&kp LA(F4)        &trans    &trans  &trans    &trans      &trans         &mt_home HOME LEFT  &kp DOWN       &kp UP                         &mt_end END RIGHT      &kp LEFT_BRACKET    &kp RIGHT_BRACKET
 &kp LC(LEFT_GUI)  &trans    &trans  &trans    &trans      &trans         &kp HOME            &kp PAGE_DOWN  &kp PAGE_UP                    &kp END                &kp INSERT          &kp CAPSLOCK
                                     &trans    &trans      &trans         &kp RET             &trans         &kp RALT
             >;

@@ -56,7 +56,7 @@ layers:
   - )
   - {t: KP MINUS, h: _}
   - {t: +, h: '='}
-  - {t: ▽, type: trans}
+  - Alt+F4
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
