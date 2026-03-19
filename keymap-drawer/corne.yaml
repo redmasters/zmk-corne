@@ -40,7 +40,7 @@ layers:
   - {t: ESC, h: fn}
   - '&td_gui_nav_media'
   - {t: TAB, h: num}
-  - {t: Ctl+ENTER, h: mouse}
+  - {t: ENTER, h: mouse}
   - {t: SPACE, h: num}
   - {t: BACKSPACE, s: DEL}
   nav:

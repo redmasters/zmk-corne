@@ -164,7 +164,7 @@
 &trans  &kp Q  &mt RC(F2) W       &kp E                &kp R              &kp T              &mt LS(F6) Y     &kp U            &kp I                &mt LS(F9) O       &kp P     &trans
 &trans  &kp A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F    &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr LEFT_ALT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &kp SEMI  &kp SQT
 &trans  &kp Z  &kp X              &kp C                &kp V              &kp B              &kp N            &kp M            &kp COMMA            &kp DOT            &kp FSLH  &smart_shift
-                                  &lt 2 ESC            &td_gui_nav_media  &lt 3 TAB          &lt 7 LC(ENTER)  &lt 3 SPACE      &bs_delete
+                                  &lt 2 ESC            &td_gui_nav_media  &lt 3 TAB          &lt 7 ENTER      &lt 3 SPACE      &bs_delete
             >;
         };
 
