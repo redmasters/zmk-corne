@@ -40,7 +40,7 @@ layers:
   - {t: ESC, h: fn}
   - '&td_gui_nav_media'
   - {t: TAB, h: num}
-  - {t: ENTER, h: mouse}
+  - ENTER
   - {t: SPACE, h: num}
   - {t: BACKSPACE, s: DEL}
   nav:
@@ -341,7 +341,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '&mkp LCLK', type: held}
+  - '&mkp LCLK'
   - '&mkp RCLK'
   - '&mkp MCLK'
   media:
