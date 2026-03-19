@@ -139,7 +139,7 @@
         mouse {
             bindings = <&tog 7>;
             key-positions = <4 2>;
-            layers = <0 4>;
+            layers = <0 4 7>;
         };
 
         alt+insert {

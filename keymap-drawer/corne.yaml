@@ -399,7 +399,7 @@ combos:
   l: [base, num, game, mouse]
 - p: [4, 2]
   k: {t: mouse, h: toggle}
-  l: [base, game]
+  l: [base, game, mouse]
 - p: [15, 16]
   k: Alt+INSERT
   l: [base]
