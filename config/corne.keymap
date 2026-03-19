@@ -110,6 +110,8 @@
             label = "TD_GUI_NAV_MEDIA";
             #binding-cells = <0>;
             bindings = <&lt 1 LEFT_GUI>, <&mo 8>;
+
+            tapping-term-ms = <175>;
         };
     };
 
