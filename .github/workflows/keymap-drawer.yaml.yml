@@ -8,7 +8,7 @@ on:
   push: # automatically run on changes to following paths
     paths:
       - "config/*.keymap"
-      - "config/keymap/config_keymap-drawer.yaml"
+      - "config/config_keymap-drawer.yaml"
       - .github/workflows/keymap-drawer.yaml
 
 jobs:
