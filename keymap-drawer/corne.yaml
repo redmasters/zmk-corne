@@ -41,7 +41,7 @@ layers:
   - '&td_gui_nav_media'
   - {t: TAB, h: num}
   - ENTER
-  - {t: SPACE, h: num}
+  - '&lt SPACE'
   - {t: BACKSPACE, s: DEL}
   nav:
   - '~'
