@@ -215,19 +215,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans           &kp F7     &kp F8             &kp F9  &kp F12  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans           &kp F4     &kp F5             &kp F6  &kp F11  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PRINTSCREEN  &kp F1     &kp F2             &kp F3  &kp F10  &trans
-                        &trans  &trans  &trans    &trans           &kp SPACE  &kp K_APPLICATION
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F7  &kp F8     &kp F9             &kp F12  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F4  &kp F5     &kp F6             &kp F11  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F1  &kp F2     &kp F3             &kp F10  &kp PRINTSCREEN  &trans
+                        &trans  &trans  &trans    &trans  &kp SPACE  &kp K_APPLICATION
             >;
         };
 
         numbers {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2          &kp N3  &kp N4  &kp N5       &kp N6         &kp N7        &kp N8   &kp N9  &kp NUMBER_0      &kp BSPC
-&kp LSHFT  &trans  &sk LEFT_SHIFT  &trans  &trans  &trans       &kp EQUAL      &kp N4        &kp N5   &kp N6  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LCTRL  &trans  &trans          &trans  &trans  &tog GAME    &kp BACKSLASH  &kp N1        &kp N2   &kp N3  &kp SEMICOLON     &kp SLASH
-                                   &trans  &trans  &trans       &kp MINUS      &kp NUMBER_0  &kp DOT
+&trans     &trans  &trans          &trans  &trans  &trans       &kp N7     &kp N8        &kp N9   &kp LBKT   &kp RBKT   &kp BSPC
+&kp LSHFT  &trans  &sk LEFT_SHIFT  &trans  &trans  &trans       &kp N4     &kp N5        &kp N6   &kp EQUAL  &kp SEMI   &trans
+&kp LCTRL  &trans  &trans          &trans  &trans  &tog GAME    &kp N1     &kp N2        &kp N3   &kp BSLH   &kp GRAVE  &trans
+                                   &trans  &trans  &trans       &kp MINUS  &kp NUMBER_0  &kp DOT
             >;
 
             label = "num";
