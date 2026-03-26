@@ -28,3 +28,4 @@ include:
  # Reset settings para todas as boards
   - board: nice_nano_v2
     shield: settings_reset
+    artifact-name: 1settings_reset
