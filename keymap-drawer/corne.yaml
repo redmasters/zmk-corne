@@ -38,7 +38,7 @@ layers:
   - /
   - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
   - '&td_esc_fn_media'
-  - {t: LEFT GUI, h: fn}
+  - {t: LEFT GUI, h: nav}
   - {t: TAB, h: num}
   - ENTER
   - SPACE
@@ -81,7 +81,7 @@ layers:
   - INSERT
   - CAPSLOCK
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - RET
   - {t: ▽, type: trans}
@@ -124,7 +124,7 @@ layers:
   - F10
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SPACE
