@@ -37,8 +37,8 @@ layers:
   - .
   - /
   - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
-  - {t: ESC, h: fn}
-  - '&td_gui_nav_media'
+  - '&td_esc_fn_media'
+  - {t: LEFT GUI, h: fn}
   - {t: TAB, h: num}
   - ENTER
   - SPACE
@@ -93,6 +93,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F7
   - F8
   - F9
@@ -116,15 +117,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - PRINTSCREEN
   - F1
   - F2
   - F3
   - F10
-  - PRINTSCREEN
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SPACE
@@ -136,35 +136,35 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '7'
   - '8'
   - '9'
   - '['
   - ']'
-  - BSPC
   - LSHFT
   - {t: ▽, type: trans}
   - {t: LEFT SHIFT, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '='
   - '4'
   - '5'
   - '6'
-  - '='
-  - ;
-  - {t: ▽, type: trans}
+  - '{'
+  - '}'
   - LCTRL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: game, h: toggle}
+  - \
   - '1'
   - '2'
   - '3'
-  - \
-  - '`'
+  - KP COMMA
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -364,8 +364,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PREVIOUS
-  - VOLUME UP
   - VOLUME DOWN
+  - VOLUME UP
   - NEXT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

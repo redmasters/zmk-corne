@@ -53,7 +53,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <QUICK_TAP_MS>;
+            quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
@@ -123,11 +123,11 @@
             bindings = <&kp LC(INS)>, <&kp LC(X)>;
         };
 
-        td_gui_nav_media: td_gui_nav_media {
+        td_esc_fn_media: td_esc_fn_media {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_GUI_NAV_MEDIA";
+            label = "TD_ESC_FN_MEDIA";
             #binding-cells = <0>;
-            bindings = <&lt 1 LEFT_GUI>, <&mo 8>;
+            bindings = <&lt 2 ESCAPE>, <&mo 8>;
 
             tapping-term-ms = <QUICK_TAP_MS>;
         };
@@ -152,6 +152,8 @@
             bindings = <&kp LS(INS)>;
             key-positions = <27 28>;
             layers = <BASE NUM GAME MOUSE>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
         };
 
         mouse {
@@ -181,10 +183,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q  &mt RC(F2) W       &kp E                &kp R              &kp T              &mt LS(F6) Y     &kp U            &kp I                &mt LS(F9) O       &kp P     &trans
-&trans  &kp A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F    &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr LEFT_ALT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &kp SEMI  &kp SQT
-&trans  &kp Z  &kp X              &kp C                &kp V              &kp B              &kp N            &kp M            &kp COMMA            &kp DOT            &kp FSLH  &smart_shift
-                                  &lt FUN ESC          &td_gui_nav_media  &lt NUM TAB        &kp ENTER        &kp SPACE        &bs_delete
+&trans  &kp Q  &mt RC(F2) W       &kp E                &kp R            &kp T              &mt LS(F6) Y     &kp U            &kp I                &mt LS(F9) O       &kp P     &trans
+&trans  &kp A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr LEFT_ALT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &kp SEMI  &kp SQT
+&trans  &kp Z  &kp X              &kp C                &kp V            &kp B              &kp N            &kp M            &kp COMMA            &kp DOT            &kp FSLH  &smart_shift
+                                  &td_esc_fn_media     &lt 2 LEFT_GUI   &lt NUM TAB        &kp ENTER        &kp SPACE        &bs_delete
             >;
         };
 
@@ -215,19 +217,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp F7  &kp F8     &kp F9             &kp F12  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp F4  &kp F5     &kp F6             &kp F11  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp F1  &kp F2     &kp F3             &kp F10  &kp PRINTSCREEN  &trans
-                        &trans  &trans  &trans    &trans  &kp SPACE  &kp K_APPLICATION
+&trans  &trans  &trans  &trans  &trans  &trans    &trans           &kp F7     &kp F8             &kp F9  &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans           &kp F4     &kp F5             &kp F6  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PRINTSCREEN  &kp F1     &kp F2             &kp F3  &kp F10  &trans
+                        &trans  &trans  &trans    &trans           &kp SPACE  &kp K_APPLICATION
             >;
         };
 
         numbers {
             bindings = <
-&trans     &trans  &trans          &trans  &trans  &trans       &kp N7     &kp N8        &kp N9   &kp LBKT   &kp RBKT   &kp BSPC
-&kp LSHFT  &trans  &sk LEFT_SHIFT  &trans  &trans  &trans       &kp N4     &kp N5        &kp N6   &kp EQUAL  &kp SEMI   &trans
-&kp LCTRL  &trans  &trans          &trans  &trans  &tog GAME    &kp N1     &kp N2        &kp N3   &kp BSLH   &kp GRAVE  &trans
-                                   &trans  &trans  &trans       &kp MINUS  &kp NUMBER_0  &kp DOT
+&trans     &trans  &trans          &trans  &trans  &trans       &trans         &kp N7        &kp N8   &kp N9  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LSHFT  &trans  &sk LEFT_SHIFT  &trans  &trans  &trans       &kp EQUAL      &kp N4        &kp N5   &kp N6  &kp LEFT_BRACE    &kp RIGHT_BRACE
+&kp LCTRL  &trans  &trans          &trans  &trans  &tog GAME    &kp BACKSLASH  &kp N1        &kp N2   &kp N3  &kp KP_COMMA      &trans
+                                   &trans  &trans  &trans       &kp MINUS      &kp NUMBER_0  &kp DOT
             >;
 
             label = "num";
@@ -276,10 +278,10 @@
 
         media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &out OUT_TOG    &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL
-&trans  &trans  &trans  &trans  &trans  &trans    &kp K_PREVIOUS  &kp C_VOLUME_UP   &kp C_VOLUME_DOWN  &kp K_NEXT    &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans            &trans             &trans        &trans      &trans
-                        &trans  &trans  &trans    &kp K_STOP      &kp K_PLAY_PAUSE  &kp K_MUTE
+&trans  &trans  &trans  &trans  &trans  &trans    &out OUT_TOG    &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans    &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_NEXT    &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans             &trans           &trans        &trans      &trans
+                        &trans  &trans  &trans    &kp K_STOP      &kp K_PLAY_PAUSE   &kp K_MUTE
             >;
 
             label = "media";
