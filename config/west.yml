@@ -17,7 +17,7 @@ manifest:
       import: app/west.yml
     - name: zmk-dongle-display
       remote: redmasters
-      revision: main
+      revision: feature/sync-fork
 
   self:
     path: config
