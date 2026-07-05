@@ -7,7 +7,7 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: redmasetrs
+    - name: redmasters
       url-base: https://github.com/redmasters
 
   projects:
