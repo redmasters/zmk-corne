@@ -127,7 +127,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_ESC_FN_MEDIA";
             #binding-cells = <0>;
-            bindings = <&lt 2 ESCAPE>, <&mo 8>;
+            bindings = <&lt FUN ESCAPE>, <&mo MEDIA>;
 
             tapping-term-ms = <QUICK_TAP_MS>;
         };
@@ -157,7 +157,7 @@
         };
 
         mouse {
-            bindings = <&tog 7>;
+            bindings = <&tog MOUSE>;
             key-positions = <4 2>;
             layers = <BASE GAME MOUSE>;
         };
@@ -186,7 +186,7 @@
 &trans  &kp Q  &mt RC(F2) W       &kp E                &kp R            &kp T              &mt LS(F6) Y     &kp U            &kp I                &mt LS(F9) O       &kp P     &trans
 &trans  &kp A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr LEFT_ALT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &kp SEMI  &kp SQT
 &trans  &kp Z  &kp X              &kp C                &kp V            &kp B              &kp N            &kp M            &kp COMMA            &kp DOT            &kp FSLH  &smart_shift
-                                  &td_esc_fn_media     &lt 1 LEFT_GUI   &lt NUM TAB        &kp ENTER        &kp SPACE        &bs_delete
+                                  &td_esc_fn_media     &lt NAV LEFT_GUI   &lt NUM TAB        &kp ENTER        &kp SPACE        &bs_delete
             >;
         };
 
@@ -225,6 +225,7 @@
         };
 
         numbers {
+            display-name = "num";
             bindings = <
 &trans     &trans  &trans          &trans  &trans  &trans       &trans         &kp N7        &kp N8   &kp N9  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp LSHFT  &trans  &sk LEFT_SHIFT  &trans  &trans  &trans       &kp EQUAL      &kp N4        &kp N5   &kp N6  &kp LEFT_BRACE    &kp RIGHT_BRACE
@@ -232,7 +233,6 @@
                                    &trans  &trans  &trans       &kp MINUS      &kp NUMBER_0  &kp DOT
             >;
 
-            label = "num";
         };
 
         game {
@@ -251,7 +251,7 @@
 &trans  &kp Q  &kp W  &kp E                &kp R             &kp T      &kp Y    &kp U         &kp I      &kp O    &kp P     &kp BACKSPACE
 &trans  &kp A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_ALT F   &kp G      &kp H    &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
 &trans  &kp Z  &kp X  &kp C                &kp V             &kp B      &kp N    &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                      &kp LEFT_SHIFT       &lt FNGAME SPACE  &kp TAB    &kp RET  &mt F4 SPACE  &kp F8
+                      &kp LEFT_SHIFT       &lt FNGAME SPACE  &kp TAB    &kp RET  &kp SPACE  &kp F8
             >;
         };
 
@@ -266,6 +266,7 @@
         };
 
         mouse {
+            display-name = "mouse";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
@@ -273,18 +274,17 @@
                         &trans  &trans  &trans    &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
 
-            label = "mouse";
         };
 
         media {
+            display-name = "media";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &out OUT_TOG    &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL
-&trans  &trans  &trans  &trans  &trans  &trans    &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_NEXT    &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans             &trans           &trans        &trans      &trans
-                        &trans  &trans  &trans    &kp K_STOP      &kp K_PLAY_PAUSE   &kp K_MUTE
+&trans  &trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4    &out OUT_TOG    &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans        &trans          &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_NEXT    &trans      &trans
+&trans  &trans  &trans  &trans  &trans        &trans          &trans          &trans             &trans           &trans        &trans      &trans
+                        &trans  &trans        &trans          &kp K_STOP      &kp K_PLAY_PAUSE   &kp K_MUTE
             >;
 
-            label = "media";
         };
     };
 };
