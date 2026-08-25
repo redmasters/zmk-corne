@@ -22,6 +22,7 @@
 #define FNGAME 6
 #define MOUSE 7
 #define MEDIA 8
+#define SYS 9
 #define QUICK_TAP_MS 175
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35
 #define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29
@@ -42,6 +43,10 @@
 &sk {
     release-after-ms = <900>; // release-after 0.9s
     quick-release; // no double capitalizations
+};
+
+&soft_off {
+    hold-time-ms = <2000>;
 };
 
 / {
@@ -168,6 +173,22 @@
             require-prior-idle-ms = <150>;
             layers = <BASE>;
         };
+
+        sys_left {
+            bindings = <&tog SYS>;
+            key-positions = <0 12>;
+            layers = <BASE>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+        };
+
+        sys_right {
+            bindings = <&tog SYS>;
+            key-positions = <11 23>;
+            layers = <BASE>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+        };
     };
 
     keymap {
@@ -176,11 +197,10 @@
         base {
             display-name = "base";
 
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+            // |  ▽  |  Q  | W/C-F2 |  E  |  R  |  T  |   | Y/S-F6 |  U  |  I  | O/S-F9 |  P  |  ▽   |
+            // |  ▽  |  A  | S/SFT  |D/CTRL| F/ALT|G/GUI|   | H/GUI  |J/ALT|K/CTRL| L/SFT  |  ;  |  '   |
+            // |  ▽  |  Z  |   X    |  C  |  V  |  B  |   |   N    |  M  |  ,  |   .    |  /  |SFT/CW|
+            //                       |ESC/FN|GUI/NAV|TAB/NUM| | ENTER |SPACE|BSPC/DEL|
 
             bindings = <
 &trans  &kp Q  &mt RC(F2) W       &kp E                &kp R            &kp T              &mt LS(F6) Y     &kp U            &kp I                &mt LS(F9) O       &kp P     &trans
@@ -193,11 +213,10 @@
         navigation {
             display-name = "nav";
 
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  ~  |  !  |  @  |  #  |  $  |  %  |   |  ^   |  &  |  (/* |  )  |  -/_ |  +/= |
+            // |A-F4 |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |←/HOME|  ↓  |  ↑   |→/END|  [   |   ]  |
+            // |C-GUI|  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   | HOME |PGDN | PGUP | END  | INS  | CAPS |
+            //                    |  ▽  |  ▽  |  ▽  |   | ENTER|  ▽  | RALT |
 
             bindings = <
 &kp TILDE         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET           &kp AMPERSAND  &mt ASTERISK LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt UNDER KP_MINUS  &mt EQUAL PLUS
@@ -210,11 +229,10 @@
         function {
             display-name = "fn";
 
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  | F7 | F8 | F9 | F12|  ▽  |
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  | F4 | F5 | F6 | F11|  ▽  |
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |PSCRN| F1 | F2 | F3 | F10|  ▽  |
+            //                    |  ▽  |  ▽  |  ▽  |   |  ▽  |SPACE| APP |
 
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans           &kp F7     &kp F8             &kp F9  &kp F12  &trans
@@ -226,6 +244,10 @@
 
         numbers {
             display-name = "num";
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  7  |  8  |  9  |  [  |  ]  |
+            // | SFT |  ▽  |SK-SFT|  ▽  |  ▽  |  ▽  |   |  =  |  4  |  5  |  6  |  {  |  }  |
+            // |CTRL |  ▽  |  ▽  |  ▽  |  ▽  | GAME|   |  \  |  1  |  2  |  3  | KP, |  ▽  |
+            //                    |  ▽  |  ▽  |  ▽  |   |  -  |  0  |  .  |
             bindings = <
 &trans     &trans  &trans          &trans  &trans  &trans       &trans         &kp N7        &kp N8   &kp N9  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp LSHFT  &trans  &sk LEFT_SHIFT  &trans  &trans  &trans       &kp EQUAL      &kp N4        &kp N5   &kp N6  &kp LEFT_BRACE    &kp RIGHT_BRACE
@@ -237,6 +259,10 @@
 
         game {
             display-name = "game";
+            // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  ▽  |
+            // | SFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
+            // |CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |  ▽  |
+            //                    |ESC/FNG|SPACE| TAB |   |ENTER|  ▽  |  ▽  |
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E           &kp R      &kp T      &kp Y    &kp U   &kp I      &kp O    &kp P     &trans
 &kp LSHFT  &kp A  &kp S  &kp D           &kp F      &kp G      &kp H    &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
@@ -247,6 +273,10 @@
 
         dota {
             display-name = "dota";
+            // |  ▽  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |BSPC |
+            // |  ▽  |  A  |  S  |D/CTRL|F/ALT|  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
+            // |  ▽  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |ENTER|
+            //                    | SFT |SPC/FNG| TAB |   |ENTER|SPACE| F8  |
             bindings = <
 &trans  &kp Q  &kp W  &kp E                &kp R             &kp T      &kp Y    &kp U         &kp I      &kp O    &kp P     &kp BACKSPACE
 &trans  &kp A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_ALT F   &kp G      &kp H    &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
@@ -257,6 +287,10 @@
 
         fngame {
             display-name = "fngame";
+            // | F12 |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | GAME|
+            // | F11 | F6  | F7  | F8  | F9  | F10 |   |  ▽  |  4  |  5  |  6  |  ▽  |  ▽  |
+            // |  ▽  | F1  | F2  | F3  | F4  | F5  |   |  0  |  1  |  2  |  3  |  ▽  |  ▽  |
+            //                    |  ▽  |  ▽  |  ▽  |   |  ▽  |  0  |  ▽  |
             bindings = <
 &kp F12  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8  &kp N9  &kp N0  &tog GAME
 &kp F11  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &trans  &kp N4        &kp N5  &kp N6  &trans  &trans
@@ -267,6 +301,10 @@
 
         mouse {
             display-name = "mouse";
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   | M←  | M↓  | M↑  | M→  |  ▽  |  ▽  |
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
+            //                    |  ▽  |  ▽  |  ▽  |   |LCLK |RCLK |MCLK |
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
@@ -278,13 +316,31 @@
 
         media {
             display-name = "media";
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   | OUT |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |PREV |VOL- |VOL+ |NEXT |  ▽  |  ▽  |
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
+            //                    |  ▽  |  ▽  |  ▽  |   |STOP |PLAY |MUTE |
             bindings = <
-&trans  &trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4    &out OUT_TOG    &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL
-&trans  &trans  &trans  &trans  &trans        &trans          &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_NEXT    &trans      &trans
-&trans  &trans  &trans  &trans  &trans        &trans          &trans          &trans             &trans           &trans        &trans      &trans
-                        &trans  &trans        &trans          &kp K_STOP      &kp K_PLAY_PAUSE   &kp K_MUTE
+&trans  &trans  &trans  &trans  &trans  &trans    &out OUT_TOG    &trans             &trans           &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_NEXT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans             &trans           &trans      &trans  &trans
+                        &trans  &trans  &trans    &kp K_STOP      &kp K_PLAY_PAUSE   &kp K_MUTE
             >;
 
+        };
+
+        system {
+            display-name = "sys";
+            // |BOOT-L|  ·  |  ·  |  ·  |  ·  | OUT |   | BT1 | BT2 | BT3 | BT4 | BT5 |BOOT-R|
+            // |RST-L |  ·  |  ·  |  ·  |  ·  |  ·  |   | CLR |CLR-A|  ·  |  ·  |  ·  |RST-R |
+            // |OFF-L |  ·  |  ·  |  ·  |  ·  |  ·  |   |  ·  |  ·  |  ·  |  ·  |  ·  |OFF-R |
+            //                    | EXIT|  ·  |  ·  |   |  ·  |  ·  | EXIT|
+            bindings = <
+&bootloader  &none  &none  &none  &none  &out OUT_TOG    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
+&sys_reset   &none  &none  &none  &none  &none           &bt BT_CLR    &bt BT_CLR_ALL  &none          &none          &none          &sys_reset
+&soft_off    &none  &none  &none  &none  &none           &none        &none           &none          &none          &none          &soft_off
+                              &tog SYS  &none  &none       &none        &none           &tog SYS
+            >;
         };
     };
 };
