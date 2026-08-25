@@ -1,8 +1,8 @@
+![corneMXSep25](docs/corne+dongle.jpg)
 ## Corne MX
-- 42 Teclas;
+- 42 MX Keys;
 - Wireless;
 - Dongle Mode;
-- Teclas MX;
 - Brown switches;
 -  KLP Lame keycaps
 
@@ -109,11 +109,9 @@ hold-tap strategy described by urob. Sticky Shift is intended for capitalization
 without timing a home-row chord, while Caps Word handles longer uppercase
 sequences.
 
-![keymap](keymap-drawer/corne.svg)
-![corneMXSep25](https://github.com/user-attachments/assets/7398610f-8dae-4a55-93a2-0f7db8255be1)
-![dongle](https://github.com/user-attachments/assets/d0380472-0ed7-4239-918c-ba612be7c63c)
-
 ### Layout:
+![keymap](keymap-drawer/corne.svg)
+
 
 ### Log
 https://gist.github.com/redmasters/c388c28b4bfd8b269c60cc647f9fd280
