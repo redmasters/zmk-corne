@@ -256,7 +256,7 @@ layers:
   - {t: SPACE, h: fngame}
   - TAB
   - RET
-  - {t: SPACE, h: F4}
+  - SPACE
   - F8
   fngame:
   - F12
@@ -352,11 +352,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - OUT TOG
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - BT CLR
-  - BT CLR ALL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -387,6 +387,49 @@ layers:
   - STOP
   - PLAY PAUSE
   - MUTE
+  sys:
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - OUT TOG
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - '&bootloader'
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - BT CLR ALL
+  - ''
+  - ''
+  - ''
+  - '&sys_reset'
+  - '&soft_off'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&soft_off'
+  - {t: sys, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: sys, h: toggle}
 combos:
 - p: [21, 22]
   k: {t: dota, h: toggle}
@@ -402,4 +445,10 @@ combos:
   l: [base, game, mouse]
 - p: [15, 16]
   k: Alt+INSERT
+  l: [base]
+- p: [0, 12]
+  k: {t: sys, h: toggle}
+  l: [base]
+- p: [11, 23]
+  k: {t: sys, h: toggle}
   l: [base]
