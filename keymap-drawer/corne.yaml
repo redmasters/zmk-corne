@@ -424,12 +424,12 @@ layers:
   - ''
   - ''
   - '&soft_off'
-  - {t: sys, h: toggle}
-  - ''
-  - ''
-  - ''
   - ''
   - {t: sys, h: toggle}
+  - ''
+  - ''
+  - {t: sys, h: toggle}
+  - ''
 combos:
 - p: [21, 22]
   k: {t: dota, h: toggle}
