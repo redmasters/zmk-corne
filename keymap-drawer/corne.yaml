@@ -54,7 +54,7 @@ layers:
   - '&'
   - {t: (, h: '*'}
   - )
-  - {t: KP MINUS, h: _}
+  - {t: '-', h: _}
   - {t: +, h: '='}
   - Alt+F4
   - {t: ▽, type: trans}
@@ -169,7 +169,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - '-'
+  - KP MINUS
   - '0'
   - .
   game:
@@ -452,3 +452,6 @@ combos:
 - p: [11, 23]
   k: {t: sys, h: toggle}
   l: [base]
+- p: [1, 2]
+  k: '&bootloader'
+  l: [sys]
