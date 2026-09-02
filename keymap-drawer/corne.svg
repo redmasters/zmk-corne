@@ -1998,6 +1998,10 @@ path.combo {
 <text x="0" y="0" class="key tap layer-activator">sys</text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
+<g class="combo combopos-0">
+<rect rx="6" ry="6" x="98" y="29" width="28" height="26" class="combo"/>
+<text x="112" y="42" class="combo tap"><tspan style="font-size: 64%">&amp;bootloader</tspan></text>
+</g>
 </g>
 </g>
 </svg>
