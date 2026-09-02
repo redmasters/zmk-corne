@@ -1,3 +1,4 @@
+![corneMXSep25](docs/corne+dongle.jpg)
 ## Corne MX
 
 [Read in English](../README.md)
@@ -122,8 +123,6 @@ sem precisar temporizar um acorde da home row, enquanto Caps Word atende a
 sequências maiores em maiúsculas.
 
 ![keymap](../keymap-drawer/corne.svg)
-![corneMXSep25](https://github.com/user-attachments/assets/7398610f-8dae-4a55-93a2-0f7db8255be1)
-![dongle](https://github.com/user-attachments/assets/d0380472-0ed7-4239-918c-ba612be7c63c)
 
 ### Layout
 
