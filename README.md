@@ -6,6 +6,34 @@
 - Brown switches;
 -  KLP Lame keycaps
 
+### Keymap:
+Heavily based on [Miryoku Layout](https://github.com/manna-harbour/miryoku), with some changes to fit my needs.
+
+The home-row modifiers and tap-hold tuning are also inspired by
+[urob's ZMK configuration](https://github.com/urob/zmk-config#timeless-homerow-mods).
+
+#### Shift states
+
+The keymap deliberately provides several Shift modes for different contexts:
+
+| State | Binding | Result |
+|---|---|---|
+| Home-row Shift | Hold `S` or `L` on Base | Holds `Left Shift` while another key is pressed. The positional hold-tap tuning favors normal same-hand rolls as taps. |
+| Sticky Shift | Tap the outer-right `smart_shift` key on Base | Applies `Left Shift` to the next key. It expires after 900 ms and releases immediately after use. |
+| Caps Word | Activate `smart_shift` while `Left Shift` is already held | Starts Caps Word for identifiers and consecutive capital letters. |
+| Number-layer Shift | Hold the left outer Shift key, or tap sticky Shift, on Num | Provides conventional or one-shot Shift while entering numbers and symbols. |
+| Game Shift | Hold the left outer key on Game | Uses a plain `Left Shift` without home-row tap-hold behavior. |
+| Dota Shift | Hold the left outer thumb on Dota | Uses a dedicated plain `Left Shift` suited to gameplay. |
+| Shift + Backspace | Hold either Shift and press the Base Backspace/Delete key | The mod-morph emits `Delete`; without Shift it emits `Backspace`. |
+
+The Base home-row Shift behaviors use the same 280 ms balanced, positional
+hold-tap strategy described by urob. Sticky Shift is intended for capitalization
+without timing a home-row chord, while Caps Word handles longer uppercase
+sequences.
+
+### Layout:
+![keymap](keymap-drawer/corne.svg)
+
 ## Flashing
 
 The dongle is the ZMK central and both keyboard halves are peripherals. Keymap
@@ -84,33 +112,8 @@ procedure is documented in
 > Always match `corne_dongle`, `corne_left`, and `corne_right` to the correct
 > Nice!Nano. Do not disconnect or overwrite the wrong mounted bootloader drive.
 
-### Keymap:
-Heavily based on [Miryoku Layout](https://github.com/manna-harbour/miryoku), with some changes to fit my needs.
 
-The home-row modifiers and tap-hold tuning are also inspired by
-[urob's ZMK configuration](https://github.com/urob/zmk-config#timeless-homerow-mods).
 
-#### Shift states
-
-The keymap deliberately provides several Shift modes for different contexts:
-
-| State | Binding | Result |
-|---|---|---|
-| Home-row Shift | Hold `S` or `L` on Base | Holds `Left Shift` while another key is pressed. The positional hold-tap tuning favors normal same-hand rolls as taps. |
-| Sticky Shift | Tap the outer-right `smart_shift` key on Base | Applies `Left Shift` to the next key. It expires after 900 ms and releases immediately after use. |
-| Caps Word | Activate `smart_shift` while `Left Shift` is already held | Starts Caps Word for identifiers and consecutive capital letters. |
-| Number-layer Shift | Hold the left outer Shift key, or tap sticky Shift, on Num | Provides conventional or one-shot Shift while entering numbers and symbols. |
-| Game Shift | Hold the left outer key on Game | Uses a plain `Left Shift` without home-row tap-hold behavior. |
-| Dota Shift | Hold the left outer thumb on Dota | Uses a dedicated plain `Left Shift` suited to gameplay. |
-| Shift + Backspace | Hold either Shift and press the Base Backspace/Delete key | The mod-morph emits `Delete`; without Shift it emits `Backspace`. |
-
-The Base home-row Shift behaviors use the same 280 ms balanced, positional
-hold-tap strategy described by urob. Sticky Shift is intended for capitalization
-without timing a home-row chord, while Caps Word handles longer uppercase
-sequences.
-
-### Layout:
-![keymap](keymap-drawer/corne.svg)
 
 
 ### Log
