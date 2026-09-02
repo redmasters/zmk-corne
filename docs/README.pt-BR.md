@@ -1,4 +1,4 @@
-![corneMXSep25](docs/corne+dongle.jpg)
+![corneMXSep25](corne+dongle.jpg)
 ## Corne MX
 
 [Read in English](../README.md)
@@ -122,9 +122,8 @@ Os behaviors de Shift na home row da Base usam a mesma estratégia posicional
 sem precisar temporizar um acorde da home row, enquanto Caps Word atende a
 sequências maiores em maiúsculas.
 
-![keymap](../keymap-drawer/corne.svg)
-
 ### Layout
+![keymap](../keymap-drawer/corne.svg)
 
 ### Log
 
