@@ -1,5 +1,8 @@
 ![corneMXSep25](docs/corne+dongle.jpg)
 ## Corne MX
+
+[Leia em Português (Brasil)](docs/README.pt-BR.md)
+
 - 42 MX Keys;
 - Wireless;
 - Dongle Mode;
