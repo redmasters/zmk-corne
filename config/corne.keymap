@@ -128,14 +128,6 @@
             bindings = <&kp LC(INS)>, <&kp LC(X)>;
         };
 
-        td_esc_fn_media: td_esc_fn_media {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_ESC_FN_MEDIA";
-            #binding-cells = <0>;
-            bindings = <&lt FUN ESCAPE>, <&mo MEDIA>;
-
-            tapping-term-ms = <QUICK_TAP_MS>;
-        };
     };
 
 combos {
@@ -209,13 +201,13 @@ bindings = <&bootloader>;
             // |  ▽  |  Q  | W/C-F2 |  E  |  R  |  T  |   | Y/S-F6 |  U  |  I  | O/S-F9 |  P  |  ▽   |
             // |  ▽  |  A  | S/SFT  |D/CTRL| F/ALT|G/GUI|   | H/GUI  |J/ALT|K/CTRL| L/SFT  |  ;  |  '   |
             // |  ▽  |  Z  |   X    |  C  |  V  |  B  |   |   N    |  M  |  ,  |   .    |  /  |SFT/CW|
-            //                       |ESC/FN|GUI/NAV|TAB/NUM| | ENTER |SPACE|BSPC/DEL|
+            //                       |ESC/FN|GUI/NAV|TAB/NUM| |ENT/MED|SPACE|BSPC/DEL|
 
             bindings = <
 &trans  &kp Q  &mt RC(F2) W       &kp E                &kp R            &kp T              &mt LS(F6) Y     &kp U            &kp I                &mt LS(F9) O       &kp P     &trans
 &trans  &kp A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr LEFT_ALT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &kp SEMI  &kp SQT
 &trans  &kp Z  &kp X              &kp C                &kp V            &kp B              &kp N            &kp M            &kp COMMA            &kp DOT            &kp FSLH  &smart_shift
-                                  &td_esc_fn_media     &lt NAV LEFT_GUI   &lt NUM TAB        &kp ENTER        &kp SPACE        &bs_delete
+                                  &lt FUN ESCAPE       &lt NAV LEFT_GUI   &lt NUM TAB        &lt MEDIA ENTER  &kp SPACE        &bs_delete
             >;
         };
 
@@ -325,15 +317,15 @@ bindings = <&bootloader>;
 
         media {
             display-name = "media";
-            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   | OUT |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
-            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |PREV |VOL- |VOL+ |NEXT |  ▽  |  ▽  |
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  | OUT |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
+            // |  ▽  |  ▽  |NEXT |VOL+ |VOL- |PREV |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
             // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
-            //                    |  ▽  |  ▽  |  ▽  |   |STOP |PLAY |MUTE |
+            //                    |MUTE |PLAY |STOP |   |  ▽  |  ▽  |  ▽  |
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &out OUT_TOG    &trans             &trans           &trans      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_NEXT  &trans  &trans
+&trans  &trans  &trans          &trans              &trans              &out OUT_TOG    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp K_NEXT      &kp C_VOLUME_UP     &kp C_VOLUME_DOWN   &kp K_PREVIOUS  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans             &trans           &trans      &trans  &trans
-                        &trans  &trans  &trans    &kp K_STOP      &kp K_PLAY_PAUSE   &kp K_MUTE
+                        &kp K_MUTE  &kp K_PLAY_PAUSE  &kp K_STOP    &trans  &trans  &trans
             >;
 
         };
