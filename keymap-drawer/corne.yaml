@@ -452,3 +452,6 @@ combos:
 - p: [11, 23]
   k: {t: sys, h: toggle}
   l: [base]
+- p: [1, 2]
+  k: '&bootloader'
+  l: [sys]
