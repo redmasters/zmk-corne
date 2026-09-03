@@ -330,10 +330,10 @@
             //                    |MUTE |PLAY |STOP |   |  ▽  |  ▽  |  ▽  |
 
             bindings = <
-&trans  &trans  &trans      &trans           &trans             &out OUT_TOG      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp K_NEXT  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp K_PREVIOUS    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans           &trans             &trans            &trans  &trans  &trans  &trans  &trans  &trans
-                            &kp K_MUTE       &kp K_PLAY_PAUSE   &kp K_STOP        &trans  &trans  &trans
+&trans  &trans  &trans          &trans             &trans             &out OUT_TOG      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp K_NEXT        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans             &trans             &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                                &kp K_MUTE         &kp K_PLAY_PAUSE   &kp K_STOP        &trans  &trans  &trans
             >;
         };
 
@@ -343,13 +343,13 @@
             // |BOOT-L| DBL | DBL |  ·  |  ·  | OUT |   | BT1 | BT2 | BT3 | BT4 | BT5 |BOOT-R|
             // |RST-L |  ·  |  ·  |  ·  |  ·  |  ·  |   | CLR |CLR-A|  ·  |  ·  |  ·  |RST-R |
             // |OFF   |  ·  |  ·  |  ·  |  ·  |  ·  |   |  ·  |  ·  |  ·  |  ·  |  ·  |OFF   |
-            //                    | EXIT|  ·  |  ·  |   |  ·  |  ·  | EXIT|
+            //                    | ·   | EXIT|  ·  |  |  ·  |  EXIT  |  ·  |
 
             bindings = <
-&bootloader  &none  &none  &none  &none   &out OUT_TOG    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
-&sys_reset   &none  &none  &none  &none   &none           &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none         &sys_reset
-&soft_off    &none  &none  &none  &none   &none           &none         &none           &none         &none         &none         &soft_off
-                           &none  &tog 9  &none           &none         &tog 9          &none
+&bootloader  &none  &none  &none  &none     &out OUT_TOG    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
+&sys_reset   &none  &none  &none  &none     &none           &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none         &sys_reset
+&soft_off    &none  &none  &none  &none     &none           &none         &none           &none         &none         &none         &soft_off
+                           &none  &tog SYS  &none           &none         &tog SYS          &none
             >;
         };
     };

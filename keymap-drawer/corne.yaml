@@ -359,10 +359,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - NEXT
-  - VOLUME UP
-  - VOLUME DOWN
   - PREVIOUS
+  - VOLUME DOWN
+  - VOLUME UP
+  - NEXT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
