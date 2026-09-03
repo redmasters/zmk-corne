@@ -235,7 +235,7 @@
             // |  ~  |  !  |  @  |  #  |  $  |  %  |   |  ^   |  &  |  (/* |  )  |  -/_ |  +/= |
             // |A-F4 |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |←/HOME|  ↓  |  ↑   |→/END|  [   |   ]  |
             // |C-GUI|  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   | HOME |PGDN | PGUP | END  | INS  | CAPS |
-            //                    |  ▽  |  ▽  |  ▽  |   | ENTER|  ▽  | RALT |
+            //                    |  ▽  |  ▽  |  ▽  |   | ENTER| DEL | BSPC |
 
             bindings = <
 &kp TILDE         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET           &kp AMPERSAND  &mt ASTERISK LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt UNDER MINUS   &mt EQUAL PLUS
@@ -264,7 +264,7 @@
         numbers {
             display-name = "num";
 
-            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  7  |  8  |  9  |  [  |  ]  |
+            // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  [  |  7  |  8  |  9  |  ]  |  ]  |
             // | SFT |  ▽  |SK-SFT|  ▽  |  ▽  |  ▽  |   |  =  |  4  |  5  |  6  |  {  |  }  |
             // |CTRL |  ▽  |  ▽  |  ▽  |  ▽  | GAME|   |  \  |  1  |  2  |  3  | KP, |  ▽  |
             //                    |  ▽  |  ▽  |  ▽  |   |  -  |  0  |  .  |

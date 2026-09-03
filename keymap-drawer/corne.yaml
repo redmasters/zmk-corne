@@ -3,26 +3,26 @@ layers:
   base:
   - {t: ▽, type: trans}
   - Q
-  - {t: W, h: Ctl+F2}
+  - {t: W, h: Ctrl+F2}
   - E
   - R
   - T
-  - {t: Y, h: Sft+F6}
+  - {t: Y, h: Shift+F6}
   - U
   - I
-  - {t: O, h: Sft+F9}
+  - {t: O, h: Shift+F9}
   - P
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - A
-  - {t: S, h: LEFT SHIFT}
-  - {t: D, h: LEFT CONTROL}
-  - {t: F, h: LEFT ALT}
-  - {t: G, h: LEFT GUI}
-  - {t: H, h: LEFT GUI}
-  - {t: J, h: LEFT ALT}
-  - {t: K, h: LEFT CONTROL}
-  - {t: L, h: LEFT SHIFT}
+  - {t: S, h: Shift}
+  - {t: D, h: Ctrl}
+  - {t: F, h: Alt}
+  - {t: G, h: Gui}
+  - {t: H, h: Gui}
+  - {t: J, h: Alt}
+  - {t: K, h: Ctrl}
+  - {t: L, h: Shift}
   - ;
   - ''''
   - {t: ▽, type: trans}
@@ -36,13 +36,13 @@ layers:
   - ','
   - .
   - /
-  - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
-  - {t: ESCAPE, h: fn}
-  - {t: LEFT GUI, h: nav}
-  - {t: TAB, h: num}
-  - {t: ENTER, h: media}
-  - SPACE
-  - {t: BACKSPACE, s: DEL}
+  - {t: Shift, h: sticky, s: '&caps_word'}
+  - {t: Esc, h: fn}
+  - {t: Gui, h: nav}
+  - {t: Tab, h: num}
+  - {t: Enter, h: media}
+  - Space
+  - {t: Bspc, s: Del}
   nav:
   - '~'
   - '!'
@@ -68,24 +68,24 @@ layers:
   - {t: RIGHT, h: END}
   - '['
   - ']'
-  - Ctl+LEFT GUI
+  - Ctrl+Gui
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - HOME
-  - PAGE DOWN
-  - PAGE UP
+  - PgDn
+  - PgUp
   - END
-  - INSERT
-  - CAPSLOCK
+  - Ins
+  - Caps Lock
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - RET
-  - DEL
-  - BACKSPACE
+  - Enter
+  - Del
+  - Bspc
   fn:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -117,7 +117,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PRINTSCREEN
+  - PrtSc
   - F1
   - F2
   - F3
@@ -126,9 +126,9 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - TAB
-  - SPACE
-  - APPLICATION
+  - Tab
+  - Space
+  - Menu
   num:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,9 +142,9 @@ layers:
   - '9'
   - ']'
   - ']'
-  - LSHFT
+  - Shift
   - {t: ▽, type: trans}
-  - {t: LEFT SHIFT, h: sticky}
+  - {t: Shift, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -154,7 +154,7 @@ layers:
   - '6'
   - ;
   - '}'
-  - LCTRL
+  - Ctrl
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -173,7 +173,7 @@ layers:
   - '0'
   - .
   game:
-  - ESC
+  - Esc
   - Q
   - W
   - E
@@ -185,7 +185,7 @@ layers:
   - O
   - P
   - {t: ▽, type: trans}
-  - LSHFT
+  - Shift
   - A
   - S
   - D
@@ -197,7 +197,7 @@ layers:
   - L
   - ;
   - ''''
-  - LCTRL
+  - Ctrl
   - Z
   - X
   - C
@@ -209,10 +209,10 @@ layers:
   - .
   - /
   - {t: ▽, type: trans}
-  - {t: ESC, h: fngame}
-  - SPACE
-  - TAB
-  - RET
+  - {t: Esc, h: fngame}
+  - Space
+  - Tab
+  - Enter
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   dota:
@@ -227,12 +227,12 @@ layers:
   - I
   - O
   - P
-  - BACKSPACE
+  - Bspc
   - {t: ▽, type: trans}
   - A
   - S
-  - {t: D, h: LEFT CONTROL}
-  - {t: F, h: LEFT ALT}
+  - {t: D, h: Ctrl}
+  - {t: F, h: Alt}
   - G
   - H
   - J
@@ -251,12 +251,12 @@ layers:
   - ','
   - .
   - /
-  - ENTER
-  - LEFT SHIFT
-  - {t: SPACE, h: fngame}
-  - TAB
-  - RET
-  - SPACE
+  - Enter
+  - Shift
+  - {t: Space, h: fngame}
+  - Tab
+  - Enter
+  - Space
   - F8
   fngame:
   - F12
@@ -320,10 +320,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_UP'
-  - '&mmv MOVE_RIGHT'
+  - Mouse ←
+  - Mouse ↓
+  - Mouse ↑
+  - Mouse →
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -333,24 +333,24 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - SCROLL DOWN
-  - SCROLL UP
+  - Scroll ↓
+  - Scroll ↑
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp LCLK'
-  - '&mkp RCLK'
-  - '&mkp MCLK'
+  - Left Click
+  - Right Click
+  - Middle Click
   media:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - OUT TOG
+  - Output
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -359,19 +359,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PREVIOUS
-  - VOLUME DOWN
-  - VOLUME UP
-  - NEXT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Prev
+  - Vol-
+  - Vol+
+  - Next
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -381,49 +372,58 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - MUTE
-  - PLAY PAUSE
-  - STOP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Mute
+  - Play/Pause
+  - Stop
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   sys:
-  - '&safe_bootloader'
+  - {t: Boot, s: 2×, type: tap_dance}
   - ''
   - ''
   - ''
   - ''
-  - OUT TOG
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - '&safe_bootloader'
-  - '&safe_sys_reset'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - BT CLR
-  - BT CLR ALL
-  - ''
-  - ''
-  - ''
-  - '&safe_sys_reset'
-  - '&safe_soft_off'
+  - Output
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - {t: Boot, s: 2×, type: tap_dance}
+  - {t: Reset, s: 2×, type: tap_dance}
   - ''
   - ''
   - ''
   - ''
   - ''
+  - BT Clear
+  - Clear All
+  - ''
+  - ''
+  - ''
+  - {t: Reset, s: 2×, type: tap_dance}
+  - {t: 'Off', s: 2×, type: tap_dance}
   - ''
   - ''
   - ''
   - ''
   - ''
-  - '&safe_soft_off'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: 'Off', s: 2×, type: tap_dance}
   - ''
   - {t: sys, h: toggle}
   - ''
@@ -435,16 +435,16 @@ combos:
   k: {t: dota, h: toggle}
   l: [game, dota]
 - p: [26, 27]
-  k: '&copy_cut'
+  k: {t: Copy, s: 2× Cut, type: tap_dance}
   l: [base, num, game, mouse]
 - p: [27, 28]
-  k: Sft+INS
+  k: Shift+INS
   l: [base, num, game, mouse]
 - p: [4, 2]
   k: {t: mouse, h: toggle}
   l: [base, game, mouse]
 - p: [15, 16]
-  k: Alt+INSERT
+  k: Alt+Ins
   l: [base]
 - p: [0, 12]
   k: {t: sys, h: toggle}
@@ -453,5 +453,5 @@ combos:
   k: {t: sys, h: toggle}
   l: [base]
 - p: [1, 2]
-  k: '&bootloader'
+  k: Dongle Boot
   l: [sys]
