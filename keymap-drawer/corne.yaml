@@ -84,8 +84,8 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - RET
-  - {t: ▽, type: trans}
-  - RALT
+  - BACKSPACE
+  - DELETE
   fn:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -126,7 +126,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - TAB
   - SPACE
   - APPLICATION
   num:
@@ -136,11 +136,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '['
   - '7'
   - '8'
   - '9'
-  - '['
+  - ']'
   - ']'
   - LSHFT
   - {t: ▽, type: trans}
@@ -152,7 +152,7 @@ layers:
   - '4'
   - '5'
   - '6'
-  - '{'
+  - ;
   - '}'
   - LCTRL
   - {t: ▽, type: trans}
@@ -164,12 +164,12 @@ layers:
   - '1'
   - '2'
   - '3'
-  - KP COMMA
+  - '`'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - KP MINUS
+  - '-'
   - '0'
   - .
   game:
@@ -333,8 +333,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SCROLL DOWN
+  - SCROLL UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

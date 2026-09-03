@@ -221,7 +221,7 @@
 &kp TILDE         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET           &kp AMPERSAND  &mt ASTERISK LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt UNDER MINUS   &mt EQUAL PLUS
 &kp LA(F4)        &trans    &trans  &trans    &trans      &trans         &mt_home HOME LEFT  &kp DOWN       &kp UP                         &mt_end END RIGHT      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp LC(LEFT_GUI)  &trans    &trans  &trans    &trans      &trans         &kp HOME            &kp PAGE_DOWN  &kp PAGE_UP                    &kp END                &kp INSERT        &kp CAPSLOCK
-                                    &trans    &trans      &trans         &kp RET             &trans         &kp RALT
+                                    &trans    &trans      &trans         &kp RET             &kp BACKSPACE  &kp DELETE
             >;
         };
 
@@ -237,7 +237,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans           &kp F7     &kp F8             &kp F9  &kp F12  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans           &kp F4     &kp F5             &kp F6  &kp F11  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp PRINTSCREEN  &kp F1     &kp F2             &kp F3  &kp F10  &trans
-                        &trans  &trans  &trans    &trans           &kp SPACE  &kp K_APPLICATION
+                        &trans  &trans  &trans    &kp TAB          &kp SPACE  &kp K_APPLICATION
             >;
         };
 
@@ -250,10 +250,10 @@
             //                    |  ▽  |  ▽  |  ▽  |   |  -  |  0  |  .  |
 
             bindings = <
-&trans     &trans  &trans          &trans  &trans  &trans       &trans         &kp N7        &kp N8   &kp N9  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LSHFT  &trans  &sk LEFT_SHIFT  &trans  &trans  &trans       &kp EQUAL      &kp N4        &kp N5   &kp N6  &kp LEFT_BRACE    &kp RIGHT_BRACE
-&kp LCTRL  &trans  &trans          &trans  &trans  &tog GAME    &kp BACKSLASH  &kp N1        &kp N2   &kp N3  &kp KP_COMMA      &trans
-                                   &trans  &trans  &trans       &kp KP_MINUS   &kp NUMBER_0  &kp DOT
+&trans     &trans  &trans          &trans  &trans  &trans       &kp LEFT_BRACKET  &kp N7        &kp N8   &kp N9  &kp RIGHT_BRACKET  &kp RIGHT_BRACKET
+&kp LSHFT  &trans  &sk LEFT_SHIFT  &trans  &trans  &trans       &kp EQUAL         &kp N4        &kp N5   &kp N6  &kp SEMI           &kp RIGHT_BRACE
+&kp LCTRL  &trans  &trans          &trans  &trans  &tog GAME    &kp BACKSLASH     &kp N1        &kp N2   &kp N3  &kp GRAVE          &trans
+                                   &trans  &trans  &trans       &kp MINUS         &kp NUMBER_0  &kp DOT
             >;
         };
 
@@ -314,10 +314,10 @@
             //                    |  ▽  |  ▽  |  ▽  |   |LCLK |RCLK |MCLK |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
-                        &trans  &trans  &trans    &mkp LCLK       &mkp RCLK       &mkp MCLK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans             &trans           &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_UP     &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &kp K_SCROLL_DOWN  &kp K_SCROLL_UP  &trans           &trans  &trans
+                        &trans  &trans  &trans    &mkp LCLK       &mkp RCLK          &mkp MCLK
             >;
         };
 
@@ -330,10 +330,10 @@
             //                    |MUTE |PLAY |STOP |   |  ▽  |  ▽  |  ▽  |
 
             bindings = <
-&trans  &trans  &trans          &trans             &trans             &out OUT_TOG      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp K_NEXT        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans             &trans             &trans            &trans  &trans  &trans  &trans  &trans  &trans
-                                &kp K_MUTE         &kp K_PLAY_PAUSE   &kp K_STOP        &trans  &trans  &trans
+&trans  &trans  &trans          &trans             &trans            &out OUT_TOG    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp K_NEXT      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans             &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                &kp K_MUTE         &kp K_PLAY_PAUSE  &kp K_STOP      &trans  &trans  &trans
             >;
         };
 
@@ -349,7 +349,7 @@
 &bootloader  &none  &none  &none  &none     &out OUT_TOG    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
 &sys_reset   &none  &none  &none  &none     &none           &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none         &sys_reset
 &soft_off    &none  &none  &none  &none     &none           &none         &none           &none         &none         &none         &soft_off
-                           &none  &tog SYS  &none           &none         &tog SYS          &none
+                           &none  &tog SYS  &none           &none         &tog SYS        &none
             >;
         };
     };
