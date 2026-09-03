@@ -84,8 +84,8 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - RET
+  - DEL
   - BACKSPACE
-  - DELETE
   fn:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
