@@ -45,9 +45,7 @@
     quick-release; // no double capitalizations
 };
 
-&soft_off {
-    hold-time-ms = <2000>;
-};
+&soft_off { hold-time-ms = <2000>; };
 
 / {
     behaviors {
@@ -127,70 +125,70 @@
             #binding-cells = <0>;
             bindings = <&kp LC(INS)>, <&kp LC(X)>;
         };
-
     };
 
-combos {
-  compatible = "zmk,combos";
+    combos {
+        compatible = "zmk,combos";
 
-  dota {
-  bindings = <&tog DOTA>;
-  key-positions = <21 22>;
-    layers = <GAME DOTA>;
-};
-
-copy {
-bindings = <&copy_cut>;
-  key-positions = <26 27>;
-  layers = <BASE NUM GAME MOUSE>;
-  require-prior-idle-ms = <150>;
+        dota {
+            bindings = <&tog DOTA>;
+            key-positions = <21 22>;
+            layers = <GAME DOTA>;
         };
 
-paste {
-bindings = <&kp LS(INS)>;
-  key-positions = <27 28>;
-  layers = <BASE NUM GAME MOUSE>;
-  timeout-ms = <18>;
-  require-prior-idle-ms = <150>;
+        copy {
+            bindings = <&copy_cut>;
+            key-positions = <26 27>;
+            layers = <BASE NUM GAME MOUSE>;
+            require-prior-idle-ms = <150>;
         };
 
-mouse {
-bindings = <&tog MOUSE>;
-  key-positions = <4 2>;
-  layers = <BASE GAME MOUSE>;
-  require-prior-idle-ms = <150>;
-};
-
-  alt+insert {
-    bindings = <&kp LA(INSERT)>;
-    key-positions = <15 16>;
-    require-prior-idle-ms = <150>;
-    layers = <BASE>;
-  };
-
-sys_left {
-bindings = <&tog SYS>;
-  key-positions = <0 12>;
-  layers = <BASE>;
-  timeout-ms = <35>;
-  require-prior-idle-ms = <150>;
+        paste {
+            bindings = <&kp LS(INS)>;
+            key-positions = <27 28>;
+            layers = <BASE NUM GAME MOUSE>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
         };
 
-sys_right {
-bindings = <&tog SYS>;
-  key-positions = <11 23>;
-  layers = <BASE>;
-  timeout-ms = <35>;
-  require-prior-idle-ms = <150>;
+        mouse {
+            bindings = <&tog MOUSE>;
+            key-positions = <4 2>;
+            layers = <BASE GAME MOUSE>;
+            require-prior-idle-ms = <150>;
         };
-dongle_bootloader {
-bindings = <&bootloader>;
-  key-positions = <1 2>;
-  layers = <SYS>;
-  timeout-ms = <50>;
-  require-prior-idle-ms = <150>;
-};
-};
+
+        alt+insert {
+            bindings = <&kp LA(INSERT)>;
+            key-positions = <15 16>;
+            require-prior-idle-ms = <150>;
+            layers = <BASE>;
+        };
+
+        sys_left {
+            bindings = <&tog SYS>;
+            key-positions = <0 12>;
+            layers = <BASE>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+        };
+
+        sys_right {
+            bindings = <&tog SYS>;
+            key-positions = <11 23>;
+            layers = <BASE>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+        };
+
+        dongle_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <1 2>;
+            layers = <SYS>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -204,10 +202,10 @@ bindings = <&bootloader>;
             //                       |ESC/FN|GUI/NAV|TAB/NUM| |ENT/MED|SPACE|BSPC/DEL|
 
             bindings = <
-&trans  &kp Q  &mt RC(F2) W       &kp E                &kp R            &kp T              &mt LS(F6) Y     &kp U            &kp I                &mt LS(F9) O       &kp P     &trans
-&trans  &kp A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F  &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr LEFT_ALT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &kp SEMI  &kp SQT
-&trans  &kp Z  &kp X              &kp C                &kp V            &kp B              &kp N            &kp M            &kp COMMA            &kp DOT            &kp FSLH  &smart_shift
-                                  &lt FUN ESCAPE       &lt NAV LEFT_GUI   &lt NUM TAB        &lt MEDIA ENTER  &kp SPACE        &bs_delete
+&trans  &kp Q  &mt RC(F2) W       &kp E                &kp R             &kp T              &mt LS(F6) Y     &kp U            &kp I                &mt LS(F9) O       &kp P     &trans
+&trans  &kp A  &hml LEFT_SHIFT S  &hml LEFT_CONTROL D  &hml LEFT_ALT F   &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr LEFT_ALT J  &hmr LEFT_CONTROL K  &hmr LEFT_SHIFT L  &kp SEMI  &kp SQT
+&trans  &kp Z  &kp X              &kp C                &kp V             &kp B              &kp N            &kp M            &kp COMMA            &kp DOT            &kp FSLH  &smart_shift
+                                  &lt FUN ESCAPE       &lt NAV LEFT_GUI  &lt NUM TAB        &lt MEDIA ENTER  &kp SPACE        &bs_delete
             >;
         };
 
@@ -220,9 +218,9 @@ bindings = <&bootloader>;
             //                    |  ▽  |  ▽  |  ▽  |   | ENTER|  ▽  | RALT |
 
             bindings = <
-&kp TILDE         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET           &kp AMPERSAND  &mt ASTERISK LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt UNDER MINUS  &mt EQUAL PLUS
-&kp LA(F4)        &trans    &trans  &trans    &trans      &trans         &mt_home HOME LEFT  &kp DOWN       &kp UP                         &mt_end END RIGHT      &kp LEFT_BRACKET    &kp RIGHT_BRACKET
-&kp LC(LEFT_GUI)  &trans    &trans  &trans    &trans      &trans         &kp HOME            &kp PAGE_DOWN  &kp PAGE_UP                    &kp END                &kp INSERT          &kp CAPSLOCK
+&kp TILDE         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET           &kp AMPERSAND  &mt ASTERISK LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt UNDER MINUS   &mt EQUAL PLUS
+&kp LA(F4)        &trans    &trans  &trans    &trans      &trans         &mt_home HOME LEFT  &kp DOWN       &kp UP                         &mt_end END RIGHT      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LC(LEFT_GUI)  &trans    &trans  &trans    &trans      &trans         &kp HOME            &kp PAGE_DOWN  &kp PAGE_UP                    &kp END                &kp INSERT        &kp CAPSLOCK
                                     &trans    &trans      &trans         &kp RET             &trans         &kp RALT
             >;
         };
@@ -245,25 +243,28 @@ bindings = <&bootloader>;
 
         numbers {
             display-name = "num";
+
             // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  7  |  8  |  9  |  [  |  ]  |
             // | SFT |  ▽  |SK-SFT|  ▽  |  ▽  |  ▽  |   |  =  |  4  |  5  |  6  |  {  |  }  |
             // |CTRL |  ▽  |  ▽  |  ▽  |  ▽  | GAME|   |  \  |  1  |  2  |  3  | KP, |  ▽  |
             //                    |  ▽  |  ▽  |  ▽  |   |  -  |  0  |  .  |
+
             bindings = <
 &trans     &trans  &trans          &trans  &trans  &trans       &trans         &kp N7        &kp N8   &kp N9  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp LSHFT  &trans  &sk LEFT_SHIFT  &trans  &trans  &trans       &kp EQUAL      &kp N4        &kp N5   &kp N6  &kp LEFT_BRACE    &kp RIGHT_BRACE
 &kp LCTRL  &trans  &trans          &trans  &trans  &tog GAME    &kp BACKSLASH  &kp N1        &kp N2   &kp N3  &kp KP_COMMA      &trans
                                    &trans  &trans  &trans       &kp KP_MINUS   &kp NUMBER_0  &kp DOT
             >;
-
         };
 
         game {
             display-name = "game";
+
             // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  ▽  |
             // | SFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
             // |CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |  ▽  |
             //                    |ESC/FNG|SPACE| TAB |   |ENTER|  ▽  |  ▽  |
+
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E           &kp R      &kp T      &kp Y    &kp U   &kp I      &kp O    &kp P     &trans
 &kp LSHFT  &kp A  &kp S  &kp D           &kp F      &kp G      &kp H    &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
@@ -274,24 +275,28 @@ bindings = <&bootloader>;
 
         dota {
             display-name = "dota";
+
             // |  ▽  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |BSPC |
             // |  ▽  |  A  |  S  |D/CTRL|F/ALT|  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
             // |  ▽  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |ENTER|
             //                    | SFT |SPC/FNG| TAB |   |ENTER|SPACE| F8  |
+
             bindings = <
-&trans  &kp Q  &kp W  &kp E                &kp R             &kp T      &kp Y    &kp U         &kp I      &kp O    &kp P     &kp BACKSPACE
-&trans  &kp A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_ALT F   &kp G      &kp H    &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
-&trans  &kp Z  &kp X  &kp C                &kp V             &kp B      &kp N    &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+&trans  &kp Q  &kp W  &kp E                &kp R             &kp T      &kp Y    &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&trans  &kp A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_ALT F   &kp G      &kp H    &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&trans  &kp Z  &kp X  &kp C                &kp V             &kp B      &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
                       &kp LEFT_SHIFT       &lt FNGAME SPACE  &kp TAB    &kp RET  &kp SPACE  &kp F8
             >;
         };
 
         fngame {
             display-name = "fngame";
+
             // | F12 |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | GAME|
             // | F11 | F6  | F7  | F8  | F9  | F10 |   |  ▽  |  4  |  5  |  6  |  ▽  |  ▽  |
             // |  ▽  | F1  | F2  | F3  | F4  | F5  |   |  0  |  1  |  2  |  3  |  ▽  |  ▽  |
             //                    |  ▽  |  ▽  |  ▽  |   |  ▽  |  0  |  ▽  |
+
             bindings = <
 &kp F12  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8  &kp N9  &kp N0  &tog GAME
 &kp F11  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &trans  &kp N4        &kp N5  &kp N6  &trans  &trans
@@ -302,45 +307,49 @@ bindings = <&bootloader>;
 
         mouse {
             display-name = "mouse";
+
             // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
             // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   | M←  | M↓  | M↑  | M→  |  ▽  |  ▽  |
             // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
             //                    |  ▽  |  ▽  |  ▽  |   |LCLK |RCLK |MCLK |
+
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans  &trans
                         &trans  &trans  &trans    &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
-
         };
 
         media {
             display-name = "media";
+
             // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  | OUT |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
             // |  ▽  |  ▽  |NEXT |VOL+ |VOL- |PREV |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
             // |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |   |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |  ▽  |
             //                    |MUTE |PLAY |STOP |   |  ▽  |  ▽  |  ▽  |
-            bindings = <
-&trans  &trans  &trans          &trans              &trans              &out OUT_TOG    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp K_NEXT      &kp C_VOLUME_UP     &kp C_VOLUME_DOWN   &kp K_PREVIOUS  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans             &trans           &trans      &trans  &trans
-                        &kp K_MUTE  &kp K_PLAY_PAUSE  &kp K_STOP    &trans  &trans  &trans
-            >;
 
+            bindings = <
+&trans  &trans  &trans      &trans           &trans             &out OUT_TOG      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp K_NEXT  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp K_PREVIOUS    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans           &trans             &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                            &kp K_MUTE       &kp K_PLAY_PAUSE   &kp K_STOP        &trans  &trans  &trans
+            >;
         };
 
         system {
             display-name = "sys";
+
             // |BOOT-L| DBL | DBL |  ·  |  ·  | OUT |   | BT1 | BT2 | BT3 | BT4 | BT5 |BOOT-R|
             // |RST-L |  ·  |  ·  |  ·  |  ·  |  ·  |   | CLR |CLR-A|  ·  |  ·  |  ·  |RST-R |
             // |OFF   |  ·  |  ·  |  ·  |  ·  |  ·  |   |  ·  |  ·  |  ·  |  ·  |  ·  |OFF   |
             //                    | EXIT|  ·  |  ·  |   |  ·  |  ·  | EXIT|
+
             bindings = <
-&bootloader  &none  &none  &none  &none  &out OUT_TOG    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
-&sys_reset   &none  &none  &none  &none  &none           &bt BT_CLR    &bt BT_CLR_ALL  &none          &none        &none         &sys_reset
-&soft_off    &none  &none  &none  &none  &none           &none         &none           &none          &none        &none         &soft_off
-                              &tog SYS  &none  &none       &none       &none           &tog SYS
+&bootloader  &none  &none  &none  &none   &out OUT_TOG    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
+&sys_reset   &none  &none  &none  &none   &none           &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none         &sys_reset
+&soft_off    &none  &none  &none  &none   &none           &none         &none           &none         &none         &none         &soft_off
+                           &none  &tog 9  &none           &none         &tog 9          &none
             >;
         };
     };

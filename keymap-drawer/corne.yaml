@@ -37,10 +37,10 @@ layers:
   - .
   - /
   - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
-  - '&td_esc_fn_media'
+  - {t: ESCAPE, h: fn}
   - {t: LEFT GUI, h: nav}
   - {t: TAB, h: num}
-  - ENTER
+  - {t: ENTER, h: media}
   - SPACE
   - {t: BACKSPACE, s: DEL}
   nav:
@@ -123,7 +123,7 @@ layers:
   - F3
   - F10
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -350,7 +350,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - OUT TOG
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -360,13 +359,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - PREVIOUS
-  - VOLUME DOWN
-  - VOLUME UP
   - NEXT
+  - VOLUME UP
+  - VOLUME DOWN
+  - PREVIOUS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -384,9 +380,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - STOP
-  - PLAY PAUSE
+  - {t: ▽, type: trans}
   - MUTE
+  - PLAY PAUSE
+  - STOP
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   sys:
   - '&bootloader'
   - ''
@@ -424,12 +424,12 @@ layers:
   - ''
   - ''
   - '&soft_off'
-  - {t: sys, h: toggle}
-  - ''
-  - ''
-  - ''
   - ''
   - {t: sys, h: toggle}
+  - ''
+  - ''
+  - {t: sys, h: toggle}
+  - ''
 combos:
 - p: [21, 22]
   k: {t: dota, h: toggle}
