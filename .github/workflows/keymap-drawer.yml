@@ -9,15 +9,16 @@ on:
     paths:
       - "config/*.keymap"
       - "config/config_keymap-drawer.yaml"
-      - .github/workflows/keymap-drawer.yaml
+      - .github/workflows/keymap-drawer.yml
 
 jobs:
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.23.0
     permissions:
       contents: write # allow workflow to commit to the repo
     with:
       amend_commit: true
+      install_version: "0.23.0"
       keymap_patterns: "config/*.keymap" # path to the keymaps to parse
       config_path: "config/config_keymap-drawer.yaml" # config file, ignored if not exists
       output_folder: "keymap-drawer" # path to save produced SVG and keymap YAML files
