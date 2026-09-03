@@ -388,7 +388,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   sys:
-  - '&bootloader'
+  - '&safe_bootloader'
   - ''
   - ''
   - ''
@@ -399,8 +399,8 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - '&bootloader'
-  - '&sys_reset'
+  - '&safe_bootloader'
+  - '&safe_sys_reset'
   - ''
   - ''
   - ''
@@ -411,8 +411,8 @@ layers:
   - ''
   - ''
   - ''
-  - '&sys_reset'
-  - '&soft_off'
+  - '&safe_sys_reset'
+  - '&safe_soft_off'
   - ''
   - ''
   - ''
@@ -423,7 +423,7 @@ layers:
   - ''
   - ''
   - ''
-  - '&soft_off'
+  - '&safe_soft_off'
   - ''
   - {t: sys, h: toggle}
   - ''
