@@ -7,18 +7,17 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
+    - name: redmasters
+      url-base: https://github.com/redmasters
 
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: v0.3
+    - name: scyan-zmk-module
+      remote: redmasters
+      revision: d6404acae006a29daa845e8956e05945652ed2d2
 
   self:
     path: config
-
