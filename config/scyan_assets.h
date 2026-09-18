@@ -2447,7 +2447,7 @@ static const struct display_layout_block LAYOUT_CENTRAL_ACTIVE_BLOCKS[5] = {
     { .type = WIDGET_TYPE_BATTERY, .x = 21, .y = 5, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_1, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_5, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_10, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_12, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_15 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
     { .type = WIDGET_TYPE_BATTERY, .x = 63, .y = 5, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_1, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_5, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_10, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_12, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_15 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
     { .type = WIDGET_TYPE_BONGO, .x = 91, .y = 8, .width = 32, .height = 24, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 3, .symbol_ids = { SYMBOL_BONGO_SCYAN_5477, SYMBOL_BONGO_SCYAN_5477_SUB_1, SYMBOL_BONGO_SCYAN_5477_SUB_2 }, .text_count = 1, .text_entries = { "(=^.^=)" }, .custom_text = "(=^.^=)", .symbol_id = SYMBOL_BONGO_SCYAN_5477 },
-    { .type = WIDGET_TYPE_LAYER, .x = 44, .y = 13, .width = 22, .height = 11, .enabled = true, .mode = 1, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 5, .symbol_ids = { SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_1, SYMBOL_BRACKET_LAYER_2, SYMBOL_BRACKET_LAYER_3 }, .text_count = 4, .text_entries = { "DEFAULT", "LOWER", "RAISE", "ADJUST" }, .custom_text = "DEFAULT", .symbol_id = SYMBOL_BRACKET_LAYER_0 },
+    { .type = WIDGET_TYPE_LAYER, .x = 45, .y = 19, .width = 22, .height = 11, .enabled = true, .mode = 1, .param1 = 0, .param2 = 0, .param3 = 1, .symbol_count = 5, .symbol_ids = { SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_1, SYMBOL_BRACKET_LAYER_2, SYMBOL_BRACKET_LAYER_3 }, .text_count = 4, .text_entries = { "base", "navigation", "function", "numbers" }, .custom_text = "base", .symbol_id = SYMBOL_BRACKET_LAYER_0 },
 };
 #define LAYOUT_CENTRAL_ACTIVE_COUNT 5
 
@@ -2542,8 +2542,8 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "widgetType": "layer-banner",
       "instanceId": "layer-banner-default",
       "name": "Layer Banner",
-      "x": 44,
-      "y": 13,
+      "x": 45,
+      "y": 19,
       "width": 22,
       "height": 11,
       "enabled": true,
@@ -2828,7 +2828,14 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
             "SYMBOL_BRACKET_LAYER_1",
             "SYMBOL_BRACKET_LAYER_2",
             "SYMBOL_BRACKET_LAYER_3"
-          ]
+          ],
+          "textEntries": [
+            "base",
+            "navigation",
+            "function",
+            "numbers"
+          ],
+          "fontSize": "big"
         }
       },
       {
