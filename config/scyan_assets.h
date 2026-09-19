@@ -2443,11 +2443,11 @@ struct display_layout_block {
 };
 
 static const struct display_layout_block LAYOUT_CENTRAL_ACTIVE_BLOCKS[5] = {
-    { .type = WIDGET_TYPE_BATTERY, .x = 19, .y = 11, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 1, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_1, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_5, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_10, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_12, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_15 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
+    { .type = WIDGET_TYPE_BATTERY, .x = 14, .y = 11, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 1, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_1, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_5, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_10, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_12, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_15 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
     { .type = WIDGET_TYPE_BATTERY, .x = 59, .y = 11, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 2, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_1, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_5, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_10, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_12, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_15 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
+    { .type = WIDGET_TYPE_LAYER, .x = 41, .y = 21, .width = 22, .height = 11, .enabled = true, .mode = 1, .param1 = 0, .param2 = 0, .param3 = 1, .symbol_count = 5, .symbol_ids = { SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_1, SYMBOL_BRACKET_LAYER_2, SYMBOL_BRACKET_LAYER_3 }, .text_count = 4, .text_entries = { "base", "nav", "fun", "num" }, .custom_text = "base", .symbol_id = SYMBOL_BRACKET_LAYER_0 },
     { .type = WIDGET_TYPE_OUTPUT_STATUS, .x = 0, .y = 4, .width = 12, .height = 10, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 6, .symbol_ids = { SYMBOL_USB, SYMBOL_BLUETOOTH_9659_SUB_1, SYMBOL_BLUETOOTH_9659_SUB_2, SYMBOL_BLUETOOTH_9659_SUB_3, SYMBOL_BLUETOOTH_9659_SUB_4, SYMBOL_BLUETOOTH_9659_SUB_5 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_USB },
-    { .type = WIDGET_TYPE_BONGO, .x = 96, .y = 9, .width = 32, .height = 23, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 3, .symbol_ids = { SYMBOL_SLICE_40_4046, SYMBOL_SLICE_40_4046_SUB_1, SYMBOL_SLICE_40_4046_SUB_2 }, .text_count = 1, .text_entries = { "(=^.^=)" }, .custom_text = "(=^.^=)", .symbol_id = SYMBOL_SLICE_40_4046 },
-    { .type = WIDGET_TYPE_LAYER, .x = 44, .y = 20, .width = 22, .height = 11, .enabled = true, .mode = 1, .param1 = 0, .param2 = 0, .param3 = 1, .symbol_count = 5, .symbol_ids = { SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_1, SYMBOL_BRACKET_LAYER_2, SYMBOL_BRACKET_LAYER_3 }, .text_count = 4, .text_entries = { "base", "nav", "func", "num" }, .custom_text = "base", .symbol_id = SYMBOL_BRACKET_LAYER_0 },
+    { .type = WIDGET_TYPE_WPM_CHART, .x = 96, .y = 2, .width = 32, .height = 30, .enabled = true, .mode = 0, .param1 = 0, .param2 = 60, .param3 = 10, .symbol_count = 1, .symbol_ids = { SYMBOL_USB }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_USB },
 };
 #define LAYOUT_CENTRAL_ACTIVE_COUNT 5
 
@@ -2486,11 +2486,11 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
   "version": 1,
   "centralBlocks": [
     {
-      "id": "block-battery-1789785011762",
+      "id": "block-battery-1789787431022",
       "widgetType": "battery",
       "instanceId": "battery-1789135980106",
       "name": "Battery Meter",
-      "x": 19,
+      "x": 14,
       "y": 11,
       "width": 32,
       "height": 1,
@@ -2499,9 +2499,9 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "side": "central"
     },
     {
-      "id": "block-battery-1789785027298",
+      "id": "block-battery-1789787442913",
       "widgetType": "battery",
-      "instanceId": "battery-1789784530937",
+      "instanceId": "battery-1789787327890",
       "name": "Battery Meter",
       "x": 59,
       "y": 11,
@@ -2512,7 +2512,20 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "side": "central"
     },
     {
-      "id": "block-connection-1789785118880",
+      "id": "block-layer-banner-1789787521957",
+      "widgetType": "layer-banner",
+      "instanceId": "layer-banner-default",
+      "name": "Layer Banner",
+      "x": 41,
+      "y": 21,
+      "width": 22,
+      "height": 11,
+      "enabled": true,
+      "description": "Shows active keyboard layer frame brackets and text name.",
+      "side": "central"
+    },
+    {
+      "id": "block-connection-1789787537258",
       "widgetType": "connection",
       "instanceId": "connection-default",
       "name": "Output Status",
@@ -2525,29 +2538,16 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "side": "central"
     },
     {
-      "id": "block-bongo-1789785147880",
-      "widgetType": "bongo",
-      "instanceId": "bongo-1788845743513",
-      "name": "Bongo Cat",
+      "id": "block-wpm-chart-1789787558457",
+      "widgetType": "wpm-chart",
+      "instanceId": "w_rpxxab",
+      "name": "WPM Chart",
       "x": 96,
-      "y": 9,
+      "y": 2,
       "width": 32,
-      "height": 23,
+      "height": 30,
       "enabled": true,
-      "description": "Reactive bongo mascot that taps paws to left/right keystrokes.",
-      "side": "central"
-    },
-    {
-      "id": "block-layer-banner-1789785265709",
-      "widgetType": "layer-banner",
-      "instanceId": "layer-banner-default",
-      "name": "Layer Banner",
-      "x": 44,
-      "y": 20,
-      "width": 22,
-      "height": 11,
-      "enabled": true,
-      "description": "Shows active keyboard layer frame brackets and text name.",
+      "description": "Line chart widget of typing speed over time.",
       "side": "central"
     }
   ],
@@ -2726,7 +2726,7 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       {
         "id": "battery-1789135980106",
         "widgetTypeId": "battery",
-        "label": "Battery Meter",
+        "label": "Battery Meter1",
         "config": {
           "mode": "symbol",
           "fontSize": "small",
@@ -2736,7 +2736,7 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
         "slots": {}
       },
       {
-        "id": "battery-1789784530937",
+        "id": "battery-1789787327890",
         "widgetTypeId": "battery",
         "label": "Battery Meter2",
         "config": {
@@ -2844,7 +2844,7 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
           "textEntries": [
             "base",
             "nav",
-            "func",
+            "fun",
             "num"
           ],
           "fontSize": "big"
