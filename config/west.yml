@@ -17,7 +17,7 @@ manifest:
       import: app/west.yml
     - name: scyan-zmk-module
       remote: redmasters
-      revision: 06cf4ef7dd0778e803266fcd76ee3d44ac49f49b
+      revision: 1088d0577ea486a55cecf0af682afd3e1c504d14
 
   self:
     path: config
