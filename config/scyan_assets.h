@@ -2442,14 +2442,15 @@ struct display_layout_block {
     uint16_t symbol_id;
 };
 
-static const struct display_layout_block LAYOUT_CENTRAL_ACTIVE_BLOCKS[5] = {
-    { .type = WIDGET_TYPE_BATTERY, .x = 14, .y = 11, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 1, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_1, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_5, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_10, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_12, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_15 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
-    { .type = WIDGET_TYPE_BATTERY, .x = 59, .y = 11, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 2, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_1, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_5, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_10, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_12, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_15 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
-    { .type = WIDGET_TYPE_LAYER, .x = 41, .y = 21, .width = 22, .height = 11, .enabled = true, .mode = 1, .param1 = 0, .param2 = 0, .param3 = 1, .symbol_count = 5, .symbol_ids = { SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_1, SYMBOL_BRACKET_LAYER_2, SYMBOL_BRACKET_LAYER_3 }, .text_count = 4, .text_entries = { "base", "nav", "fun", "num" }, .custom_text = "base", .symbol_id = SYMBOL_BRACKET_LAYER_0 },
-    { .type = WIDGET_TYPE_OUTPUT_STATUS, .x = 0, .y = 4, .width = 12, .height = 10, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 6, .symbol_ids = { SYMBOL_USB, SYMBOL_BLUETOOTH_9659_SUB_1, SYMBOL_BLUETOOTH_9659_SUB_2, SYMBOL_BLUETOOTH_9659_SUB_3, SYMBOL_BLUETOOTH_9659_SUB_4, SYMBOL_BLUETOOTH_9659_SUB_5 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_USB },
-    { .type = WIDGET_TYPE_WPM_CHART, .x = 96, .y = 2, .width = 32, .height = 30, .enabled = true, .mode = 0, .param1 = 0, .param2 = 60, .param3 = 10, .symbol_count = 1, .symbol_ids = { SYMBOL_USB }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_USB },
+static const struct display_layout_block LAYOUT_CENTRAL_ACTIVE_BLOCKS[6] = {
+    { .type = WIDGET_TYPE_BATTERY, .x = 16, .y = 11, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 1, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_15, SYMBOL_CHARGESLIM_5317_SUB_17, SYMBOL_CHARGESLIM_5317_SUB_19, SYMBOL_CHARGESLIM_5317_SUB_21, SYMBOL_CHARGESLIM_5317_SUB_22, SYMBOL_CHARGESLIM_5317_SUB_24, SYMBOL_CHARGESLIM_5317_SUB_26, SYMBOL_CHARGESLIM_5317_SUB_28 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
+    { .type = WIDGET_TYPE_BATTERY, .x = 54, .y = 11, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 2, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_15, SYMBOL_CHARGESLIM_5317_SUB_17, SYMBOL_CHARGESLIM_5317_SUB_19, SYMBOL_CHARGESLIM_5317_SUB_21, SYMBOL_CHARGESLIM_5317_SUB_22, SYMBOL_CHARGESLIM_5317_SUB_24, SYMBOL_CHARGESLIM_5317_SUB_26, SYMBOL_CHARGESLIM_5317_SUB_28 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
+    { .type = WIDGET_TYPE_CAPS_LOCK, .x = 0, .y = 25, .width = 14, .height = 7, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 2, .symbol_ids = { SYMBOL_CAPSA_9310, SYMBOL_CAPSA_9310_SUB_1 }, .text_count = 2, .text_entries = { "a", "" }, .custom_text = "a", .symbol_id = SYMBOL_CAPSA_9310 },
+    { .type = WIDGET_TYPE_LAYER, .x = 39, .y = 21, .width = 22, .height = 11, .enabled = true, .mode = 1, .param1 = 0, .param2 = 0, .param3 = 1, .symbol_count = 5, .symbol_ids = { SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_1, SYMBOL_BRACKET_LAYER_2, SYMBOL_BRACKET_LAYER_3 }, .text_count = 4, .text_entries = { "base", "nav", "fun", "num" }, .custom_text = "base", .symbol_id = SYMBOL_BRACKET_LAYER_0 },
+    { .type = WIDGET_TYPE_OUTPUT_STATUS, .x = 0, .y = 3, .width = 12, .height = 10, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 6, .symbol_ids = { SYMBOL_USB, SYMBOL_BLUETOOTH_9659_SUB_1, SYMBOL_BLUETOOTH_9659_SUB_2, SYMBOL_BLUETOOTH_9659_SUB_3, SYMBOL_BLUETOOTH_9659_SUB_4, SYMBOL_BLUETOOTH_9659_SUB_5 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_USB },
+    { .type = WIDGET_TYPE_WPM, .x = 101, .y = 14, .width = 27, .height = 5, .enabled = true, .mode = 0, .param1 = 0, .param2 = 70, .param3 = 0, .symbol_count = 8, .symbol_ids = { SYMBOL_SPEEDOMETER_8803, SYMBOL_SPEEDOMETER_8803_SUB_1, SYMBOL_SPEEDOMETER_8803_SUB_2, SYMBOL_SPEEDOMETER_8803_SUB_3, SYMBOL_SPEEDOMETER_8803_SUB_4, SYMBOL_SPEEDOMETER_8803_SUB_5, SYMBOL_SPEEDOMETER_8803_SUB_6, SYMBOL_SPEEDOMETER_8803_SUB_7 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_SPEEDOMETER_8803 },
 };
-#define LAYOUT_CENTRAL_ACTIVE_COUNT 5
+#define LAYOUT_CENTRAL_ACTIVE_COUNT 6
 
 static const struct display_layout_block LAYOUT_CENTRAL_IDLE_BLOCKS[3] = {
     { .type = WIDGET_TYPE_SCREENSAVER, .x = 49, .y = 2, .width = 31, .height = 29, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 1, .symbol_ids = { SYMBOL_SKULL_LAYER_0 }, .text_count = 1, .text_entries = { "Scyan" }, .custom_text = "Scyan", .symbol_id = SYMBOL_SKULL_LAYER_0 },
@@ -2461,7 +2462,7 @@ static const struct display_layout_block LAYOUT_CENTRAL_IDLE_BLOCKS[3] = {
 static const struct display_layout_block LAYOUT_PERIPHERAL_ACTIVE_BLOCKS[3] = {
     { .type = WIDGET_TYPE_SPLIT, .x = 9, .y = 65, .width = 13, .height = 9, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 2, .symbol_ids = { SYMBOL_SPLIT_CONNECTED, SYMBOL_SPLIT_DISCONNECTED }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_SPLIT_CONNECTED },
     { .type = WIDGET_TYPE_LOOP, .x = 0, .y = 9, .width = 32, .height = 55, .enabled = true, .mode = 0, .param1 = 150, .param2 = 0, .param3 = 0, .symbol_count = 54, .symbol_ids = { SYMBOL_DUCK_PIXEL_0414, SYMBOL_DUCK_PIXEL_0414_SUB_1, SYMBOL_DUCK_PIXEL_0414_SUB_2, SYMBOL_DUCK_PIXEL_0414_SUB_3, SYMBOL_DUCK_PIXEL_0414_SUB_4, SYMBOL_DUCK_PIXEL_0414_SUB_5, SYMBOL_DUCK_PIXEL_0414_SUB_6, SYMBOL_DUCK_PIXEL_0414_SUB_7, SYMBOL_DUCK_PIXEL_0414_SUB_8, SYMBOL_DUCK_PIXEL_0414_SUB_9, SYMBOL_DUCK_PIXEL_0414_SUB_10, SYMBOL_DUCK_PIXEL_0414_SUB_11, SYMBOL_DUCK_PIXEL_0414_SUB_12, SYMBOL_DUCK_PIXEL_0414_SUB_13, SYMBOL_DUCK_PIXEL_0414_SUB_14, SYMBOL_DUCK_PIXEL_0414_SUB_15 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_DUCK_PIXEL_0414 },
-    { .type = WIDGET_TYPE_BATTERY, .x = 0, .y = 0, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 1, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_1, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_5, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_10, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_12, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_15 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
+    { .type = WIDGET_TYPE_BATTERY, .x = 0, .y = 0, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 1, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_15, SYMBOL_CHARGESLIM_5317_SUB_17, SYMBOL_CHARGESLIM_5317_SUB_19, SYMBOL_CHARGESLIM_5317_SUB_21, SYMBOL_CHARGESLIM_5317_SUB_22, SYMBOL_CHARGESLIM_5317_SUB_24, SYMBOL_CHARGESLIM_5317_SUB_26, SYMBOL_CHARGESLIM_5317_SUB_28 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
 };
 #define LAYOUT_PERIPHERAL_ACTIVE_COUNT 3
 
@@ -2486,11 +2487,11 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
   "version": 1,
   "centralBlocks": [
     {
-      "id": "block-battery-1789787431022",
+      "id": "block-battery-1789791877279",
       "widgetType": "battery",
       "instanceId": "battery-1789135980106",
       "name": "Battery Meter",
-      "x": 14,
+      "x": 16,
       "y": 11,
       "width": 32,
       "height": 1,
@@ -2499,11 +2500,11 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "side": "central"
     },
     {
-      "id": "block-battery-1789787442913",
+      "id": "block-battery-1789791879482",
       "widgetType": "battery",
-      "instanceId": "battery-1789787327890",
+      "instanceId": "battery-1789791830274",
       "name": "Battery Meter",
-      "x": 59,
+      "x": 54,
       "y": 11,
       "width": 32,
       "height": 1,
@@ -2512,11 +2513,24 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "side": "central"
     },
     {
-      "id": "block-layer-banner-1789787521957",
+      "id": "block-caps-lock-1789791885660",
+      "widgetType": "caps-lock",
+      "instanceId": "caps-lock-1788790331442",
+      "name": "Caps Lock Indicator",
+      "x": 0,
+      "y": 25,
+      "width": 14,
+      "height": 7,
+      "enabled": true,
+      "description": "Caps lock indicator pill or [CAPS] text indicator.",
+      "side": "central"
+    },
+    {
+      "id": "block-layer-banner-1789791889061",
       "widgetType": "layer-banner",
       "instanceId": "layer-banner-default",
       "name": "Layer Banner",
-      "x": 41,
+      "x": 39,
       "y": 21,
       "width": 22,
       "height": 11,
@@ -2525,12 +2539,12 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "side": "central"
     },
     {
-      "id": "block-connection-1789787537258",
+      "id": "block-connection-1789791893269",
       "widgetType": "connection",
       "instanceId": "connection-default",
       "name": "Output Status",
       "x": 0,
-      "y": 4,
+      "y": 3,
       "width": 12,
       "height": 10,
       "enabled": true,
@@ -2538,16 +2552,16 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "side": "central"
     },
     {
-      "id": "block-wpm-chart-1789787558457",
-      "widgetType": "wpm-chart",
-      "instanceId": "w_rpxxab",
-      "name": "WPM Chart",
-      "x": 96,
-      "y": 2,
-      "width": 32,
-      "height": 30,
+      "id": "block-wpm-1789791955454",
+      "widgetType": "wpm",
+      "instanceId": "wpm-default",
+      "name": "WPM Meter",
+      "x": 101,
+      "y": 14,
+      "width": 27,
+      "height": 5,
       "enabled": true,
-      "description": "Line chart widget of typing speed over time.",
+      "description": "Typing speed readout interpolating up to a target.",
       "side": "central"
     }
   ],
@@ -2736,7 +2750,7 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
         "slots": {}
       },
       {
-        "id": "battery-1789787327890",
+        "id": "battery-1789791830274",
         "widgetTypeId": "battery",
         "label": "Battery Meter2",
         "config": {
@@ -2841,13 +2855,13 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
             "SYMBOL_BRACKET_LAYER_2",
             "SYMBOL_BRACKET_LAYER_3"
           ],
+          "fontSize": "big",
           "textEntries": [
             "base",
             "nav",
             "fun",
             "num"
-          ],
-          "fontSize": "big"
+          ]
         }
       },
       {
