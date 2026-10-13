@@ -40,6 +40,7 @@ parse_config:
     # modo OS persistente (Linux/Windows <-> macOS)
     "&sw_layer 0": Lin/Win
     "&sw_layer 1": macOS
+    "&sw_layer 2": OS ⇄
 
     # atalhos que só existem na layer mac (rótulo direto: mod aninhado confunde o parser)
     "&kp LG(LS(N3))": "⌘⇧3"

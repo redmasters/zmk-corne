@@ -285,6 +285,18 @@
             require-prior-idle-ms = <150>;
         };
 
+        // Alterna o modo OS (Linux/Win <-> macOS) SEM passar pela SYS: aperte juntas as duas
+        // pontas da coluna externa ESQUERDA (0 + 24, as duas células ▽). É o mesmo estado
+        // persistente das teclas da SYS (&sw_layer), mas o gesto não envolve polegar nenhum —
+        // era o polegar da SYS que ativava a NAV por acidente e transformava o espaço em DEL.
+        os_toggle {
+            bindings = <&sw_layer 2>;
+            key-positions = <0 24>;
+            layers = <BASE MAC>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+        };
+
         dongle_bootloader {
             bindings = <&bootloader>;
             key-positions = <1 2>;

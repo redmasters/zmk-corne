@@ -587,6 +587,9 @@ combos:
 - p: [11, 23]
   k: {t: sys, h: toggle}
   l: [base, mac]
+- p: [0, 24]
+  k: OS ⇄
+  l: [base, mac]
 - p: [1, 2]
   k: Dongle Boot
   l: [sys]
