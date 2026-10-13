@@ -31,6 +31,8 @@ parse_config:
     "&safe_sys_reset": {t: Reset, s: "2×", type: tap_dance}
     "&safe_soft_off": {t: "Off", s: "2×", type: tap_dance}
     "&copy_cut": {t: Copy, s: "2× Cut", type: tap_dance}
+    "&copy_cut_mac": {t: "⌘C", s: "2× ⌘X", type: tap_dance}
+    "&kp LG(V)": "⌘V"
 
     "&bootloader": Dongle Boot
     "&out OUT_TOG": Output

@@ -169,6 +169,13 @@
             bindings = <&kp LC(INS)>, <&kp LC(X)>;
         };
 
+        // macOS: mesma dança do &copy_cut, com os idiomas do sistema (⌘C copia, ⌘X recorta).
+        copy_cut_mac: copy_cut_mac {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C)>, <&kp LG(X)>;
+        };
+
         safe_bootloader: safe_bootloader {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -213,17 +220,37 @@
             layers = <GAME DOTA>;
         };
 
+        // Copiar/recortar (X+C) e colar (C+V): cada idioma tem a sua variante e as máscaras
+        // são disjuntas — o ZMK testa o combo contra a layer ativa MAIS ALTA, então no modo
+        // mac só a variante _mac responde (e vice-versa). O caminho mod+letra (D+C = ⌘C)
+        // continua valendo em qualquer layer, inclusive com NUM/GAME/MOUSE ativas.
         copy {
             bindings = <&copy_cut>;
             key-positions = <26 27>;
-            layers = <BASE MAC NUM GAME MOUSE>;
+            layers = <BASE NUM GAME MOUSE>;
             require-prior-idle-ms = <150>;
         };
 
         paste {
             bindings = <&kp LS(INS)>;
             key-positions = <27 28>;
-            layers = <BASE MAC NUM GAME MOUSE>;
+            layers = <BASE NUM GAME MOUSE>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
+        };
+
+        // Variantes macOS dos mesmos gestos (⌘C / ⌘X e ⌘V), só com a MAC ativa.
+        copy_mac {
+            bindings = <&copy_cut_mac>;
+            key-positions = <26 27>;
+            layers = <MAC>;
+            require-prior-idle-ms = <150>;
+        };
+
+        paste_mac {
+            bindings = <&kp LG(V)>;
+            key-positions = <27 28>;
+            layers = <MAC>;
             timeout-ms = <18>;
             require-prior-idle-ms = <150>;
         };

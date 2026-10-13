@@ -60,13 +60,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: S, h: Shift}
   - {t: D, h: Gui}
-  - {t: F, h: Alt}
+  - {t: F, h: Gui}
   - {t: G, h: Ctrl}
   - {t: H, h: Ctrl}
-  - {t: J, h: Alt}
+  - {t: J, h: Gui}
   - {t: K, h: Gui}
   - {t: L, h: Shift}
   - {t: ▽, type: trans}
+  - Alt
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -80,11 +81,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: Gui+Space, h: nav}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Space
   - {t: ▽, type: trans}
   nav:
   - '~'
@@ -473,16 +473,108 @@ layers:
   - ''
   - {t: sys, h: toggle}
   - ''
+  nav mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+W
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: LEFT, h: Gui+LEFT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: RIGHT, h: Gui+RIGHT}
+  - Alt+LEFT
+  - Alt+RIGHT
+  - Ctrl
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+DOWN
+  - Gui+`
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  fn mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⌘⇧4
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⌘⇧3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [21, 22]
   k: {t: dota, h: toggle}
   l: [game, dota]
 - p: [26, 27]
   k: {t: Copy, s: 2× Cut, type: tap_dance}
-  l: [base, mac, num, game, mouse]
+  l: [base, num, game, mouse]
 - p: [27, 28]
   k: Shift+INS
-  l: [base, mac, num, game, mouse]
+  l: [base, num, game, mouse]
+- p: [26, 27]
+  k: {t: ⌘C, s: 2× ⌘X, type: tap_dance}
+  l: [mac]
+- p: [27, 28]
+  k: ⌘V
+  l: [mac]
 - p: [4, 2]
   k: {t: mouse, h: toggle}
   l: [base, mac, game, mouse]
