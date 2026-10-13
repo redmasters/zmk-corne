@@ -505,6 +505,7 @@
         //  22/23   ⌥←/⌥→ (palavra)                30/33  ⌘↑/⌘↓ (início/fim do documento)
         //  24      Ctrl (com as setas: Ctrl+←/→ troca de Space, Ctrl+↑ = Mission Control)
         //  34      ⌘` (alterna janelas do mesmo app — o Insert do Linux não existe no macOS)
+        //  40      espaço (mesmo com a NAV segurada: o DEL da NAV não passa para o modo mac)
         //  Os colchetes [ ] das posições 22/23 continuam disponíveis na NUMPAD/NUM (6/10).
         nav_mac {
             display-name = "nav mac";
@@ -513,7 +514,7 @@
 &trans     &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans                   &trans         &trans
 &kp LG(W)  &trans  &trans  &trans  &trans  &trans  &mt_home LG(LEFT) LEFT  &trans  &trans  &mt_end LG(RIGHT) RIGHT  &kp LA(LEFT)   &kp LA(RIGHT)
 &kp LCTRL  &trans  &trans  &trans  &trans  &trans  &kp LG(UP)              &trans  &trans  &kp LG(DOWN)             &kp LG(GRAVE)  &trans
-                           &trans  &trans  &trans  &trans                  &trans  &trans
+                                   &trans               &trans             &trans            &trans            &kp SPACE        &trans
             >;
         };
 

@@ -514,7 +514,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Space
   - {t: ▽, type: trans}
   fn mac:
   - {t: ▽, type: trans}
