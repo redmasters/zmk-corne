@@ -39,6 +39,10 @@ parse_config:
     "&sw_layer 0": Lin/Win
     "&sw_layer 1": macOS
 
+    # atalhos que só existem na layer mac (rótulo direto: mod aninhado confunde o parser)
+    "&kp LG(LS(N3))": "⌘⇧3"
+    "&kp LG(LS(N4))": "⌘⇧4"
+
     "&bt BT_SEL 0": BT 1
     "&bt BT_SEL 1": BT 2
     "&bt BT_SEL 2": BT 3
