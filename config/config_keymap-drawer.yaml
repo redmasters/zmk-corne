@@ -35,6 +35,10 @@ parse_config:
     "&bootloader": Dongle Boot
     "&out OUT_TOG": Output
 
+    # modo OS persistente (Linux/Windows <-> macOS)
+    "&sw_layer 0": Lin/Win
+    "&sw_layer 1": macOS
+
     "&bt BT_SEL 0": BT 1
     "&bt BT_SEL 1": BT 2
     "&bt BT_SEL 2": BT 3

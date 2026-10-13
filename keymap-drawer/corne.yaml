@@ -43,6 +43,49 @@ layers:
   - {t: Enter, h: media}
   - Space
   - {t: Bspc, s: Del}
+  mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: S, h: Shift}
+  - {t: D, h: Gui}
+  - {t: F, h: Alt}
+  - {t: G, h: Ctrl}
+  - {t: H, h: Ctrl}
+  - {t: J, h: Alt}
+  - {t: K, h: Gui}
+  - {t: L, h: Shift}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   nav:
   - '~'
   - '!'
@@ -391,8 +434,8 @@ layers:
   - {t: Boot, s: 2×, type: tap_dance}
   - ''
   - ''
-  - ''
-  - ''
+  - Lin/Win
+  - macOS
   - Output
   - BT 1
   - BT 2
@@ -436,22 +479,22 @@ combos:
   l: [game, dota]
 - p: [26, 27]
   k: {t: Copy, s: 2× Cut, type: tap_dance}
-  l: [base, num, game, mouse]
+  l: [base, mac, num, game, mouse]
 - p: [27, 28]
   k: Shift+INS
-  l: [base, num, game, mouse]
+  l: [base, mac, num, game, mouse]
 - p: [4, 2]
   k: {t: mouse, h: toggle}
-  l: [base, game, mouse]
+  l: [base, mac, game, mouse]
 - p: [15, 16]
   k: Alt+Ins
-  l: [base]
+  l: [base, mac]
 - p: [0, 12]
   k: {t: sys, h: toggle}
-  l: [base]
+  l: [base, mac]
 - p: [11, 23]
   k: {t: sys, h: toggle}
-  l: [base]
+  l: [base, mac]
 - p: [1, 2]
   k: Dongle Boot
   l: [sys]

@@ -1,7 +1,7 @@
 # ZMK Corne - Manifesto West Padrão
 # Documentação: https://zmk.dev/docs/config
 #
-# Configuração mínima usando apenas o ZMK oficial
+# ZMK oficial + módulos externos, todos pinados por commit/tag
 
 manifest:
   remotes:
@@ -9,6 +9,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: redmasters
       url-base: https://github.com/redmasters
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
 
   projects:
     - name: zmk
@@ -18,6 +20,11 @@ manifest:
     - name: scyan-zmk-module
       remote: redmasters
       revision: 1088d0577ea486a55cecf0af682afd3e1c504d14
+    # Troca persistente do modo OS (Linux/Windows <-> macOS) via &sw_layer.
+    # Repo de commit único, por isso o pin é um SHA e não uma tag.
+    - name: zmk-switch-layer
+      remote: mctechnology17
+      revision: 18320c2c7450dd807fe0ca531c9422a5c4547028
 
   self:
     path: config
