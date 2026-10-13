@@ -34,6 +34,46 @@ hold-tap strategy described by urob. Sticky Shift is intended for capitalization
 without timing a home-row chord, while Caps Word handles longer uppercase
 sequences.
 
+#### macOS mode
+
+The board is used on Linux/Windows and on macOS, so the keymap keeps one rule: **the same finger performs the same action on both systems**. The `mac` layer moves the modifiers instead of making your hands relearn shortcuts:
+
+| Finger | Linux / Windows | macOS (`mac` layer) |
+|---|---|---|
+| ring (15/20) | `Ctrl` — `Ctrl+T`, `Ctrl+C`, `Ctrl+Z` | **`Cmd`** — `⌘T`, `⌘C`, `⌘Z` |
+| middle (16/19) | `Alt` — `Alt+Tab`, `Alt+F4` | **`Cmd`** — `⌘Tab`, `⌘W` |
+| index (17/18) | `Super` | **`Ctrl`** — terminal `Ctrl+C/A/E/K` |
+| outer column (23) | — | **`Option`** — accents (`⌥e`, `⌥c`) and `⌥←/→` |
+| pinky | `Shift` | `Shift` (unchanged) |
+
+Copying follows the same idea: the Linux gestures (`X+C` = `Ctrl+Ins` / 2× `Ctrl+X`; `C+V` = `Shift+Ins`) have macOS twins on the same keys (`⌘C` / 2× `⌘X`; `⌘V`). Independently of the combos, mod+letter always works: hold `D` + `C` = `⌘C`.
+
+When mac mode is on, two thin layers stack automatically on top of `NAV` and `FUN`, redefining only what differs:
+
+| Key | Linux | macOS |
+|---|---|---|
+| NAV 12 | `Alt+F4` | `⌘W` (close window/tab) |
+| NAV 18 / 21 (hold) | Home / End | `⌘←` / `⌘→` (line start/end) |
+| NAV 22 / 23 | `[` `]` | `⌥←` / `⌥→` (word) — brackets remain on Num (6/10) |
+| NAV 24 | workspace switch | `Ctrl`: `⌃←/→` Spaces, `⌃↑` Mission Control |
+| NAV 30 / 33 | Home / End | `⌘↑` / `⌘↓` (document start/end) |
+| NAV 34 | Insert | `` ⌘` `` (cycle windows of the same app) |
+| FUN 30 / 11 | PrintScreen | `⌘⇧3` (full screen) / `⌘⇧4` (region) |
+| thumb 37 (tap) | `Super` (overview) | `⌘Space` (Spotlight) |
+
+The space position stays a space everywhere in mac mode — including while `NAV` is held, where the Linux side deliberately has `Delete`.
+
+**Switching modes.** Press the two ends of the left outer column together (positions **0 + 24**, the two `▽` cells). The gesture uses no thumb, so the NAV layer cannot be engaged by accident. Alternative route: `SYS` → key 3 = `Lin/Win`, key 4 = `mac`. The mode is persistent (stored in the dongle's settings) and the display confirms it (`base` ⇄ `mac`; `navM`/`fnM` while a mac-mode nav/fn layer is active).
+
+**macOS-side checklist** (System Settings → Keyboard):
+
+- *Input sources*: the keyboard can no longer emit `⌃Space` by accident, but the system shortcut "Select the previous input source" still swallows a deliberate one — keep it or disable it.
+- *Text*: "Add period with double-space" turns `␣␣` into `. ` — disable it if you type double spaces on purpose.
+- *Keyboard Shortcuts → Modifier Keys*: this dialog is **per keyboard**. Use it only for the Mac's built-in keyboard (swap Control ⇄ Command there so your hands behave the same on both). The Corne does its remapping in firmware, per layer.
+- Karabiner-Elements / BetterTouchTool rules are also **per device**: add the dongle, and when "the same key behaves differently", debug there first.
+
+> ⚠️ **Layer-structure changes require `settings_reset`.** This build enables ZMK Studio, which can store a keymap **inside the keyboard** (`ZMK_KEYMAP_SETTINGS_STORAGE` + `ZMK_KEYMAP_LAYER_REORDERING`), and a stored keymap overrides the compiled firmware. One saved before a layer is added/removed/reordered keeps the **old layer indices** and silently applies the wrong bindings (that is how the `mac` layer once inherited the old `nav` layer and the space key emitted Delete). If a key does something the keymap does not say: open ZMK Studio, compare that binding with `config/corne.keymap`, and if they differ, run `settings_reset` on all three controllers (resetting the dongle also drops the split pairing), reflash all three and re-pair. Do not save the keymap from Studio.
+
 ### Layout:
 ![keymap](keymap-drawer/corne.svg)
 
@@ -43,7 +83,10 @@ The dongle is the ZMK central and both keyboard halves are peripherals. Keymap
 processing happens primarily on the central, so a keymap-only update normally
 requires flashing only `corne_dongle`. A regular firmware update does **not**
 require `settings_reset`; standard firmware preserves the existing split and
-host bonds.
+host bonds — **except after a layer-structure change** (adding, removing or
+reordering layers). In that case a keymap previously saved by ZMK Studio would
+still point at the old layer indices and shadow the new firmware, so run the
+`settings_reset` procedure below first. See "macOS mode" for the full story.
 
 ### Keymap-only update
 

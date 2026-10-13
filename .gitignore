@@ -2,3 +2,5 @@
 .idea/
 .zmk
 zmk/
+.agents/
+skills-lock.json
