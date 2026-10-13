@@ -17,7 +17,11 @@ processamento do keymap acontece principalmente no central, portanto uma
 atualização apenas do keymap normalmente exige gravar somente o
 `corne_dongle`. Uma atualização normal de firmware **não** exige
 `settings_reset`; o firmware padrão preserva os vínculos existentes entre o
-split e os hosts.
+split e os hosts — **exceto depois de uma mudança na estrutura de layers**
+(adicionar, remover ou reordenar layers). Nesse caso, um keymap salvo
+anteriormente pelo ZMK Studio continuaria apontando para os índices antigos e
+sobreporia o firmware novo; rode o procedimento de `settings_reset` abaixo
+primeiro. Veja "Modo macOS" para a história completa.
 
 ### Atualização somente do keymap
 
@@ -121,6 +125,46 @@ Os behaviors de Shift na home row da Base usam a mesma estratégia posicional
 `balanced`, com 280 ms, descrita pelo urob. Sticky Shift serve para capitalizar
 sem precisar temporizar um acorde da home row, enquanto Caps Word atende a
 sequências maiores em maiúsculas.
+
+#### Modo macOS
+
+O teclado é usado em Linux/Windows e no macOS, então o keymap mantém uma regra: **o mesmo dedo executa a mesma ação nos dois sistemas**. A layer `mac` move os modificadores em vez de obrigar as mãos a reaprender atalhos:
+
+| Dedo | Linux / Windows | macOS (layer `mac`) |
+|---|---|---|
+| anelar (15/20) | `Ctrl` — `Ctrl+T`, `Ctrl+C`, `Ctrl+Z` | **`Cmd`** — `⌘T`, `⌘C`, `⌘Z` |
+| médio (16/19) | `Alt` — `Alt+Tab`, `Alt+F4` | **`Cmd`** — `⌘Tab`, `⌘W` |
+| indicador (17/18) | `Super` | **`Ctrl`** — terminal `Ctrl+C/A/E/K` |
+| coluna externa (23) | — | **`Option`** — acentos (`⌥e`, `⌥c`) e `⌥←/→` |
+| mindinho | `Shift` | `Shift` (igual) |
+
+Copiar/recortar/colar segue a mesma ideia: os gestos do Linux (`X+C` = `Ctrl+Ins` / 2× `Ctrl+X`; `C+V` = `Shift+Ins`) têm gêmeos no macOS nas mesmas teclas (`⌘C` / 2× `⌘X`; `⌘V`). Independentemente dos combos, mod+letra sempre funciona: segure `D` + `C` = `⌘C`.
+
+Com o modo mac ligado, duas layers finas entram automaticamente por cima da `NAV` e da `FUN`, redefinindo só o que difere:
+
+| Tecla | Linux | macOS |
+|---|---|---|
+| NAV 12 | `Alt+F4` | `⌘W` (fecha janela/aba) |
+| NAV 18 / 21 (segurando) | Home / End | `⌘←` / `⌘→` (início/fim de linha) |
+| NAV 22 / 23 | `[` `]` | `⌥←` / `⌥→` (palavra) — os colchetes continuam na Num (6/10) |
+| NAV 24 | troca de workspace | `Ctrl`: `⌃←/→` troca de Space, `⌃↑` Mission Control |
+| NAV 30 / 33 | Home / End | `⌘↑` / `⌘↓` (início/fim do documento) |
+| NAV 34 | Insert | `` ⌘` `` (alterna janelas do mesmo app) |
+| FUN 30 / 11 | PrintScreen | `⌘⇧3` (tela toda) / `⌘⇧4` (região) |
+| polegar 37 (toque) | `Super` (overview) | `⌘Space` (Spotlight) |
+
+A posição do espaço continua sendo espaço em todo o modo mac — inclusive com a `NAV` segurada, onde o lado Linux tem `Delete` por escolha de projeto.
+
+**Trocar de modo.** Aperte juntas as duas pontas da coluna externa esquerda (posições **0 + 24**, as duas células `▽`). O gesto não usa polegar, então não há risco de acionar a layer `NAV` por acidente. Caminho alternativo: `SYS` → tecla 3 = `Lin/Win`, tecla 4 = `mac`. O modo é persistente (fica gravado nas settings do dongle) e o display confirma (`base` ⇄ `mac`; `navM`/`fnM` quando uma layer de navegação do modo mac está ativa).
+
+**Checklist do lado macOS** (Ajustes do Sistema → Teclado):
+
+- *Fontes de entrada*: o teclado não consegue mais emitir `⌃Space` por acidente, mas o atalho "Selecionar a fonte de entrada anterior" ainda engole um `⌃Space` deliberado — mantenha ou desative.
+- *Texto*: "Adicionar ponto com dois espaços" transforma `␣␣` em `. ` — desative se você digita dois espaços de propósito.
+- *Atalhos de Teclado → Teclas Modificadoras*: esse diálogo é **por teclado**. Use apenas no teclado embutido do Mac (troque Control ⇄ Command lá para as mãos se comportarem igual). O Corne faz o remapeamento no firmware, por layer.
+- Regras do Karabiner-Elements / BetterTouchTool também são **por dispositivo**: inclua o dongle, e quando "a mesma tecla se comporta diferente", investigue ali primeiro.
+
+> ⚠️ **Mudanças na estrutura de layers exigem `settings_reset`.** Este build habilita o ZMK Studio, que consegue gravar um keymap **dentro do teclado** (`ZMK_KEYMAP_SETTINGS_STORAGE` + `ZMK_KEYMAP_LAYER_REORDERING`), e o keymap gravado sobrepõe o firmware compilado. Um keymap salvo antes de uma layer ser adicionada/removida/reordenada continua apontando para os **índices antigos** e aplica bindings errados em silêncio (foi assim que a layer `mac` herdou a antiga `nav` e o espaço passou a dar Delete). Se uma tecla fizer algo diferente do keymap: abra o ZMK Studio, compare aquele binding com o `config/corne.keymap` e, se diferirem, rode o `settings_reset` nos três controladores (resetar o dongle também derruba o pareamento do split), regrave os três e repareie. Não salve o keymap pelo Studio.
 
 ### Layout
 ![keymap](../keymap-drawer/corne.svg)
