@@ -2444,11 +2444,11 @@ struct display_layout_block {
 
 static const struct display_layout_block LAYOUT_CENTRAL_ACTIVE_BLOCKS[6] = {
     { .type = WIDGET_TYPE_CAPS_LOCK, .x = 1, .y = 19, .width = 14, .height = 7, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 2, .symbol_ids = { SYMBOL_CAPSA_9310, SYMBOL_CAPSA_9310_SUB_1 }, .text_count = 2, .text_entries = { "a", "" }, .custom_text = "a", .symbol_id = SYMBOL_CAPSA_9310 },
-    { .type = WIDGET_TYPE_LAYER, .x = 35, .y = 14, .width = 22, .height = 11, .enabled = true, .mode = 1, .param1 = 0, .param2 = 0, .param3 = 1, .symbol_count = 5, .symbol_ids = { SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_1, SYMBOL_BRACKET_LAYER_2, SYMBOL_BRACKET_LAYER_3 }, .text_count = 13, .text_entries = { "base", "mac", "nav", "fun", "num", "game", "dota", "fngame", "mouse", "media", "sys", "navM", "fnM" }, .custom_text = "base", .symbol_id = SYMBOL_BRACKET_LAYER_0 },
+    { .type = WIDGET_TYPE_LAYER, .x = 40, .y = 12, .width = 22, .height = 11, .enabled = true, .mode = 1, .param1 = 0, .param2 = 0, .param3 = 1, .symbol_count = 5, .symbol_ids = { SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_0, SYMBOL_BRACKET_LAYER_1, SYMBOL_BRACKET_LAYER_2, SYMBOL_BRACKET_LAYER_3 }, .text_count = 13, .text_entries = { "base", "mac", "nav", "fun", "num", "game", "dota", "fngame", "mouse", "media", "sys", "navM", "fnM" }, .custom_text = "base", .symbol_id = SYMBOL_BRACKET_LAYER_0 },
     { .type = WIDGET_TYPE_OUTPUT_STATUS, .x = 0, .y = 3, .width = 12, .height = 10, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 6, .symbol_ids = { SYMBOL_USB, SYMBOL_BLUETOOTH_9659_SUB_1, SYMBOL_BLUETOOTH_9659_SUB_2, SYMBOL_BLUETOOTH_9659_SUB_3, SYMBOL_BLUETOOTH_9659_SUB_4, SYMBOL_BLUETOOTH_9659_SUB_5 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_USB },
-    { .type = WIDGET_TYPE_BATTERY, .x = 15, .y = 2, .width = 17, .height = 10, .enabled = true, .mode = 1, .param1 = 4, .param2 = 0, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_BATTERY_FRAME, SYMBOL_CHARGE_0960_SUB_2, SYMBOL_CHARGE_0960_SUB_5, SYMBOL_CHARGE_0960_SUB_7, SYMBOL_CHARGE_0960_SUB_10, SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_17, SYMBOL_CHARGESLIM_5317_SUB_20, SYMBOL_CHARGESLIM_5317_SUB_22, SYMBOL_CHARGESLIM_5317_SUB_25, SYMBOL_CHARGESLIM_5317_SUB_28 }, .text_count = 10, .text_entries = { "CHARGE NOW!", "LOW", "OK", "FULL", "5", "6", "7", "8", "9", "10" }, .custom_text = "CHARGE NOW!", .symbol_id = SYMBOL_BATTERY_FRAME },
-    { .type = WIDGET_TYPE_BATTERY, .x = 61, .y = 2, .width = 17, .height = 10, .enabled = true, .mode = 1, .param1 = 4, .param2 = 0, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_BATTERY_FRAME, SYMBOL_CHARGE_0960_SUB_2, SYMBOL_CHARGE_0960_SUB_5, SYMBOL_CHARGE_0960_SUB_7, SYMBOL_CHARGE_0960_SUB_10, SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_3, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_8, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_14, SYMBOL_CHARGESLIM_5317_SUB_17, SYMBOL_CHARGESLIM_5317_SUB_20, SYMBOL_CHARGESLIM_5317_SUB_22, SYMBOL_CHARGESLIM_5317_SUB_25, SYMBOL_CHARGESLIM_5317_SUB_28 }, .text_count = 10, .text_entries = { "CHARGE NOW!", "LOW", "OK", "FULL", "5", "6", "7", "8", "9", "10" }, .custom_text = "CHARGE NOW!", .symbol_id = SYMBOL_BATTERY_FRAME },
-    { .type = WIDGET_TYPE_BONGO, .x = 86, .y = 5, .width = 32, .height = 23, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 3, .symbol_ids = { SYMBOL_SLICE_40_4046, SYMBOL_SLICE_40_4046_SUB_1, SYMBOL_SLICE_40_4046_SUB_2 }, .text_count = 1, .text_entries = { "(=^.^=)" }, .custom_text = "(=^.^=)", .symbol_id = SYMBOL_SLICE_40_4046 },
+    { .type = WIDGET_TYPE_BONGO, .x = 89, .y = 9, .width = 32, .height = 23, .enabled = true, .mode = 0, .param1 = 0, .param2 = 0, .param3 = 0, .symbol_count = 3, .symbol_ids = { SYMBOL_SLICE_40_4046, SYMBOL_SLICE_40_4046_SUB_1, SYMBOL_SLICE_40_4046_SUB_2 }, .text_count = 1, .text_entries = { "(=^.^=)" }, .custom_text = "(=^.^=)", .symbol_id = SYMBOL_SLICE_40_4046 },
+    { .type = WIDGET_TYPE_BATTERY, .x = 16, .y = 7, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 1, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_15, SYMBOL_CHARGESLIM_5317_SUB_17, SYMBOL_CHARGESLIM_5317_SUB_19, SYMBOL_CHARGESLIM_5317_SUB_21, SYMBOL_CHARGESLIM_5317_SUB_22, SYMBOL_CHARGESLIM_5317_SUB_24, SYMBOL_CHARGESLIM_5317_SUB_26, SYMBOL_CHARGESLIM_5317_SUB_28 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
+    { .type = WIDGET_TYPE_BATTERY, .x = 54, .y = 7, .width = 32, .height = 1, .enabled = true, .mode = 0, .param1 = 0, .param2 = 2, .param3 = 0, .symbol_count = 16, .symbol_ids = { SYMBOL_CHARGESLIM_5317, SYMBOL_CHARGESLIM_5317_SUB_2, SYMBOL_CHARGESLIM_5317_SUB_4, SYMBOL_CHARGESLIM_5317_SUB_6, SYMBOL_CHARGESLIM_5317_SUB_7, SYMBOL_CHARGESLIM_5317_SUB_9, SYMBOL_CHARGESLIM_5317_SUB_11, SYMBOL_CHARGESLIM_5317_SUB_13, SYMBOL_CHARGESLIM_5317_SUB_15, SYMBOL_CHARGESLIM_5317_SUB_17, SYMBOL_CHARGESLIM_5317_SUB_19, SYMBOL_CHARGESLIM_5317_SUB_21, SYMBOL_CHARGESLIM_5317_SUB_22, SYMBOL_CHARGESLIM_5317_SUB_24, SYMBOL_CHARGESLIM_5317_SUB_26, SYMBOL_CHARGESLIM_5317_SUB_28 }, .text_count = 0, .text_entries = { NULL }, .custom_text = NULL, .symbol_id = SYMBOL_CHARGESLIM_5317 },
 };
 #define LAYOUT_CENTRAL_ACTIVE_COUNT 6
 
@@ -2504,8 +2504,8 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "widgetType": "layer-banner",
       "instanceId": "layer-banner-default",
       "name": "Layer Banner",
-      "x": 35,
-      "y": 14,
+      "x": 40,
+      "y": 12,
       "width": 22,
       "height": 11,
       "enabled": true,
@@ -2526,42 +2526,42 @@ static const struct display_layout_block LAYOUT_PERIPHERAL_IDLE_BLOCKS[1] = {
       "side": "central"
     },
     {
-      "id": "block-battery-1792602042128",
-      "widgetType": "battery",
-      "instanceId": "battery-1788811021435",
-      "name": "Battery Meter",
-      "x": 15,
-      "y": 2,
-      "width": 17,
-      "height": 10,
-      "enabled": true,
-      "description": "Dynamic battery meter using symbol interpolation or custom text divisions.",
-      "side": "central"
-    },
-    {
-      "id": "block-battery-1792602047488",
-      "widgetType": "battery",
-      "instanceId": "battery-1788811021435",
-      "name": "Battery Meter",
-      "x": 61,
-      "y": 2,
-      "width": 17,
-      "height": 10,
-      "enabled": true,
-      "description": "Dynamic battery meter using symbol interpolation or custom text divisions.",
-      "side": "central"
-    },
-    {
       "id": "block-bongo-1792602195747",
       "widgetType": "bongo",
       "instanceId": "bongo-1788845743513",
       "name": "Bongo Cat",
-      "x": 86,
-      "y": 5,
+      "x": 89,
+      "y": 9,
       "width": 32,
       "height": 23,
       "enabled": true,
       "description": "Reactive bongo mascot that taps paws to left/right keystrokes.",
+      "side": "central"
+    },
+    {
+      "id": "block-battery-1792603048465",
+      "widgetType": "battery",
+      "instanceId": "battery-1789135980106",
+      "name": "Battery Meter",
+      "x": 16,
+      "y": 7,
+      "width": 32,
+      "height": 1,
+      "enabled": true,
+      "description": "Dynamic battery meter using symbol interpolation or custom text divisions.",
+      "side": "central"
+    },
+    {
+      "id": "block-battery-1792603056800",
+      "widgetType": "battery",
+      "instanceId": "battery-1789791830274",
+      "name": "Battery Meter",
+      "x": 54,
+      "y": 7,
+      "width": 32,
+      "height": 1,
+      "enabled": true,
+      "description": "Dynamic battery meter using symbol interpolation or custom text divisions.",
       "side": "central"
     }
   ],
