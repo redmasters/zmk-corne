@@ -18,6 +18,7 @@
 // continuar sendo a default (índice 0) e NAV/NUM/GAME/*game* precisam ficar ACIMA da MAC,
 // senão ela sobrescreveria as setas da NAV (posições 18-21, que são a home row) e as letras
 // puras da GAME/DOTA (14-21).
+
 #define BASE 0
 #define MAC 1
 #define NAV 2
@@ -29,9 +30,11 @@
 #define MOUSE 8
 #define MEDIA 9
 #define SYS 10
+
 // Variantes macOS das layers de navegação. Ficam no fim só para não renumerar as outras:
 // quem manda é a precedência por índice (maior vence) e elas precisam ficar acima da NAV/FUN,
 // que são suas "camadas de baixo". São ativadas por zmk,conditional-layers (ver o nó no fim).
+
 #define NAV_MAC 11
 #define FUN_MAC 12
 #define QUICK_TAP_MS 175
@@ -39,9 +42,11 @@
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35
 #define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29
 #define THUMBS 39 40 41 36 37 38
+
 // Igual a THUMBS, mas SEM o polegar do espaço (pos. 40): usado só na layer mac, onde
 // mod+espaço é destrutivo no macOS (⌥␣ = espaço inquebrável, ⌃␣ = troca fonte de entrada)
 // e o espaço "sumia" em rolls rápidos de digitação.
+
 #define THUMBS_NO_SPACE 39 41 36 37 38
 
 &mt {
@@ -94,6 +99,7 @@
         // Só na layer mac: idênticos a &hml/&hmr (mesmo tuning), mas o espaço não dispara
         // o hold. Assim `F`+espaço em roll vira "f" + " " (na ordem certa) em vez de
         // ⌥␣/⌃␣/⌘␣, que no macOS trocam a fonte de entrada, inserem NBSP ou abrem o Spotlight.
+
         hml_mac: homerow_mods_left_mac {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
@@ -170,6 +176,7 @@
         };
 
         // macOS: mesma dança do &copy_cut, com os idiomas do sistema (⌘C copia, ⌘X recorta).
+
         copy_cut_mac: copy_cut_mac {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -203,6 +210,7 @@
         // Parâmetro: 0 = Linux/Windows (source), 1 = macOS (target), 2 = alterna.
         // Com o modo em "macOS", a MAC é ativada EMPILHADA sobre a BASE — as layers
         // funcionais seguem por cima dela, então NAV/NUM/GAME/*game* não mudam de posição.
+
         sw_layer: sw_layer {
             compatible = "zmk-switch-layer,behavior-switch-layer-mode";
             #binding-cells = <1>;
@@ -224,6 +232,7 @@
         // são disjuntas — o ZMK testa o combo contra a layer ativa MAIS ALTA, então no modo
         // mac só a variante _mac responde (e vice-versa). O caminho mod+letra (D+C = ⌘C)
         // continua valendo em qualquer layer, inclusive com NUM/GAME/MOUSE ativas.
+
         copy {
             bindings = <&copy_cut>;
             key-positions = <26 27>;
@@ -240,6 +249,7 @@
         };
 
         // Variantes macOS dos mesmos gestos (⌘C / ⌘X e ⌘V), só com a MAC ativa.
+
         copy_mac {
             bindings = <&copy_cut_mac>;
             key-positions = <26 27>;
@@ -289,6 +299,7 @@
         // pontas da coluna externa ESQUERDA (0 + 24, as duas células ▽). É o mesmo estado
         // persistente das teclas da SYS (&sw_layer), mas o gesto não envolve polegar nenhum —
         // era o polegar da SYS que ativava a NAV por acidente e transformava o espaço em DEL.
+
         os_toggle {
             bindings = <&sw_layer 2>;
             key-positions = <0 24>;
@@ -309,6 +320,7 @@
     // Ativa as variantes macOS quando a layer mac está no modo macOS (MAC empilhada pelo
     // módulo zmk-switch-layer) e a NAV/FUN correspondente está segurada. As duas if-layers
     // precisam estar ativas ao mesmo tempo (é um AND, ver app/src/conditional_layer.c).
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -355,14 +367,14 @@
         // Mods: &hml_mac/&hmr_mac = &hml/&hmr com o espaço fora do hold-trigger (ver THUMBS_NO_SPACE).
         // Apelidos curtos (LGUI/LCTRL/LSHFT) só para caber no alinhamento de colunas deste arquivo.
         // |  ▽   |  ▽  | S/SFT  | D/⌘   | F/⌘   | G/CTRL |   | H/CTRL | J/⌘  | K/⌘   | L/SFT  |  ▽  |  ⌥   |
+
         mac {
             display-name = "mac";
-
             bindings = <
-&trans  &trans  &trans             &trans               &trans             &trans            &trans            &trans           &trans               &trans             &trans    &trans
-&trans  &trans  &hml_mac LSHFT S   &hml_mac LGUI D      &hml_mac LGUI F    &hml_mac LCTRL G  &hmr_mac LCTRL H  &hmr_mac LGUI J  &hmr_mac LGUI K      &hmr_mac LSHFT L   &trans    &kp LALT
-&trans  &trans  &trans             &trans               &trans             &trans            &trans            &trans           &trans               &trans             &trans    &trans
-                                   &trans               &lt NAV LG(SPACE)  &trans            &trans            &kp SPACE        &trans
+&trans  &trans  &trans            &trans           &trans             &trans              &trans            &trans           &trans           &trans            &trans  &trans
+&trans  &trans  &hml_mac LSHFT S  &hml_mac LGUI D  &hml_mac LGUI F    &hml_mac LCTRL G    &hmr_mac LCTRL H  &hmr_mac LGUI J  &hmr_mac LGUI K  &hmr_mac LSHFT L  &trans  &kp LALT
+&trans  &trans  &trans            &trans           &trans             &trans              &trans            &trans           &trans           &trans            &trans  &trans
+                                  &trans           &lt NAV LG(SPACE)  &trans              &trans            &kp SPACE        &trans
             >;
         };
 
@@ -456,7 +468,7 @@
 
             bindings = <
 &kp F12  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8  &kp N9  &kp N0  &tog GAME
-&kp F11  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &trans  &kp N4        &kp N5  &kp N6  &trans  &trans
+&kp F11  &kp F6  &kp F7  &trans  &kp F9  &kp F10    &trans  &kp N4        &kp N5  &kp N6  &trans  &trans
 &trans   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp N0  &kp N1        &kp N2  &kp N3  &trans  &trans
                          &trans  &trans  &trans     &trans  &kp NUMBER_0  &trans
             >;
@@ -519,28 +531,28 @@
         //  34      ⌘` (alterna janelas do mesmo app — o Insert do Linux não existe no macOS)
         //  40      espaço (mesmo com a NAV segurada: o DEL da NAV não passa para o modo mac)
         //  Os colchetes [ ] das posições 22/23 continuam disponíveis na NUMPAD/NUM (6/10).
+
         nav_mac {
             display-name = "nav mac";
-
             bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans                   &trans         &trans
-&kp LG(W)  &trans  &trans  &trans  &trans  &trans  &mt_home LG(LEFT) LEFT  &trans  &trans  &mt_end LG(RIGHT) RIGHT  &kp LA(LEFT)   &kp LA(RIGHT)
-&kp LCTRL  &trans  &trans  &trans  &trans  &trans  &kp LG(UP)              &trans  &trans  &kp LG(DOWN)             &kp LG(GRAVE)  &trans
-                                   &trans               &trans             &trans            &trans            &kp SPACE        &trans
+&trans     &trans  &trans  &trans  &trans  &trans    &trans                  &trans     &trans  &trans                   &trans         &trans
+&kp LG(W)  &trans  &trans  &trans  &trans  &trans    &mt_home LG(LEFT) LEFT  &trans     &trans  &mt_end LG(RIGHT) RIGHT  &kp LA(LEFT)   &kp LA(RIGHT)
+&kp LCTRL  &trans  &trans  &trans  &trans  &trans    &kp LG(UP)              &trans     &trans  &kp LG(DOWN)             &kp LG(GRAVE)  &trans
+                           &trans  &trans  &trans    &trans                  &kp SPACE  &trans
             >;
         };
 
         // Variante macOS da FUN, ativada por zmk,conditional-layers quando FUN e MAC estão
         // ativas juntas. O PrintScreen do Linux não existe no macOS: vira ⌘⇧3 (tela toda) em
         // 30 e ⌘⇧4 (região) em 11.
+
         fun_mac {
             display-name = "fn mac";
-
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &kp LG(LS(N4))
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(N3))  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans  &kp LG(LS(N4))
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LG(LS(N3))  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans          &trans  &trans
             >;
         };
     };
