@@ -9,6 +9,9 @@
 - Brown switches;
 -  KLP Lame keycaps
 
+> Also in this repo: [Charybdis Mini 3x6](docs/charybdis.md) — a handwired
+> 41-key split with a PMW3610 trackball.
+
 ### Keymap:
 Heavily based on [Miryoku Layout](https://github.com/manna-harbour/miryoku), with some changes to fit my needs.
 
@@ -164,3 +167,10 @@ procedure is documented in
 
 ### Log
 https://gist.github.com/redmasters/c388c28b4bfd8b269c60cc647f9fd280
+
+## Second keyboard: Charybdis Mini 3x6
+
+Handwired 41-key split with a PMW3610 trackball on the right half. It shares
+the same nice!nano dongle with the Corne (one firmware at a time). See the
+[Charybdis build guide](docs/charybdis.md) (pt-BR) for wiring, firmware and
+the dongle-switching procedure.
