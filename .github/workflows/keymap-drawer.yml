@@ -1,5 +1,7 @@
-#     keymap -c config/config_keymap-drawer.yaml parse -c 12 -z config/corne.keymap > keymap-drawer/corne.yaml
+#     keymap -c config/config_keymap-drawer.yaml parse -z config/corne.keymap > keymap-drawer/corne.yaml
 #     keymap -c config/config_keymap-drawer.yaml draw keymap-drawer/corne.yaml > keymap-drawer/corne.svg
+#     keymap -c config/config_keymap-drawer.yaml parse -z config/charybdis.keymap > keymap-drawer/charybdis.yaml
+#     keymap -c config/config_keymap-drawer.yaml draw keymap-drawer/charybdis.yaml > keymap-drawer/charybdis.svg
 
 # Example for using the keymap-drawer ZMK user config workflow
 name: Draw ZMK keymaps
@@ -8,6 +10,7 @@ on:
   push: # automatically run on changes to following paths
     paths:
       - "config/*.keymap"
+      - "config/*.json"
       - "config/config_keymap-drawer.yaml"
       - .github/workflows/keymap-drawer.yml
 

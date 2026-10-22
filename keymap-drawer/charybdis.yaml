@@ -1,0 +1,600 @@
+layout: {zmk_keyboard: charybdis}
+layers:
+  base:
+  - {t: ▽, type: trans}
+  - Q
+  - {t: W, h: Ctrl+F2}
+  - E
+  - R
+  - T
+  - {t: Y, h: Shift+F6}
+  - U
+  - I
+  - {t: O, h: Shift+F9}
+  - P
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - A
+  - {t: S, h: Shift}
+  - {t: D, h: Ctrl}
+  - {t: F, h: Alt}
+  - {t: G, h: Gui}
+  - {t: H, h: Gui}
+  - {t: J, h: Alt}
+  - {t: K, h: Ctrl}
+  - {t: L, h: Shift}
+  - ;
+  - ''''
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: Shift, h: sticky, s: '&caps_word'}
+  - {t: Esc, h: fn}
+  - {t: Gui, h: nav}
+  - {t: Tab, h: num}
+  - {t: Enter, h: media}
+  - Space
+  mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: S, h: Shift}
+  - {t: D, h: Gui}
+  - {t: F, h: Gui}
+  - {t: G, h: Ctrl}
+  - {t: H, h: Ctrl}
+  - {t: J, h: Gui}
+  - {t: K, h: Gui}
+  - {t: L, h: Shift}
+  - {t: ▽, type: trans}
+  - Alt
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Gui+Space, h: nav}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Space
+  nav:
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - {t: (, h: '*'}
+  - )
+  - {t: '-', h: _}
+  - {t: +, h: '='}
+  - Alt+F4
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: LEFT, h: HOME}
+  - DOWN
+  - UP
+  - {t: RIGHT, h: END}
+  - '['
+  - ']'
+  - Ctrl+Gui
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - PgDn
+  - PgUp
+  - END
+  - Ins
+  - Caps Lock
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - Enter
+  - Del
+  fn:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F7
+  - F8
+  - F9
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F4
+  - F5
+  - F6
+  - F11
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PrtSc
+  - F1
+  - F2
+  - F3
+  - F10
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Tab
+  - Space
+  num:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '['
+  - '7'
+  - '8'
+  - '9'
+  - ']'
+  - ']'
+  - Shift
+  - {t: ▽, type: trans}
+  - {t: Shift, h: sticky}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '='
+  - '4'
+  - '5'
+  - '6'
+  - ;
+  - '}'
+  - Ctrl
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: game, h: toggle}
+  - \
+  - '1'
+  - '2'
+  - '3'
+  - '`'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - '-'
+  - '0'
+  game:
+  - Esc
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: ▽, type: trans}
+  - Shift
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - Ctrl
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: ▽, type: trans}
+  - {t: Esc, h: fngame}
+  - Space
+  - Tab
+  - Enter
+  - {t: ▽, type: trans}
+  dota:
+  - {t: ▽, type: trans}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - Bspc
+  - {t: ▽, type: trans}
+  - A
+  - S
+  - {t: D, h: Ctrl}
+  - {t: F, h: Alt}
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - Enter
+  - Shift
+  - {t: Space, h: fngame}
+  - Tab
+  - Enter
+  - Space
+  fngame:
+  - F12
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: game, h: toggle}
+  - F11
+  - F6
+  - F7
+  - {t: ▽, type: trans}
+  - F9
+  - F10
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  mouse:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Mouse ←
+  - Mouse ↓
+  - Mouse ↑
+  - Mouse →
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Scroll ↓
+  - Scroll ↑
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Left Click
+  - Right Click
+  media:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Output
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Prev
+  - Vol-
+  - Vol+
+  - Next
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Mute
+  - Play/Pause
+  - Stop
+  - {type: held}
+  - {t: ▽, type: trans}
+  sys:
+  - {t: Boot, s: 2×, type: tap_dance}
+  - ''
+  - ''
+  - Lin/Win
+  - macOS
+  - Output
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - {t: Boot, s: 2×, type: tap_dance}
+  - {t: Reset, s: 2×, type: tap_dance}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT Clear
+  - Clear All
+  - ''
+  - ''
+  - ''
+  - {t: Reset, s: 2×, type: tap_dance}
+  - {t: 'Off', s: 2×, type: tap_dance}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: 'Off', s: 2×, type: tap_dance}
+  - ''
+  - {t: sys, h: toggle}
+  - ''
+  - ''
+  - {t: sys, h: toggle}
+  nav mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+W
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: LEFT, h: Gui+LEFT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: RIGHT, h: Gui+RIGHT}
+  - Alt+LEFT
+  - Alt+RIGHT
+  - Ctrl
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+DOWN
+  - Gui+`
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Space
+  fn mac:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⌘⇧4
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⌘⇧3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [21, 22]
+  k: {t: dota, h: toggle}
+  l: [game, dota]
+- p: [26, 27]
+  k: {t: Copy, s: 2× Cut, type: tap_dance}
+  l: [base, num, game, mouse]
+- p: [27, 28]
+  k: Shift+INS
+  l: [base, num, game, mouse]
+- p: [26, 27]
+  k: {t: ⌘C, s: 2× ⌘X, type: tap_dance}
+  l: [mac]
+- p: [27, 28]
+  k: ⌘V
+  l: [mac]
+- p: [4, 2]
+  k: {t: mouse, h: toggle}
+  l: [base, mac, game, mouse]
+- p: [15, 16]
+  k: Alt+Ins
+  l: [base, mac]
+- p: [0, 12]
+  k: {t: sys, h: toggle}
+  l: [base, mac]
+- p: [11, 23]
+  k: {t: sys, h: toggle}
+  l: [base, mac]
+- p: [0, 24]
+  k: OS ⇄
+  l: [base, mac]
+- p: [1, 2]
+  k: Dongle Boot
+  l: [sys]
+- p: [39, 40]
+  k: {t: Bspc, s: Del}
+  l: [base, mac, game, fngame, media]
+- p: [39, 40]
+  k: Bspc
+  l: [nav, nav mac]
+- p: [39, 40]
+  k: Menu
+  l: [fn, fn mac]
+- p: [39, 40]
+  k: .
+  l: [num]
+- p: [39, 40]
+  k: F8
+  l: [dota]
+- p: [39, 40]
+  k: Middle Click
+  l: [mouse]
