@@ -1,0 +1,16 @@
+/*
+ * Processamento do ponteiro no dongle.
+ *
+ * O trackball emite REL_X/REL_Y; o listener repassa para o HID. O scaler
+ * abaixo é identidade (1/1) e existe só como ponto de ajuste: use 1/2 para
+ * deixar o cursor mais lento ou 2/1 para acelerar, sem mexer no CPI.
+ *
+ * Scroll continua pelas teclas &msc da layer MOUSE; o ZMK 0.3 não tem um
+ * mapper XY->scroll nativo.
+ */
+
+#include <input/processors.dtsi>
+
+&trackball_listener {
+    input-processors = <&zip_xy_scaler 1 1>;
+};

@@ -1,0 +1,24 @@
+/*
+ * Trackball via zmk,input-split
+ *
+ * A metade direita tem o sensor e publica os eventos no split. O dongle
+ * (central) define o listener e os processors de ponteiro.
+ */
+
+/ {
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        trackball_split: trackball_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&trackball_split>;
+    };
+};

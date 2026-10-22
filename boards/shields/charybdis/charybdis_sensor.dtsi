@@ -1,0 +1,71 @@
+/*
+ * PMW3610DM-SUDU na metade direita
+ *
+ * Fiação (nice!nano v2 -> breakout):
+ *   D0  (P0.08) -> SCK
+ *   D1  (P0.06) -> MOT/IRQ
+ *   D2  (P0.17) -> SDIO (MOSI e MISO no mesmo pino)
+ *   D3  (P0.20) -> CS
+ *   3V3         -> VCC  (NUNCA use RAW: o sensor é 3.3 V)
+ *   GND         -> GND
+ *
+ * O sensor usa SPI0, que compartilha o periférico com o I2C0 do display.
+ * Por isso o sensor fica na metade direita e o OLED fica no dongle; não
+ * habilite os dois no mesmo controlador.
+ */
+
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
+                <NRF_PSEL(SPIM_MISO, 0, 17)>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
+                <NRF_PSEL(SPIM_MISO, 0, 17)>;
+            low-power-enable;
+        };
+    };
+};
+
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+&spi0 {
+    status = "okay";
+    compatible = "nordic,nrf-spim";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
+
+    trackball: trackball@0 {
+        status = "okay";
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        cpi = <800>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+
+        /*
+         * Orientação: comece sem os três atributos abaixo. Se o cursor andar
+         * no eixo errado, descomente o que for necessário e recompile:
+         *   swap-xy;  -> troca X/Y
+         *   invert-x; -> inverte o eixo X
+         *   invert-y; -> inverte o eixo Y
+         */
+        // swap-xy;
+        // invert-x;
+        // invert-y;
+
+        force-awake;
+        force-awake-4ms-mode;
+    };
+};
