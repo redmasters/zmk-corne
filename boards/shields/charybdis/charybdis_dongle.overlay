@@ -1,0 +1,56 @@
+/*
+ * Charybdis Mini 3x6 - dongle (central)
+ *
+ * Usa o mesmo nice!nano + OLED do dongle do Corne. O firmware deste shield
+ * é gravado no mesmo dongle quando você for usar o Charybdis; o dongle não
+ * tem sensor, ele recebe o trackball da metade direita via zmk,input-split.
+ */
+
+#include "charybdis.dtsi"
+#include "charybdis_split_input.dtsi"
+
+/ {
+    chosen {
+        zephyr,display = &oled;
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &charybdis_physical_layout;
+        zmk,input-device = &trackball_split;
+    };
+
+    mock_kscan: kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
+
+&pro_micro_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        inversion-on;
+        prechargep = <0x22>;
+    };
+};
+
+&trackball_split {
+    status = "okay";
+};
+
+&trackball_listener {
+    status = "okay";
+};
+
+#include "charybdis_pointer.dtsi"

@@ -1,0 +1,57 @@
+/*
+ * Charybdis Mini 3x6 - metade direita (peripheral + trackball)
+ *
+ * Matriz 4x6, diodos col2row (igual ao Corne):
+ *   linha 0 = D4    coluna 0 = D6   (C0 = coluna interna)
+ *   linha 1 = D5    coluna 1 = D7
+ *   linha 2 = D9    coluna 2 = D8
+ *   linha 3 = D18   coluna 3 = D10
+ *                   coluna 4 = D19
+ *                   coluna 5 = D20  (C5 = coluna externa)
+ *
+ * O transform da direita soma 6 às colunas locais (col-offset = <6>).
+ */
+
+#include "charybdis.dtsi"
+#include "charybdis_split_input.dtsi"
+#include "charybdis_sensor.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &charybdis_physical_layout;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
+
+        diode-direction = "col2row";
+
+        row-gpios
+            = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+
+        col-gpios
+            = <&pro_micro 6 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 7 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 10 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 20 GPIO_ACTIVE_HIGH>
+            ;
+    };
+};
+
+/* O sensor local publica os eventos do trackball no split. */
+&trackball_split {
+    device = <&trackball>;
+    status = "okay";
+};

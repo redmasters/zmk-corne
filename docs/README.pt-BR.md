@@ -10,6 +10,12 @@
 - Switches Brown;
 - Keycaps KLP Lame.
 
+## Segundo teclado: Charybdis Mini 3x6
+
+Split handwired de 41 teclas com trackball PMW3610 na metade direita. Usa o
+mesmo dongle nice!nano do Corne (um firmware por vez). O guia completo de
+montagem, firmware e troca de dongle está em [charybdis.md](charybdis.md).
+
 ## Gravação do firmware
 
 O dongle é o central do ZMK e as duas metades do teclado são periféricos. O
